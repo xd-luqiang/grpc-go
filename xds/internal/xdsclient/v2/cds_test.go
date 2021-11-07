@@ -22,13 +22,13 @@ import (
 	"testing"
 	"time"
 
+	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/dubbogo/grpc-go/xds/internal/version"
+	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 	xdspb "github.com/envoyproxy/go-control-plane/envoy/api/v2"
 	corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
 	anypb "github.com/golang/protobuf/ptypes/any"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"google.golang.org/grpc/internal/testutils"
-	"google.golang.org/grpc/xds/internal/version"
-	"google.golang.org/grpc/xds/internal/xdsclient"
 )
 
 const (

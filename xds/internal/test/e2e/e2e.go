@@ -25,11 +25,11 @@ import (
 	"os"
 	"os/exec"
 
-	"google.golang.org/grpc"
-	channelzgrpc "google.golang.org/grpc/channelz/grpc_channelz_v1"
-	channelzpb "google.golang.org/grpc/channelz/grpc_channelz_v1"
-	testgrpc "google.golang.org/grpc/interop/grpc_testing"
-	testpb "google.golang.org/grpc/interop/grpc_testing"
+	"github.com/dubbogo/grpc-go"
+	channelzgrpc "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
+	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
+	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
+	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
 )
 
 func cmd(path string, logger io.Writer, args []string, env []string) (*exec.Cmd, error) {

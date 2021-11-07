@@ -32,13 +32,13 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/credentials/google"
-	"google.golang.org/grpc/credentials/insecure"
-	"google.golang.org/grpc/credentials/tls/certprovider"
-	"google.golang.org/grpc/internal"
-	"google.golang.org/grpc/internal/xds/env"
-	"google.golang.org/grpc/xds/internal/version"
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/credentials/google"
+	"github.com/dubbogo/grpc-go/credentials/insecure"
+	"github.com/dubbogo/grpc-go/credentials/tls/certprovider"
+	"github.com/dubbogo/grpc-go/internal"
+	"github.com/dubbogo/grpc-go/internal/xds/env"
+	"github.com/dubbogo/grpc-go/xds/internal/version"
 )
 
 var (

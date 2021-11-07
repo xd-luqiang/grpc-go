@@ -29,15 +29,15 @@ import (
 func (cc *ClientConn) Invoke(ctx context.Context, method string, args, reply interface{}, opts ...CallOption) error {
 	// allow interceptor to see all applicable call options, which means those
 	// configured as defaults from dial option as well as per-call options
-	opts = combine(cc.dopts.callOptions, opts)
+	opts = Combine(cc.dopts.callOptions, opts)
 
 	if cc.dopts.unaryInt != nil {
-		return cc.dopts.unaryInt(ctx, method, args, reply, cc, invoke, opts...)
+		return cc.dopts.unaryInt(ctx, method, args, reply, cc, GRPCConnInvoke, opts...)
 	}
-	return invoke(ctx, method, args, reply, cc, opts...)
+	return GRPCConnInvoke(ctx, method, args, reply, cc, opts...)
 }
 
-func combine(o1 []CallOption, o2 []CallOption) []CallOption {
+func Combine(o1 []CallOption, o2 []CallOption) []CallOption {
 	// we don't use append because o1 could have extra capacity whose
 	// elements would be overwritten, which could cause inadvertent
 	// sharing (and race conditions) between concurrent calls
@@ -62,7 +62,7 @@ func Invoke(ctx context.Context, method string, args, reply interface{}, cc *Cli
 
 var unaryStreamDesc = &StreamDesc{ServerStreams: false, ClientStreams: false}
 
-func invoke(ctx context.Context, method string, req, reply interface{}, cc *ClientConn, opts ...CallOption) error {
+func GRPCConnInvoke(ctx context.Context, method string, req, reply interface{}, cc *ClientConn, opts ...CallOption) error {
 	cs, err := newClientStream(ctx, unaryStreamDesc, cc, method, opts...)
 	if err != nil {
 		return err

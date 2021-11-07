@@ -26,12 +26,12 @@ import (
 	"net"
 	"time"
 
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/credentials/insecure"
+	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/dubbogo/grpc-go/status"
 	"github.com/golang/protobuf/proto"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials/insecure"
-	"google.golang.org/grpc/internal/testutils"
-	"google.golang.org/grpc/status"
 
 	discoverypb "github.com/envoyproxy/go-control-plane/envoy/api/v2"
 	adsgrpc "github.com/envoyproxy/go-control-plane/envoy/service/discovery/v2"

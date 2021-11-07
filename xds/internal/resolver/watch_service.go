@@ -23,9 +23,9 @@ import (
 	"sync"
 	"time"
 
-	"google.golang.org/grpc/internal/grpclog"
-	"google.golang.org/grpc/internal/pretty"
-	"google.golang.org/grpc/xds/internal/xdsclient"
+	"github.com/dubbogo/grpc-go/internal/grpclog"
+	"github.com/dubbogo/grpc-go/internal/pretty"
+	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 )
 
 // serviceUpdate contains information received from the LDS/RDS responses which

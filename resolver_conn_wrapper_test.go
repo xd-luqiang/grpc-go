@@ -25,13 +25,13 @@ import (
 	"testing"
 	"time"
 
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/internal/balancer/stub"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/resolver/manual"
-	"google.golang.org/grpc/serviceconfig"
-	"google.golang.org/grpc/status"
+	"github.com/dubbogo/grpc-go/balancer"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/internal/balancer/stub"
+	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/dubbogo/grpc-go/resolver/manual"
+	"github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/dubbogo/grpc-go/status"
 )
 
 const happyBalancerName = "happy balancer"

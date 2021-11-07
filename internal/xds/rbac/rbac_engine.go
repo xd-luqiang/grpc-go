@@ -28,15 +28,15 @@ import (
 	"net"
 	"strconv"
 
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/dubbogo/grpc-go/grpclog"
+	"github.com/dubbogo/grpc-go/internal/transport"
+	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/dubbogo/grpc-go/peer"
+	"github.com/dubbogo/grpc-go/status"
 	v3rbacpb "github.com/envoyproxy/go-control-plane/envoy/config/rbac/v3"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/internal/transport"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/peer"
-	"google.golang.org/grpc/status"
 )
 
 const logLevel = 2

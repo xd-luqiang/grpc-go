@@ -23,8 +23,8 @@ import (
 	"net"
 	"strings"
 
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/internal"
+	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/dubbogo/grpc-go/internal"
 )
 
 const cfeClusterNamePrefix = "google_cfe_"

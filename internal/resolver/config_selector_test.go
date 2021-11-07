@@ -22,9 +22,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/dubbogo/grpc-go/internal/grpctest"
+	"github.com/dubbogo/grpc-go/internal/serviceconfig"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/grpc/internal/grpctest"
-	"google.golang.org/grpc/internal/serviceconfig"
 )
 
 type s struct {

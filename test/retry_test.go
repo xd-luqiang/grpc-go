@@ -30,15 +30,15 @@ import (
 	"testing"
 	"time"
 
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/internal/envconfig"
+	"github.com/dubbogo/grpc-go/internal/stubserver"
+	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/dubbogo/grpc-go/stats"
+	"github.com/dubbogo/grpc-go/status"
+	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
 	"github.com/golang/protobuf/proto"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/internal/envconfig"
-	"google.golang.org/grpc/internal/stubserver"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/stats"
-	"google.golang.org/grpc/status"
-	testpb "google.golang.org/grpc/test/grpc_testing"
 )
 
 func enableRetry() func() {

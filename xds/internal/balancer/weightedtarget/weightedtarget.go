@@ -23,15 +23,15 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/internal/grpclog"
-	"google.golang.org/grpc/internal/hierarchy"
-	"google.golang.org/grpc/internal/pretty"
-	"google.golang.org/grpc/internal/wrr"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/serviceconfig"
-	"google.golang.org/grpc/xds/internal/balancer/balancergroup"
-	"google.golang.org/grpc/xds/internal/balancer/weightedtarget/weightedaggregator"
+	"github.com/dubbogo/grpc-go/balancer"
+	"github.com/dubbogo/grpc-go/internal/grpclog"
+	"github.com/dubbogo/grpc-go/internal/hierarchy"
+	"github.com/dubbogo/grpc-go/internal/pretty"
+	"github.com/dubbogo/grpc-go/internal/wrr"
+	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/dubbogo/grpc-go/xds/internal/balancer/balancergroup"
+	"github.com/dubbogo/grpc-go/xds/internal/balancer/weightedtarget/weightedaggregator"
 )
 
 // Name is the name of the weighted_target balancer.

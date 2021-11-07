@@ -27,10 +27,10 @@ import (
 	"strings"
 	"time"
 
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/internal"
-	internalserviceconfig "google.golang.org/grpc/internal/serviceconfig"
-	"google.golang.org/grpc/serviceconfig"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/internal"
+	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
+	"github.com/dubbogo/grpc-go/serviceconfig"
 )
 
 const maxInt = int(^uint(0) >> 1)
@@ -181,7 +181,7 @@ type jsonName struct {
 
 var (
 	errDuplicatedName             = errors.New("duplicated name")
-	errEmptyServiceNonEmptyMethod = errors.New("cannot combine empty 'service' and non-empty 'method'")
+	errEmptyServiceNonEmptyMethod = errors.New("cannot Combine empty 'service' and non-empty 'method'")
 )
 
 func (j jsonName) generatePath() (string, error) {

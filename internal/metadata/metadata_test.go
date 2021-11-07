@@ -21,10 +21,10 @@ package metadata
 import (
 	"testing"
 
+	"github.com/dubbogo/grpc-go/attributes"
+	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/grpc/attributes"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/resolver"
 )
 
 func TestGet(t *testing.T) {

@@ -35,15 +35,15 @@ import (
 	"sync"
 	"time"
 
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/dubbogo/grpc-go/internal/grpcutil"
+	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/dubbogo/grpc-go/peer"
+	"github.com/dubbogo/grpc-go/stats"
+	"github.com/dubbogo/grpc-go/status"
 	"github.com/golang/protobuf/proto"
 	"golang.org/x/net/http2"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/internal/grpcutil"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/peer"
-	"google.golang.org/grpc/stats"
-	"google.golang.org/grpc/status"
 )
 
 // NewServerHandlerTransport returns a ServerTransport handling gRPC

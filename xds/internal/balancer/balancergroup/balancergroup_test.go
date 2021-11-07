@@ -30,17 +30,17 @@ import (
 	"testing"
 	"time"
 
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/balancer"
+	"github.com/dubbogo/grpc-go/balancer/roundrobin"
+	"github.com/dubbogo/grpc-go/connectivity"
+	"github.com/dubbogo/grpc-go/credentials/insecure"
+	"github.com/dubbogo/grpc-go/internal/balancer/stub"
+	"github.com/dubbogo/grpc-go/internal/grpctest"
+	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/dubbogo/grpc-go/xds/internal/balancer/weightedtarget/weightedaggregator"
+	"github.com/dubbogo/grpc-go/xds/internal/testutils"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/balancer/roundrobin"
-	"google.golang.org/grpc/connectivity"
-	"google.golang.org/grpc/credentials/insecure"
-	"google.golang.org/grpc/internal/balancer/stub"
-	"google.golang.org/grpc/internal/grpctest"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/xds/internal/balancer/weightedtarget/weightedaggregator"
-	"google.golang.org/grpc/xds/internal/testutils"
 )
 
 var (

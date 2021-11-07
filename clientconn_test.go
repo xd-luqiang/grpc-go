@@ -29,16 +29,16 @@ import (
 	"testing"
 	"time"
 
+	"github.com/dubbogo/grpc-go/backoff"
+	"github.com/dubbogo/grpc-go/connectivity"
+	"github.com/dubbogo/grpc-go/credentials"
+	internalbackoff "github.com/dubbogo/grpc-go/internal/backoff"
+	"github.com/dubbogo/grpc-go/internal/transport"
+	"github.com/dubbogo/grpc-go/keepalive"
+	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/dubbogo/grpc-go/resolver/manual"
+	"github.com/dubbogo/grpc-go/testdata"
 	"golang.org/x/net/http2"
-	"google.golang.org/grpc/backoff"
-	"google.golang.org/grpc/connectivity"
-	"google.golang.org/grpc/credentials"
-	internalbackoff "google.golang.org/grpc/internal/backoff"
-	"google.golang.org/grpc/internal/transport"
-	"google.golang.org/grpc/keepalive"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/resolver/manual"
-	"google.golang.org/grpc/testdata"
 )
 
 func (s) TestDialWithTimeout(t *testing.T) {

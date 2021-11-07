@@ -25,10 +25,10 @@ import (
 	"testing"
 	"time"
 
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/resolver/manual"
-	"google.golang.org/grpc/status"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/dubbogo/grpc-go/resolver/manual"
+	"github.com/dubbogo/grpc-go/status"
 )
 
 func errorDesc(err error) string {

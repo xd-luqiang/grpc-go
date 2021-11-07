@@ -22,10 +22,10 @@ import (
 	"encoding/json"
 	"testing"
 
+	"github.com/dubbogo/grpc-go/internal/balancer/stub"
+	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
+	"github.com/dubbogo/grpc-go/xds/internal/balancer/ringhash"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/grpc/internal/balancer/stub"
-	internalserviceconfig "google.golang.org/grpc/internal/serviceconfig"
-	"google.golang.org/grpc/xds/internal/balancer/ringhash"
 )
 
 func TestDiscoveryMechanismTypeMarshalJSON(t *testing.T) {

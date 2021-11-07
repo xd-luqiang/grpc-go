@@ -24,17 +24,17 @@ import (
 	"testing"
 	"time"
 
+	"github.com/dubbogo/grpc-go/balancer"
+	"github.com/dubbogo/grpc-go/connectivity"
+	"github.com/dubbogo/grpc-go/internal/grpctest"
+	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/dubbogo/grpc-go/xds/internal"
+	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
+	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/connectivity"
-	"google.golang.org/grpc/internal/grpctest"
-	"google.golang.org/grpc/internal/testutils"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/xds/internal"
-	"google.golang.org/grpc/xds/internal/testutils/fakeclient"
-	"google.golang.org/grpc/xds/internal/xdsclient"
 
-	_ "google.golang.org/grpc/xds/internal/xdsclient/v2" // V2 client registration.
+	_ "github.com/dubbogo/grpc-go/xds/internal/xdsclient/v2" // V2 client registration.
 )
 
 const (

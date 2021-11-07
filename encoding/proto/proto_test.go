@@ -23,21 +23,21 @@ import (
 	"sync"
 	"testing"
 
-	"google.golang.org/grpc/encoding"
-	"google.golang.org/grpc/internal/grpctest"
-	"google.golang.org/grpc/test/codec_perf"
+	"github.com/dubbogo/grpc-go/encoding"
+	"github.com/dubbogo/grpc-go/internal/grpctest"
+	"github.com/dubbogo/grpc-go/test/codec_perf"
 )
 
-func marshalAndUnmarshal(t *testing.T, codec encoding.Codec, expectedBody []byte) {
+func marshalAndUnmarshal(t *testing.T, codec encoding.TwoWayCodec, expectedBody []byte) {
 	p := &codec_perf.Buffer{}
 	p.Body = expectedBody
 
-	marshalledBytes, err := codec.Marshal(p)
+	marshalledBytes, err := codec.MarshalRequest(p)
 	if err != nil {
 		t.Errorf("codec.Marshal(_) returned an error")
 	}
 
-	if err := codec.Unmarshal(marshalledBytes, p); err != nil {
+	if err := codec.UnmarshalRequest(marshalledBytes, p); err != nil {
 		t.Errorf("codec.Unmarshal(_) returned an error")
 	}
 
@@ -55,7 +55,7 @@ func Test(t *testing.T) {
 }
 
 func (s) TestBasicProtoCodecMarshalAndUnmarshal(t *testing.T) {
-	marshalAndUnmarshal(t, codec{}, []byte{1, 2, 3})
+	marshalAndUnmarshal(t, NewPBTwoWayCodec(), []byte{1, 2, 3})
 }
 
 // Try to catch possible race conditions around use of pools
@@ -75,7 +75,7 @@ func (s) TestConcurrentUsage(t *testing.T) {
 	}
 
 	var wg sync.WaitGroup
-	codec := codec{}
+	codec := NewPBTwoWayCodec()
 
 	for i := 0; i < numGoRoutines; i++ {
 		wg.Add(1)
@@ -93,8 +93,8 @@ func (s) TestConcurrentUsage(t *testing.T) {
 // TestStaggeredMarshalAndUnmarshalUsingSamePool tries to catch potential errors in which slices get
 // stomped on during reuse of a proto.Buffer.
 func (s) TestStaggeredMarshalAndUnmarshalUsingSamePool(t *testing.T) {
-	codec1 := codec{}
-	codec2 := codec{}
+	codec1 := PBTwoWayCodec{}
+	codec2 := PBTwoWayCodec{}
 
 	expectedBody1 := []byte{1, 2, 3}
 	expectedBody2 := []byte{4, 5, 6}
@@ -105,19 +105,19 @@ func (s) TestStaggeredMarshalAndUnmarshalUsingSamePool(t *testing.T) {
 	var m1, m2 []byte
 	var err error
 
-	if m1, err = codec1.Marshal(&proto1); err != nil {
+	if m1, err = codec1.MarshalRequest(&proto1); err != nil {
 		t.Errorf("codec.Marshal(%s) failed", &proto1)
 	}
 
-	if m2, err = codec2.Marshal(&proto2); err != nil {
+	if m2, err = codec2.MarshalRequest(&proto2); err != nil {
 		t.Errorf("codec.Marshal(%s) failed", &proto2)
 	}
 
-	if err = codec1.Unmarshal(m1, &proto1); err != nil {
+	if err = codec1.UnmarshalResponse(m1, &proto1); err != nil {
 		t.Errorf("codec.Unmarshal(%v) failed", m1)
 	}
 
-	if err = codec2.Unmarshal(m2, &proto2); err != nil {
+	if err = codec2.UnmarshalResponse(m2, &proto2); err != nil {
 		t.Errorf("codec.Unmarshal(%v) failed", m2)
 	}
 

@@ -28,14 +28,14 @@ import (
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"google.golang.org/protobuf/types/known/anypb"
 
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/credentials/insecure"
-	"google.golang.org/grpc/internal/grpcsync"
-	"google.golang.org/grpc/internal/grpctest"
-	"google.golang.org/grpc/internal/testutils"
-	xdstestutils "google.golang.org/grpc/xds/internal/testutils"
-	"google.golang.org/grpc/xds/internal/version"
-	"google.golang.org/grpc/xds/internal/xdsclient/bootstrap"
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/credentials/insecure"
+	"github.com/dubbogo/grpc-go/internal/grpcsync"
+	"github.com/dubbogo/grpc-go/internal/grpctest"
+	"github.com/dubbogo/grpc-go/internal/testutils"
+	xdstestutils "github.com/dubbogo/grpc-go/xds/internal/testutils"
+	"github.com/dubbogo/grpc-go/xds/internal/version"
+	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/bootstrap"
 	"google.golang.org/protobuf/testing/protocmp"
 )
 

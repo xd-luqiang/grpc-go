@@ -24,11 +24,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
+	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"google.golang.org/grpc/internal/testutils"
-	"google.golang.org/grpc/xds/internal/testutils/fakeclient"
-	"google.golang.org/grpc/xds/internal/xdsclient"
 	"google.golang.org/protobuf/proto"
 )
 

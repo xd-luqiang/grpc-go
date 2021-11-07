@@ -30,8 +30,8 @@ import (
 	"log"
 	"time"
 
-	"google.golang.org/grpc"
-	ecpb "google.golang.org/grpc/examples/features/proto/echo"
+	"github.com/dubbogo/grpc-go"
+	ecpb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
 )
 
 var (

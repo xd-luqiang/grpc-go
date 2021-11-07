@@ -19,7 +19,7 @@
 package xdsclient
 
 import (
-	"google.golang.org/grpc/internal/pretty"
+	"github.com/dubbogo/grpc-go/internal/pretty"
 	"google.golang.org/protobuf/proto"
 )
 

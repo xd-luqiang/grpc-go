@@ -31,15 +31,15 @@ import (
 	"sync"
 	"time"
 
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/encoding"
-	"google.golang.org/grpc/encoding/proto"
-	"google.golang.org/grpc/internal/transport"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/peer"
-	"google.golang.org/grpc/stats"
-	"google.golang.org/grpc/status"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/dubbogo/grpc-go/encoding"
+	"github.com/dubbogo/grpc-go/encoding/proto"
+	"github.com/dubbogo/grpc-go/internal/transport"
+	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/dubbogo/grpc-go/peer"
+	"github.com/dubbogo/grpc-go/stats"
+	"github.com/dubbogo/grpc-go/status"
 )
 
 // Compressor defines the interface gRPC uses to compress a message.
@@ -158,7 +158,7 @@ type callInfo struct {
 	maxSendMessageSize    *int
 	creds                 credentials.PerRPCCredentials
 	contentSubtype        string
-	codec                 baseCodec
+	codec                 encoding.TwoWayCodec
 	maxRetryRPCBufferSize int
 }
 
@@ -448,7 +448,7 @@ func (o ContentSubtypeCallOption) after(c *callInfo, attempt *csAttempt) {}
 //
 // Notice: This API is EXPERIMENTAL and may be changed or removed in a
 // later release.
-func ForceCodec(codec encoding.Codec) CallOption {
+func ForceCodec(codec encoding.TwoWayCodec) CallOption {
 	return ForceCodecCallOption{Codec: codec}
 }
 
@@ -460,7 +460,7 @@ func ForceCodec(codec encoding.Codec) CallOption {
 // Notice: This type is EXPERIMENTAL and may be changed or removed in a
 // later release.
 type ForceCodecCallOption struct {
-	Codec encoding.Codec
+	Codec encoding.TwoWayCodec
 }
 
 func (o ForceCodecCallOption) before(c *callInfo) error {
@@ -470,10 +470,10 @@ func (o ForceCodecCallOption) before(c *callInfo) error {
 func (o ForceCodecCallOption) after(c *callInfo, attempt *csAttempt) {}
 
 // CallCustomCodec behaves like ForceCodec, but accepts a grpc.Codec instead of
-// an encoding.Codec.
+// an encoding.TwoWayCodec.
 //
 // Deprecated: use ForceCodec instead.
-func CallCustomCodec(codec Codec) CallOption {
+func CallCustomCodec(codec encoding.TwoWayCodec) CallOption {
 	return CustomCodecCallOption{Codec: codec}
 }
 
@@ -485,7 +485,7 @@ func CallCustomCodec(codec Codec) CallOption {
 // Notice: This type is EXPERIMENTAL and may be changed or removed in a
 // later release.
 type CustomCodecCallOption struct {
-	Codec Codec
+	Codec encoding.TwoWayCodec
 }
 
 func (o CustomCodecCallOption) before(c *callInfo) error {
@@ -587,11 +587,17 @@ func (p *parser) recvMsg(maxReceiveMessageSize int) (pf payloadFormat, msg []byt
 // encode serializes msg and returns a buffer containing the message, or an
 // error if it is too large to be transmitted by grpc.  If msg is nil, it
 // generates an empty message.
-func encode(c baseCodec, msg interface{}) ([]byte, error) {
+func encode(encodeType string, c encoding.TwoWayCodec, msg interface{}) ([]byte, error) {
 	if msg == nil { // NOTE: typed nils will not be caught by this check
 		return nil, nil
 	}
-	b, err := c.Marshal(msg)
+	var b []byte
+	var err error
+	if encodeType == "req" {
+		b, err = c.MarshalRequest(msg)
+	} else {
+		b, err = c.MarshalResponse(msg)
+	}
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "grpc: error while marshaling: %v", err.Error())
 	}
@@ -754,14 +760,21 @@ func decompress(compressor encoding.Compressor, d []byte, maxReceiveMessageSize 
 // For the two compressor parameters, both should not be set, but if they are,
 // dc takes precedence over compressor.
 // TODO(dfawley): wrap the old compressor/decompressor using the new API?
-func recv(p *parser, c baseCodec, s *transport.Stream, dc Decompressor, m interface{}, maxReceiveMessageSize int, payInfo *payloadInfo, compressor encoding.Compressor) error {
+func recv(recvType string, p *parser, c encoding.TwoWayCodec, s *transport.Stream, dc Decompressor, m interface{}, maxReceiveMessageSize int, payInfo *payloadInfo, compressor encoding.Compressor) error {
 	d, err := recvAndDecompress(p, s, dc, maxReceiveMessageSize, payInfo, compressor)
 	if err != nil {
 		return err
 	}
-	if err := c.Unmarshal(d, m); err != nil {
-		return status.Errorf(codes.Internal, "grpc: failed to unmarshal the received message %v", err)
+	if recvType == "req" {
+		if err := c.UnmarshalRequest(d, m); err != nil {
+			return status.Errorf(codes.Internal, "grpc: failed to unmarshal the received message %v", err)
+		}
+	} else {
+		if err := c.UnmarshalResponse(d, m); err != nil {
+			return status.Errorf(codes.Internal, "grpc: failed to unmarshal the received message %v", err)
+		}
 	}
+
 	if payInfo != nil {
 		payInfo.uncompressedBytes = d
 	}
@@ -780,14 +793,14 @@ type rpcInfo struct {
 // pointers to codec, and compressors, then we can use preparedMsg for Async message prep
 // and reuse marshalled bytes
 type compressorInfo struct {
-	codec baseCodec
+	codec encoding.TwoWayCodec
 	cp    Compressor
 	comp  encoding.Compressor
 }
 
 type rpcInfoContextKey struct{}
 
-func newContextWithRPCInfo(ctx context.Context, failfast bool, codec baseCodec, cp Compressor, comp encoding.Compressor) context.Context {
+func newContextWithRPCInfo(ctx context.Context, failfast bool, codec encoding.TwoWayCodec, cp Compressor, comp encoding.Compressor) context.Context {
 	return context.WithValue(ctx, rpcInfoContextKey{}, &rpcInfo{
 		failfast: failfast,
 		preloaderInfo: &compressorInfo{
@@ -861,10 +874,10 @@ func setCallInfoCodec(c *callInfo) error {
 		// subtype if it is not set.
 		if c.contentSubtype == "" {
 			// c.codec is a baseCodec to hide the difference between grpc.Codec and
-			// encoding.Codec (Name vs. String method name).  We only support
-			// setting content subtype from encoding.Codec to avoid a behavior
+			// encoding.TwoWayCodec (Name vs. String method name).  We only support
+			// setting content subtype from encoding.TwoWayCodec to avoid a behavior
 			// change with the deprecated version.
-			if ec, ok := c.codec.(encoding.Codec); ok {
+			if ec, ok := c.codec.(encoding.TwoWayCodec); ok {
 				c.contentSubtype = strings.ToLower(ec.Name())
 			}
 		}

@@ -31,20 +31,20 @@ import (
 	"github.com/golang/protobuf/proto"
 	"google.golang.org/protobuf/types/known/anypb"
 
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/internal/xds/matcher"
-	"google.golang.org/grpc/xds/internal/httpfilter"
-	"google.golang.org/grpc/xds/internal/xdsclient/load"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/internal/xds/matcher"
+	"github.com/dubbogo/grpc-go/xds/internal/httpfilter"
+	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/load"
 
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/internal/backoff"
-	"google.golang.org/grpc/internal/buffer"
-	"google.golang.org/grpc/internal/grpclog"
-	"google.golang.org/grpc/internal/grpcsync"
-	"google.golang.org/grpc/keepalive"
-	"google.golang.org/grpc/xds/internal"
-	"google.golang.org/grpc/xds/internal/version"
-	"google.golang.org/grpc/xds/internal/xdsclient/bootstrap"
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/internal/backoff"
+	"github.com/dubbogo/grpc-go/internal/buffer"
+	"github.com/dubbogo/grpc-go/internal/grpclog"
+	"github.com/dubbogo/grpc-go/internal/grpcsync"
+	"github.com/dubbogo/grpc-go/keepalive"
+	"github.com/dubbogo/grpc-go/xds/internal"
+	"github.com/dubbogo/grpc-go/xds/internal/version"
+	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/bootstrap"
 )
 
 var (

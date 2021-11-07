@@ -29,11 +29,11 @@ import (
 	"github.com/golang/protobuf/ptypes"
 	durationpb "github.com/golang/protobuf/ptypes/duration"
 
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/balancer/rls/internal/keys"
-	rlspb "google.golang.org/grpc/balancer/rls/internal/proto/grpc_lookup_v1"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/serviceconfig"
+	"github.com/dubbogo/grpc-go/balancer"
+	"github.com/dubbogo/grpc-go/balancer/rls/internal/keys"
+	rlspb "github.com/dubbogo/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
+	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/dubbogo/grpc-go/serviceconfig"
 )
 
 const (

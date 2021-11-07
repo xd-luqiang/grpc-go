@@ -26,15 +26,15 @@ import (
 	"testing"
 	"time"
 
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/credentials/local"
-	"google.golang.org/grpc/internal/stubserver"
-	"google.golang.org/grpc/peer"
-	"google.golang.org/grpc/status"
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/dubbogo/grpc-go/credentials/local"
+	"github.com/dubbogo/grpc-go/internal/stubserver"
+	"github.com/dubbogo/grpc-go/peer"
+	"github.com/dubbogo/grpc-go/status"
 
-	testpb "google.golang.org/grpc/test/grpc_testing"
+	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
 )
 
 func testLocalCredsE2ESucceed(network, address string) error {

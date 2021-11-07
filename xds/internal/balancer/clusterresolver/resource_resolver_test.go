@@ -23,12 +23,12 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/dubbogo/grpc-go/resolver/manual"
+	"github.com/dubbogo/grpc-go/xds/internal/testutils"
+	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
+	xdsclient "github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/resolver/manual"
-	"google.golang.org/grpc/xds/internal/testutils"
-	"google.golang.org/grpc/xds/internal/testutils/fakeclient"
-	xdsclient "google.golang.org/grpc/xds/internal/xdsclient"
 )
 
 const (

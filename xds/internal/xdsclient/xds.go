@@ -42,15 +42,15 @@ import (
 	"github.com/golang/protobuf/ptypes"
 	"google.golang.org/protobuf/types/known/anypb"
 
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/internal/pretty"
-	"google.golang.org/grpc/internal/xds/matcher"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/internal/pretty"
+	"github.com/dubbogo/grpc-go/internal/xds/matcher"
 
-	"google.golang.org/grpc/internal/grpclog"
-	"google.golang.org/grpc/internal/xds/env"
-	"google.golang.org/grpc/xds/internal"
-	"google.golang.org/grpc/xds/internal/httpfilter"
-	"google.golang.org/grpc/xds/internal/version"
+	"github.com/dubbogo/grpc-go/internal/grpclog"
+	"github.com/dubbogo/grpc-go/internal/xds/env"
+	"github.com/dubbogo/grpc-go/xds/internal"
+	"github.com/dubbogo/grpc-go/xds/internal/httpfilter"
+	"github.com/dubbogo/grpc-go/xds/internal/version"
 )
 
 // TransportSocket proto message has a `name` field which is expected to be set

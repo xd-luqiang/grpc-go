@@ -20,8 +20,8 @@ package xdsclient
 import (
 	"context"
 
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/xds/internal/xdsclient/load"
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/load"
 )
 
 // ReportLoad starts an load reporting stream to the given server. If the server

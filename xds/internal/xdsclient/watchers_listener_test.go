@@ -23,9 +23,9 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/dubbogo/grpc-go/internal/testutils"
 	v3listenerpb "github.com/envoyproxy/go-control-plane/envoy/config/listener/v3"
 	v3httppb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/network/http_connection_manager/v3"
-	"google.golang.org/grpc/internal/testutils"
 	"google.golang.org/protobuf/types/known/anypb"
 )
 

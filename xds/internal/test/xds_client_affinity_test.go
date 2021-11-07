@@ -26,14 +26,14 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/credentials/insecure"
+	"github.com/dubbogo/grpc-go/internal/xds/env"
+	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
+	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
 	v3clusterpb "github.com/envoyproxy/go-control-plane/envoy/config/cluster/v3"
 	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
 	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/credentials/insecure"
-	"google.golang.org/grpc/internal/xds/env"
-	testpb "google.golang.org/grpc/test/grpc_testing"
-	"google.golang.org/grpc/xds/internal/testutils/e2e"
 )
 
 const hashHeaderName = "session_id"

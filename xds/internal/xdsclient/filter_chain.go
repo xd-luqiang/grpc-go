@@ -23,15 +23,15 @@ import (
 	"fmt"
 	"net"
 
+	"github.com/dubbogo/grpc-go/internal/resolver"
+	"github.com/dubbogo/grpc-go/internal/xds/env"
+	"github.com/dubbogo/grpc-go/xds/internal/httpfilter"
+	"github.com/dubbogo/grpc-go/xds/internal/version"
 	v3listenerpb "github.com/envoyproxy/go-control-plane/envoy/config/listener/v3"
 	v3httppb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/network/http_connection_manager/v3"
 	v3tlspb "github.com/envoyproxy/go-control-plane/envoy/extensions/transport_sockets/tls/v3"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"
-	"google.golang.org/grpc/internal/resolver"
-	"google.golang.org/grpc/internal/xds/env"
-	"google.golang.org/grpc/xds/internal/httpfilter"
-	"google.golang.org/grpc/xds/internal/version"
 )
 
 const (

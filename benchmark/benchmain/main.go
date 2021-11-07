@@ -57,20 +57,20 @@ import (
 	"sync/atomic"
 	"time"
 
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/benchmark"
-	bm "google.golang.org/grpc/benchmark"
-	"google.golang.org/grpc/benchmark/flags"
-	"google.golang.org/grpc/benchmark/latency"
-	"google.golang.org/grpc/benchmark/stats"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/internal/channelz"
-	"google.golang.org/grpc/keepalive"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/test/bufconn"
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/benchmark"
+	bm "github.com/dubbogo/grpc-go/benchmark"
+	"github.com/dubbogo/grpc-go/benchmark/flags"
+	"github.com/dubbogo/grpc-go/benchmark/latency"
+	"github.com/dubbogo/grpc-go/benchmark/stats"
+	"github.com/dubbogo/grpc-go/grpclog"
+	"github.com/dubbogo/grpc-go/internal/channelz"
+	"github.com/dubbogo/grpc-go/keepalive"
+	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/dubbogo/grpc-go/test/bufconn"
 
-	testgrpc "google.golang.org/grpc/interop/grpc_testing"
-	testpb "google.golang.org/grpc/interop/grpc_testing"
+	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
+	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
 )
 
 var (

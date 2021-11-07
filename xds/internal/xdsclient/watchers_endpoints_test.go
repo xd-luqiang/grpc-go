@@ -26,8 +26,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"google.golang.org/protobuf/types/known/anypb"
 
-	"google.golang.org/grpc/internal/testutils"
-	"google.golang.org/grpc/xds/internal"
+	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/dubbogo/grpc-go/xds/internal"
 )
 
 var (

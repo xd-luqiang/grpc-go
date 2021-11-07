@@ -22,11 +22,11 @@ import (
 	"net"
 	"regexp"
 
+	internalmatcher "github.com/dubbogo/grpc-go/internal/xds/matcher"
 	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
 	v3rbacpb "github.com/envoyproxy/go-control-plane/envoy/config/rbac/v3"
 	v3route_componentspb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
 	v3matcherpb "github.com/envoyproxy/go-control-plane/envoy/type/matcher/v3"
-	internalmatcher "google.golang.org/grpc/internal/xds/matcher"
 )
 
 // matcher is an interface that takes data about incoming RPC's and returns

@@ -30,15 +30,15 @@ import (
 	"testing"
 	"time"
 
+	"github.com/dubbogo/grpc-go/balancer"
+	grpclbstate "github.com/dubbogo/grpc-go/balancer/grpclb/state"
+	"github.com/dubbogo/grpc-go/internal/envconfig"
+	"github.com/dubbogo/grpc-go/internal/leakcheck"
+	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/dubbogo/grpc-go/serviceconfig"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"google.golang.org/grpc/balancer"
-	grpclbstate "google.golang.org/grpc/balancer/grpclb/state"
-	"google.golang.org/grpc/internal/envconfig"
-	"google.golang.org/grpc/internal/leakcheck"
-	"google.golang.org/grpc/internal/testutils"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/serviceconfig"
 )
 
 func TestMain(m *testing.M) {

@@ -27,13 +27,13 @@ import (
 	"testing"
 	"time"
 
+	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
+	"github.com/dubbogo/grpc-go/connectivity"
+	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/dubbogo/grpc-go/internal/channelz"
+	"github.com/dubbogo/grpc-go/internal/grpctest"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"
-	channelzpb "google.golang.org/grpc/channelz/grpc_channelz_v1"
-	"google.golang.org/grpc/connectivity"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/internal/channelz"
-	"google.golang.org/grpc/internal/grpctest"
 )
 
 func init() {

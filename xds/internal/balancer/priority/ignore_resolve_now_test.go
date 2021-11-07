@@ -23,11 +23,11 @@ import (
 	"testing"
 	"time"
 
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/balancer/roundrobin"
-	grpctestutils "google.golang.org/grpc/internal/testutils"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/xds/internal/testutils"
+	"github.com/dubbogo/grpc-go/balancer"
+	"github.com/dubbogo/grpc-go/balancer/roundrobin"
+	grpctestutils "github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/dubbogo/grpc-go/xds/internal/testutils"
 )
 
 const resolveNowBalancerName = "test-resolve-now-balancer"

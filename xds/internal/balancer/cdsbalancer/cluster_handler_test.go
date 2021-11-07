@@ -21,9 +21,9 @@ import (
 	"errors"
 	"testing"
 
+	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
+	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/grpc/xds/internal/testutils/fakeclient"
-	"google.golang.org/grpc/xds/internal/xdsclient"
 )
 
 const (

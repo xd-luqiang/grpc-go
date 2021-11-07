@@ -23,8 +23,8 @@ import (
 	"net"
 	"testing"
 
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/testdata"
+	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/dubbogo/grpc-go/testdata"
 )
 
 func (s) TestClientConnAuthority(t *testing.T) {

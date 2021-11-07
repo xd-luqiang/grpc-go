@@ -27,22 +27,22 @@ import (
 	"sync"
 	"time"
 
+	"github.com/dubbogo/grpc-go/balancer"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/encoding"
+	"github.com/dubbogo/grpc-go/internal/balancerload"
+	"github.com/dubbogo/grpc-go/internal/binarylog"
+	"github.com/dubbogo/grpc-go/internal/channelz"
+	"github.com/dubbogo/grpc-go/internal/grpcrand"
+	"github.com/dubbogo/grpc-go/internal/grpcutil"
+	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
+	"github.com/dubbogo/grpc-go/internal/serviceconfig"
+	"github.com/dubbogo/grpc-go/internal/transport"
+	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/dubbogo/grpc-go/peer"
+	"github.com/dubbogo/grpc-go/stats"
+	"github.com/dubbogo/grpc-go/status"
 	"golang.org/x/net/trace"
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/encoding"
-	"google.golang.org/grpc/internal/balancerload"
-	"google.golang.org/grpc/internal/binarylog"
-	"google.golang.org/grpc/internal/channelz"
-	"google.golang.org/grpc/internal/grpcrand"
-	"google.golang.org/grpc/internal/grpcutil"
-	iresolver "google.golang.org/grpc/internal/resolver"
-	"google.golang.org/grpc/internal/serviceconfig"
-	"google.golang.org/grpc/internal/transport"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/peer"
-	"google.golang.org/grpc/stats"
-	"google.golang.org/grpc/status"
 )
 
 // StreamHandler defines the handler called by gRPC server to complete the
@@ -150,7 +150,7 @@ type ClientStream interface {
 func (cc *ClientConn) NewStream(ctx context.Context, desc *StreamDesc, method string, opts ...CallOption) (ClientStream, error) {
 	// allow interceptor to see all applicable call options, which means those
 	// configured as defaults from dial option as well as per-call options
-	opts = combine(cc.dopts.callOptions, opts)
+	opts = Combine(cc.dopts.callOptions, opts)
 
 	if cc.dopts.streamInt != nil {
 		return cc.dopts.streamInt(ctx, desc, cc, method, newClientStream, opts...)
@@ -158,9 +158,11 @@ func (cc *ClientConn) NewStream(ctx context.Context, desc *StreamDesc, method st
 	return newClientStream(ctx, desc, cc, method, opts...)
 }
 
+var streamStreamDesc = &StreamDesc{ServerStreams: true, ClientStreams: true}
+
 // NewClientStream is a wrapper for ClientConn.NewStream.
-func NewClientStream(ctx context.Context, desc *StreamDesc, cc *ClientConn, method string, opts ...CallOption) (ClientStream, error) {
-	return cc.NewStream(ctx, desc, method, opts...)
+func NewClientStream(ctx context.Context, cc *ClientConn, method string, opts ...CallOption) (ClientStream, error) {
+	return cc.NewStream(ctx, streamStreamDesc, method, opts...)
 }
 
 func newClientStream(ctx context.Context, desc *StreamDesc, cc *ClientConn, method string, opts ...CallOption) (_ ClientStream, err error) {
@@ -440,7 +442,7 @@ type clientStream struct {
 	cc       *ClientConn
 	desc     *StreamDesc
 
-	codec baseCodec
+	codec encoding.TwoWayCodec
 	cp    Compressor
 	comp  encoding.Compressor
 
@@ -786,7 +788,7 @@ func (cs *clientStream) SendMsg(m interface{}) (err error) {
 	}
 
 	// load hdr, payload, data
-	hdr, payload, data, err := prepareMsg(m, cs.codec, cs.cp, cs.comp)
+	hdr, payload, data, err := prepareMsg("req", m, cs.codec, cs.cp, cs.comp)
 	if err != nil {
 		return err
 	}
@@ -972,7 +974,7 @@ func (a *csAttempt) recvMsg(m interface{}, payInfo *payloadInfo) (err error) {
 		// Only initialize this state once per stream.
 		a.decompSet = true
 	}
-	err = recv(a.p, cs.codec, a.s, a.dc, m, *cs.callInfo.maxReceiveMessageSize, payInfo, a.decomp)
+	err = recv("rsp", a.p, cs.codec, a.s, a.dc, m, *cs.callInfo.maxReceiveMessageSize, payInfo, a.decomp)
 	if err != nil {
 		if err == io.EOF {
 			if statusErr := a.s.Status().Err(); statusErr != nil {
@@ -1009,7 +1011,7 @@ func (a *csAttempt) recvMsg(m interface{}, payInfo *payloadInfo) (err error) {
 	}
 	// Special handling for non-server-stream rpcs.
 	// This recv expects EOF or errors, so we don't collect inPayload.
-	err = recv(a.p, cs.codec, a.s, a.dc, m, *cs.callInfo.maxReceiveMessageSize, nil, a.decomp)
+	err = recv("rsp", a.p, cs.codec, a.s, a.dc, m, *cs.callInfo.maxReceiveMessageSize, nil, a.decomp)
 	if err == nil {
 		return toRPCErr(errors.New("grpc: client streaming protocol violation: get <nil>, want <EOF>"))
 	}
@@ -1194,7 +1196,7 @@ type addrConnStream struct {
 	ctx       context.Context
 	sentLast  bool
 	desc      *StreamDesc
-	codec     baseCodec
+	codec     encoding.TwoWayCodec
 	cp        Compressor
 	comp      encoding.Compressor
 	decompSet bool
@@ -1255,7 +1257,7 @@ func (as *addrConnStream) SendMsg(m interface{}) (err error) {
 	}
 
 	// load hdr, payload, data
-	hdr, payld, _, err := prepareMsg(m, as.codec, as.cp, as.comp)
+	hdr, payld, _, err := prepareMsg("req", m, as.codec, as.cp, as.comp)
 	if err != nil {
 		return err
 	}
@@ -1305,7 +1307,7 @@ func (as *addrConnStream) RecvMsg(m interface{}) (err error) {
 		// Only initialize this state once per stream.
 		as.decompSet = true
 	}
-	err = recv(as.p, as.codec, as.s, as.dc, m, *as.callInfo.maxReceiveMessageSize, nil, as.decomp)
+	err = recv("rsp", as.p, as.codec, as.s, as.dc, m, *as.callInfo.maxReceiveMessageSize, nil, as.decomp)
 	if err != nil {
 		if err == io.EOF {
 			if statusErr := as.s.Status().Err(); statusErr != nil {
@@ -1326,7 +1328,7 @@ func (as *addrConnStream) RecvMsg(m interface{}) (err error) {
 
 	// Special handling for non-server-stream rpcs.
 	// This recv expects EOF or errors, so we don't collect inPayload.
-	err = recv(as.p, as.codec, as.s, as.dc, m, *as.callInfo.maxReceiveMessageSize, nil, as.decomp)
+	err = recv("rsp", as.p, as.codec, as.s, as.dc, m, *as.callInfo.maxReceiveMessageSize, nil, as.decomp)
 	if err == nil {
 		return toRPCErr(errors.New("grpc: client streaming protocol violation: get <nil>, want <EOF>"))
 	}
@@ -1413,7 +1415,7 @@ type serverStream struct {
 	t     transport.ServerTransport
 	s     *transport.Stream
 	p     *parser
-	codec baseCodec
+	codec encoding.TwoWayCodec
 
 	cp     Compressor
 	dc     Decompressor
@@ -1498,7 +1500,7 @@ func (ss *serverStream) SendMsg(m interface{}) (err error) {
 	}()
 
 	// load hdr, payload, data
-	hdr, payload, data, err := prepareMsg(m, ss.codec, ss.cp, ss.comp)
+	hdr, payload, data, err := prepareMsg("rsp", m, ss.codec, ss.cp, ss.comp)
 	if err != nil {
 		return err
 	}
@@ -1560,7 +1562,7 @@ func (ss *serverStream) RecvMsg(m interface{}) (err error) {
 	if ss.statsHandler != nil || ss.binlog != nil {
 		payInfo = &payloadInfo{}
 	}
-	if err := recv(ss.p, ss.codec, ss.s, ss.dc, m, ss.maxReceiveMessageSize, payInfo, ss.decomp); err != nil {
+	if err := recv("req", ss.p, ss.codec, ss.s, ss.dc, m, ss.maxReceiveMessageSize, payInfo, ss.decomp); err != nil {
 		if err == io.EOF {
 			if ss.binlog != nil {
 				ss.binlog.Log(&binarylog.ClientHalfClose{})
@@ -1599,13 +1601,13 @@ func MethodFromServerStream(stream ServerStream) (string, bool) {
 // prepareMsg returns the hdr, payload and data
 // using the compressors passed or using the
 // passed preparedmsg
-func prepareMsg(m interface{}, codec baseCodec, cp Compressor, comp encoding.Compressor) (hdr, payload, data []byte, err error) {
+func prepareMsg(msgType string, m interface{}, codec encoding.TwoWayCodec, cp Compressor, comp encoding.Compressor) (hdr, payload, data []byte, err error) {
 	if preparedMsg, ok := m.(*PreparedMsg); ok {
 		return preparedMsg.hdr, preparedMsg.payload, preparedMsg.encodedData, nil
 	}
 	// The input interface is not a prepared msg.
 	// Marshal and Compress the data at this point
-	data, err = encode(codec, m)
+	data, err = encode(msgType, codec, m)
 	if err != nil {
 		return nil, nil, nil, err
 	}

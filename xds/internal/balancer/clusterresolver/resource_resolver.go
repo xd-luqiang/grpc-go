@@ -21,7 +21,7 @@ package clusterresolver
 import (
 	"sync"
 
-	"google.golang.org/grpc/xds/internal/xdsclient"
+	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 )
 
 // resourceUpdate is a combined update from all the resources, in the order of

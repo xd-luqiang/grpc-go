@@ -19,8 +19,8 @@
 package grpc
 
 import (
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/status"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/status"
 )
 
 // PreparedMsg is responsible for creating a Marshalled and Compressed object.
@@ -53,7 +53,7 @@ func (p *PreparedMsg) Encode(s Stream, msg interface{}) error {
 	}
 
 	// prepare the msg
-	data, err := encode(rpcInfo.preloaderInfo.codec, msg)
+	data, err := encode("", rpcInfo.preloaderInfo.codec, msg)
 	if err != nil {
 		return err
 	}

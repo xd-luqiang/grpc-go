@@ -22,8 +22,8 @@ import (
 	"encoding/json"
 	"testing"
 
+	"github.com/dubbogo/grpc-go/serviceconfig"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/grpc/serviceconfig"
 )
 
 func (s) TestParse(t *testing.T) {

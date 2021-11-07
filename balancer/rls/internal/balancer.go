@@ -21,10 +21,10 @@ package rls
 import (
 	"sync"
 
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/balancer"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/internal/grpcsync"
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/balancer"
+	"github.com/dubbogo/grpc-go/grpclog"
+	"github.com/dubbogo/grpc-go/internal/grpcsync"
 )
 
 var (

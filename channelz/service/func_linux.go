@@ -21,11 +21,11 @@ package service
 import (
 	"time"
 
+	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
+	"github.com/dubbogo/grpc-go/internal/channelz"
+	"github.com/dubbogo/grpc-go/internal/testutils"
 	"github.com/golang/protobuf/ptypes"
 	durpb "github.com/golang/protobuf/ptypes/duration"
-	channelzpb "google.golang.org/grpc/channelz/grpc_channelz_v1"
-	"google.golang.org/grpc/internal/channelz"
-	"google.golang.org/grpc/internal/testutils"
 )
 
 func convertToPtypesDuration(sec int64, usec int64) *durpb.Duration {

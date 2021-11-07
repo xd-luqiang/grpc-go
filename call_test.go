@@ -30,9 +30,9 @@ import (
 	"testing"
 	"time"
 
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/internal/transport"
-	"google.golang.org/grpc/status"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/internal/transport"
+	"github.com/dubbogo/grpc-go/status"
 )
 
 var (
@@ -48,11 +48,22 @@ const defaultTestTimeout = 10 * time.Second
 type testCodec struct {
 }
 
-func (testCodec) Marshal(v interface{}) ([]byte, error) {
+func (c testCodec) Name() string {
+	return "testCodec"
+}
+
+func (testCodec) MarshalRequest(v interface{}) ([]byte, error) {
+	return []byte(*(v.(*string))), nil
+}
+func (testCodec) MarshalResponse(v interface{}) ([]byte, error) {
 	return []byte(*(v.(*string))), nil
 }
 
-func (testCodec) Unmarshal(data []byte, v interface{}) error {
+func (testCodec) UnmarshalResponse(data []byte, v interface{}) error {
+	*(v.(*string)) = string(data)
+	return nil
+}
+func (testCodec) UnmarshalRequest(data []byte, v interface{}) error {
 	*(v.(*string)) = string(data)
 	return nil
 }
@@ -82,7 +93,7 @@ func (h *testStreamHandler) handleStream(t *testing.T, s *transport.Stream) {
 		}
 		var v string
 		codec := testCodec{}
-		if err := codec.Unmarshal(req, &v); err != nil {
+		if err := codec.UnmarshalRequest(req, &v); err != nil {
 			t.Errorf("Failed to unmarshal the received message: %v", err)
 			return
 		}
@@ -106,7 +117,7 @@ func (h *testStreamHandler) handleStream(t *testing.T, s *transport.Stream) {
 		}
 	}
 	// send a response back to end the stream.
-	data, err := encode(testCodec{}, &expectedResponse)
+	data, err := encode("rsp", testCodec{}, &expectedResponse)
 	if err != nil {
 		t.Errorf("Failed to encode the response: %v", err)
 		return

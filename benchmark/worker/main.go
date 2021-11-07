@@ -32,13 +32,13 @@ import (
 	"strconv"
 	"time"
 
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/status"
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/grpclog"
+	"github.com/dubbogo/grpc-go/status"
 
-	testgrpc "google.golang.org/grpc/interop/grpc_testing"
-	testpb "google.golang.org/grpc/interop/grpc_testing"
+	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
+	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
 )
 
 var (
@@ -53,7 +53,18 @@ var (
 type byteBufCodec struct {
 }
 
-func (byteBufCodec) Marshal(v interface{}) ([]byte, error) {
+func (c byteBufCodec) Name() string {
+	return "byteBufCodec"
+}
+
+func (byteBufCodec) MarshalRequest(v interface{}) ([]byte, error) {
+	b, ok := v.(*[]byte)
+	if !ok {
+		return nil, fmt.Errorf("failed to marshal: %v is not type of *[]byte", v)
+	}
+	return *b, nil
+}
+func (byteBufCodec) MarshalResponse(v interface{}) ([]byte, error) {
 	b, ok := v.(*[]byte)
 	if !ok {
 		return nil, fmt.Errorf("failed to marshal: %v is not type of *[]byte", v)
@@ -61,7 +72,16 @@ func (byteBufCodec) Marshal(v interface{}) ([]byte, error) {
 	return *b, nil
 }
 
-func (byteBufCodec) Unmarshal(data []byte, v interface{}) error {
+func (byteBufCodec) UnmarshalRequest(data []byte, v interface{}) error {
+	b, ok := v.(*[]byte)
+	if !ok {
+		return fmt.Errorf("failed to marshal: %v is not type of *[]byte", v)
+	}
+	*b = data
+	return nil
+}
+
+func (byteBufCodec) UnmarshalResponse(data []byte, v interface{}) error {
 	b, ok := v.(*[]byte)
 	if !ok {
 		return fmt.Errorf("failed to marshal: %v is not type of *[]byte", v)

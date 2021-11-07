@@ -26,7 +26,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"google.golang.org/protobuf/types/known/anypb"
 
-	"google.golang.org/grpc/internal/testutils"
+	"github.com/dubbogo/grpc-go/internal/testutils"
 )
 
 // TestClusterWatch covers the cases:

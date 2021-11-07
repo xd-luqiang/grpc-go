@@ -41,39 +41,39 @@ import (
 	"testing"
 	"time"
 
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/connectivity"
+	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/dubbogo/grpc-go/encoding"
+	_ "github.com/dubbogo/grpc-go/encoding/gzip"
+	"github.com/dubbogo/grpc-go/health"
+	healthgrpc "github.com/dubbogo/grpc-go/health/grpc_health_v1"
+	healthpb "github.com/dubbogo/grpc-go/health/grpc_health_v1"
+	"github.com/dubbogo/grpc-go/internal"
+	"github.com/dubbogo/grpc-go/internal/channelz"
+	"github.com/dubbogo/grpc-go/internal/grpcsync"
+	"github.com/dubbogo/grpc-go/internal/grpctest"
+	"github.com/dubbogo/grpc-go/internal/stubserver"
+	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/dubbogo/grpc-go/internal/transport"
+	"github.com/dubbogo/grpc-go/keepalive"
+	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/dubbogo/grpc-go/peer"
+	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/dubbogo/grpc-go/resolver/manual"
+	"github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/dubbogo/grpc-go/stats"
+	"github.com/dubbogo/grpc-go/status"
+	"github.com/dubbogo/grpc-go/tap"
+	"github.com/dubbogo/grpc-go/test/bufconn"
+	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
+	"github.com/dubbogo/grpc-go/testdata"
 	"github.com/golang/protobuf/proto"
 	anypb "github.com/golang/protobuf/ptypes/any"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/hpack"
 	spb "google.golang.org/genproto/googleapis/rpc/status"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/connectivity"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/encoding"
-	_ "google.golang.org/grpc/encoding/gzip"
-	"google.golang.org/grpc/health"
-	healthgrpc "google.golang.org/grpc/health/grpc_health_v1"
-	healthpb "google.golang.org/grpc/health/grpc_health_v1"
-	"google.golang.org/grpc/internal"
-	"google.golang.org/grpc/internal/channelz"
-	"google.golang.org/grpc/internal/grpcsync"
-	"google.golang.org/grpc/internal/grpctest"
-	"google.golang.org/grpc/internal/stubserver"
-	"google.golang.org/grpc/internal/testutils"
-	"google.golang.org/grpc/internal/transport"
-	"google.golang.org/grpc/keepalive"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/peer"
-	"google.golang.org/grpc/resolver"
-	"google.golang.org/grpc/resolver/manual"
-	"google.golang.org/grpc/serviceconfig"
-	"google.golang.org/grpc/stats"
-	"google.golang.org/grpc/status"
-	"google.golang.org/grpc/tap"
-	"google.golang.org/grpc/test/bufconn"
-	testpb "google.golang.org/grpc/test/grpc_testing"
-	"google.golang.org/grpc/testdata"
 )
 
 const defaultHealthService = "grpc.health.v1.Health"
@@ -502,7 +502,7 @@ type test struct {
 	unaryClientInt              grpc.UnaryClientInterceptor
 	streamClientInt             grpc.StreamClientInterceptor
 	sc                          <-chan grpc.ServiceConfig
-	customCodec                 encoding.Codec
+	customCodec                 encoding.TwoWayCodec
 	clientInitialWindowSize     int32
 	clientInitialConnWindowSize int32
 	perRPCCreds                 credentials.PerRPCCredentials
@@ -5350,10 +5350,10 @@ func (s) TestGRPCMethod(t *testing.T) {
 	}
 }
 
-// renameProtoCodec is an encoding.Codec wrapper that allows customizing the
+// renameProtoCodec is an encoding.TwoWayCodec wrapper that allows customizing the
 // Name() of another codec.
 type renameProtoCodec struct {
-	encoding.Codec
+	encoding.TwoWayCodec
 	name string
 }
 
@@ -5385,7 +5385,7 @@ func (s) TestForceCodecName(t *testing.T) {
 	ctx, cancel := context.WithTimeout(context.Background(), defaultTestTimeout)
 	defer cancel()
 
-	codec := &renameProtoCodec{Codec: encoding.GetCodec("proto"), name: "some-test-name"}
+	codec := &renameProtoCodec{TwoWayCodec: encoding.GetCodec("proto"), name: "some-test-name"}
 	wantContentTypeCh <- []string{"application/grpc+some-test-name"}
 	if _, err := ss.Client.EmptyCall(ctx, &testpb.Empty{}, grpc.ForceCodec(codec)); err != nil {
 		t.Fatalf("ss.Client.EmptyCall(_, _) = _, %v; want _, nil", err)
@@ -5784,14 +5784,24 @@ type errCodec struct {
 	noError bool
 }
 
-func (c *errCodec) Marshal(v interface{}) ([]byte, error) {
+func (c *errCodec) MarshalRequest(v interface{}) ([]byte, error) {
 	if c.noError {
 		return []byte{}, nil
 	}
 	return nil, fmt.Errorf("3987^12 + 4365^12 = 4472^12")
 }
 
-func (c *errCodec) Unmarshal(data []byte, v interface{}) error {
+func (c *errCodec) UnmarshalRequest(data []byte, v interface{}) error {
+	return nil
+}
+func (c *errCodec) MarshalResponse(v interface{}) ([]byte, error) {
+	if c.noError {
+		return []byte{}, nil
+	}
+	return nil, fmt.Errorf("3987^12 + 4365^12 = 4472^12")
+}
+
+func (c *errCodec) UnmarshalResponse(data []byte, v interface{}) error {
 	return nil
 }
 
@@ -5804,7 +5814,7 @@ type countingProtoCodec struct {
 	unmarshalCount int32
 }
 
-func (p *countingProtoCodec) Marshal(v interface{}) ([]byte, error) {
+func (p *countingProtoCodec) MarshalResponse(v interface{}) ([]byte, error) {
 	atomic.AddInt32(&p.marshalCount, 1)
 	vv, ok := v.(proto.Message)
 	if !ok {
@@ -5813,7 +5823,24 @@ func (p *countingProtoCodec) Marshal(v interface{}) ([]byte, error) {
 	return proto.Marshal(vv)
 }
 
-func (p *countingProtoCodec) Unmarshal(data []byte, v interface{}) error {
+func (p *countingProtoCodec) MarshalRequest(v interface{}) ([]byte, error) {
+	atomic.AddInt32(&p.marshalCount, 1)
+	vv, ok := v.(proto.Message)
+	if !ok {
+		return nil, fmt.Errorf("failed to marshal, message is %T, want proto.Message", v)
+	}
+	return proto.Marshal(vv)
+}
+
+func (p *countingProtoCodec) UnmarshalResponse(data []byte, v interface{}) error {
+	atomic.AddInt32(&p.unmarshalCount, 1)
+	vv, ok := v.(proto.Message)
+	if !ok {
+		return fmt.Errorf("failed to unmarshal, message is %T, want proto.Message", v)
+	}
+	return proto.Unmarshal(data, vv)
+}
+func (p *countingProtoCodec) UnmarshalRequest(data []byte, v interface{}) error {
 	atomic.AddInt32(&p.unmarshalCount, 1)
 	vv, ok := v.(proto.Message)
 	if !ok {

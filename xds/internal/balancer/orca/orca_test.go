@@ -21,10 +21,10 @@ import (
 	"testing"
 
 	orcapb "github.com/cncf/xds/go/xds/data/orca/v3"
+	"github.com/dubbogo/grpc-go/internal/grpctest"
+	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/golang/protobuf/proto"
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/grpc/internal/grpctest"
-	"google.golang.org/grpc/metadata"
 )
 
 var (

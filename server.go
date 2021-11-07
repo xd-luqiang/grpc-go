@@ -35,23 +35,23 @@ import (
 
 	"golang.org/x/net/trace"
 
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials"
-	"google.golang.org/grpc/encoding"
-	"google.golang.org/grpc/encoding/proto"
-	"google.golang.org/grpc/grpclog"
-	"google.golang.org/grpc/internal"
-	"google.golang.org/grpc/internal/binarylog"
-	"google.golang.org/grpc/internal/channelz"
-	"google.golang.org/grpc/internal/grpcrand"
-	"google.golang.org/grpc/internal/grpcsync"
-	"google.golang.org/grpc/internal/transport"
-	"google.golang.org/grpc/keepalive"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/peer"
-	"google.golang.org/grpc/stats"
-	"google.golang.org/grpc/status"
-	"google.golang.org/grpc/tap"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/dubbogo/grpc-go/encoding"
+	"github.com/dubbogo/grpc-go/encoding/proto"
+	"github.com/dubbogo/grpc-go/grpclog"
+	"github.com/dubbogo/grpc-go/internal"
+	"github.com/dubbogo/grpc-go/internal/binarylog"
+	"github.com/dubbogo/grpc-go/internal/channelz"
+	"github.com/dubbogo/grpc-go/internal/grpcrand"
+	"github.com/dubbogo/grpc-go/internal/grpcsync"
+	"github.com/dubbogo/grpc-go/internal/transport"
+	"github.com/dubbogo/grpc-go/keepalive"
+	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/dubbogo/grpc-go/peer"
+	"github.com/dubbogo/grpc-go/stats"
+	"github.com/dubbogo/grpc-go/status"
+	"github.com/dubbogo/grpc-go/tap"
 )
 
 const (
@@ -142,7 +142,7 @@ type Server struct {
 
 type serverOptions struct {
 	creds                 credentials.TransportCredentials
-	codec                 baseCodec
+	codec                 encoding.TwoWayCodec
 	cp                    Compressor
 	dc                    Decompressor
 	unaryInt              UnaryServerInterceptor
@@ -273,7 +273,7 @@ func KeepaliveEnforcementPolicy(kep keepalive.EnforcementPolicy) ServerOption {
 // See also
 // https://github.com/grpc/grpc-go/blob/master/Documentation/encoding.md#using-a-codec.
 // Will be supported throughout 1.x.
-func CustomCodec(codec Codec) ServerOption {
+func CustomCodec(codec encoding.TwoWayCodec) ServerOption {
 	return newFuncServerOption(func(o *serverOptions) {
 		o.codec = codec
 	})
@@ -288,7 +288,7 @@ func CustomCodec(codec Codec) ServerOption {
 // See Content-Type on
 // https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md#requests for
 // more details. Also see the documentation on RegisterCodec and
-// CallContentSubtype for more details on the interaction between encoding.Codec
+// CallContentSubtype for more details on the interaction between encoding.TwoWayCodec
 // and content-subtype.
 //
 // This function is provided for advanced users; prefer to register codecs
@@ -302,7 +302,7 @@ func CustomCodec(codec Codec) ServerOption {
 //
 // Notice: This API is EXPERIMENTAL and may be changed or removed in a
 // later release.
-func ForceServerCodec(codec encoding.Codec) ServerOption {
+func ForceServerCodec(codec encoding.TwoWayCodec) ServerOption {
 	return newFuncServerOption(func(o *serverOptions) {
 		o.codec = codec
 	})
@@ -1059,7 +1059,7 @@ func (s *Server) incrCallsFailed() {
 }
 
 func (s *Server) sendResponse(t transport.ServerTransport, stream *transport.Stream, msg interface{}, cp Compressor, opts *transport.Options, comp encoding.Compressor) error {
-	data, err := encode(s.getCodec(stream.ContentSubtype()), msg)
+	data, err := encode("rsp", s.getCodec(stream.ContentSubtype()), msg)
 	if err != nil {
 		channelz.Error(logger, s.channelzID, "grpc: server failed to encode response: ", err)
 		return err
@@ -1122,7 +1122,7 @@ func chainUnaryInterceptors(interceptors []UnaryServerInterceptor) UnaryServerIn
 	}
 }
 
-func (s *Server) processUnaryRPC(t transport.ServerTransport, stream *transport.Stream, info *serviceInfo, md *MethodDesc, trInfo *traceInfo) (err error) {
+func (s *Server) processUnaryRPC(method string, t transport.ServerTransport, stream *transport.Stream, info *serviceInfo, md *MethodDesc, trInfo *traceInfo) (err error) {
 	sh := s.opts.statsHandler
 	if sh != nil || trInfo != nil || channelz.IsOn() {
 		if channelz.IsOn() {
@@ -1256,7 +1256,7 @@ func (s *Server) processUnaryRPC(t transport.ServerTransport, stream *transport.
 		t.IncrMsgRecv()
 	}
 	df := func(v interface{}) error {
-		if err := s.getCodec(stream.ContentSubtype()).Unmarshal(d, v); err != nil {
+		if err := s.getCodec(stream.ContentSubtype()).UnmarshalRequest(d, v); err != nil {
 			return status.Errorf(codes.Internal, "grpc: error unmarshalling request: %v", err)
 		}
 		if sh != nil {
@@ -1279,6 +1279,8 @@ func (s *Server) processUnaryRPC(t transport.ServerTransport, stream *transport.
 		return nil
 	}
 	ctx := NewContextWithServerTransportStream(stream.Context(), stream)
+	ctx = context.WithValue(ctx, "XXX_TRIPLE_GO_METHOD_NAME", method)
+	ctx = context.WithValue(ctx, "XXX_TRIPLE_GO_GENERIC_PAYLOAD", d)
 	reply, appErr := md.Handler(info.serviceImpl, ctx, df, s.opts.unaryInt)
 	if appErr != nil {
 		appStatus, ok := status.FromError(appErr)
@@ -1314,7 +1316,27 @@ func (s *Server) processUnaryRPC(t transport.ServerTransport, stream *transport.
 	}
 	opts := &transport.Options{Last: true}
 
-	if err := s.sendResponse(t, stream, reply, cp, opts, comp); err != nil {
+	var rawReplyStruct interface{}
+	responseAttachment := make(TripleAttachment) // todo make it useful
+
+	if result, ok := reply.(OuterResult); ok {
+		// proceess header trailer
+		outerAttachment := result.Attachments()
+		channelz.Infof(logger, s.channelzID, "unaryProcessor.processUnaryRPC: get outerAttachment = %+v", outerAttachment)
+		for k, v := range outerAttachment {
+			if str, ok := v.(string); ok {
+				responseAttachment[k] = str
+			}
+		}
+		channelz.Infof(logger, s.channelzID, "unaryProcessor.processUnaryRPC: get triple attachment = %+v", responseAttachment)
+		rawReplyStruct = result.Result()
+		channelz.Infof(logger, s.channelzID, "unaryProcessor.processUnaryRPC: get reply %+v to be marshal", rawReplyStruct)
+	} else {
+		channelz.Infof(logger, s.channelzID, "unaryProcessor.processUnaryRPC: DEPRECATED! reply from service not impl common.OuterResult")
+		rawReplyStruct = reply
+	}
+
+	if err := s.sendResponse(t, stream, rawReplyStruct, cp, opts, comp); err != nil {
 		if err == io.EOF {
 			// The entire stream is done (for unary RPC only).
 			return err
@@ -1370,6 +1392,15 @@ func (s *Server) processUnaryRPC(t transport.ServerTransport, stream *transport.
 	}
 	return err
 }
+
+// OuterResult is a dubbo RPC result
+type OuterResult interface {
+	// Result gets invoker result.
+	Result() interface{}
+	// Attachments gets all attachments
+	Attachments() map[string]interface{}
+}
+type TripleAttachment map[string]string
 
 // chainStreamServerInterceptors chains all stream server interceptors into one.
 func chainStreamServerInterceptors(s *Server) {
@@ -1609,11 +1640,15 @@ func (s *Server) handleStream(t transport.ServerTransport, stream *transport.Str
 	}
 	service := sm[:pos]
 	method := sm[pos+1:]
+	method = strings.ToUpper(string(method[0])) + method[1:]
 
 	srv, knownService := s.services[service]
 	if knownService {
+		if md, ok := srv.methods["InvokeWithArgs"]; ok {
+			s.processUnaryRPC(method, t, stream, srv, md, trInfo)
+		}
 		if md, ok := srv.methods[method]; ok {
-			s.processUnaryRPC(t, stream, srv, md, trInfo)
+			s.processUnaryRPC(method, t, stream, srv, md, trInfo)
 			return
 		}
 		if sd, ok := srv.streams[method]; ok {
@@ -1791,7 +1826,7 @@ func (s *Server) GracefulStop() {
 
 // contentSubtype must be lowercase
 // cannot return nil
-func (s *Server) getCodec(contentSubtype string) baseCodec {
+func (s *Server) getCodec(contentSubtype string) encoding.TwoWayCodec {
 	if s.opts.codec != nil {
 		return s.opts.codec
 	}

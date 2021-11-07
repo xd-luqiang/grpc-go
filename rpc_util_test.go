@@ -26,14 +26,14 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/encoding"
+	protoenc "github.com/dubbogo/grpc-go/encoding/proto"
+	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/dubbogo/grpc-go/internal/transport"
+	"github.com/dubbogo/grpc-go/status"
+	perfpb "github.com/dubbogo/grpc-go/test/codec_perf"
 	"github.com/golang/protobuf/proto"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/encoding"
-	protoenc "google.golang.org/grpc/encoding/proto"
-	"google.golang.org/grpc/internal/testutils"
-	"google.golang.org/grpc/internal/transport"
-	"google.golang.org/grpc/status"
-	perfpb "google.golang.org/grpc/test/codec_perf"
 )
 
 type fullReader struct {
@@ -113,7 +113,7 @@ func (s) TestEncode(t *testing.T) {
 	}{
 		{nil, []byte{0, 0, 0, 0, 0}, []byte{}, nil},
 	} {
-		data, err := encode(encoding.GetCodec(protoenc.Name), test.msg)
+		data, err := encode("req", encoding.GetCodec(protoenc.Name), test.msg)
 		if err != test.err || !bytes.Equal(data, test.data) {
 			t.Errorf("encode(_, %v) = %v, %v; want %v, %v", test.msg, data, err, test.data, test.err)
 			continue
@@ -196,12 +196,12 @@ func (s) TestToRPCErr(t *testing.T) {
 func bmEncode(b *testing.B, mSize int) {
 	cdc := encoding.GetCodec(protoenc.Name)
 	msg := &perfpb.Buffer{Body: make([]byte, mSize)}
-	encodeData, _ := encode(cdc, msg)
+	encodeData, _ := encode("req", cdc, msg)
 	encodedSz := int64(len(encodeData))
 	b.ReportAllocs()
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		encode(cdc, msg)
+		encode("req", cdc, msg)
 	}
 	b.SetBytes(encodedSz)
 }
