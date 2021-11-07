@@ -1,6 +1,6 @@
 module github.com/dubbogo/grpc-go
 
-go 1.17
+go 1.14
 
 require (
 	github.com/apache/dubbo-go-hessian2 v1.9.3
@@ -21,21 +21,4 @@ require (
 	golang.org/x/sys v0.0.0-20211106132015-ebca88c72f68
 	google.golang.org/genproto v0.0.0-20211104193956-4c6863e31247
 	google.golang.org/protobuf v1.27.1
-)
-
-require (
-	cloud.google.com/go v0.65.0 // indirect
-	github.com/census-instrumentation/opencensus-proto v0.2.1 // indirect
-	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/dubbogo/gost v1.11.18 // indirect
-	github.com/envoyproxy/protoc-gen-validate v0.1.0 // indirect
-	github.com/pmezard/go-difflib v1.0.0 // indirect
-	go.uber.org/atomic v1.7.0 // indirect
-	go.uber.org/multierr v1.5.0 // indirect
-	go.uber.org/zap v1.16.0 // indirect
-	golang.org/x/text v0.3.6 // indirect
-	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
-	google.golang.org/appengine v1.6.6 // indirect
-	google.golang.org/grpc v1.40.0 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
 )
