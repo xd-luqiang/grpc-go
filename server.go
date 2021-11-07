@@ -1646,6 +1646,7 @@ func (s *Server) handleStream(t transport.ServerTransport, stream *transport.Str
 	if knownService {
 		if md, ok := srv.methods["InvokeWithArgs"]; ok {
 			s.processUnaryRPC(method, t, stream, srv, md, trInfo)
+			return
 		}
 		if md, ok := srv.methods[method]; ok {
 			s.processUnaryRPC(method, t, stream, srv, md, trInfo)
