@@ -30,10 +30,12 @@ package status
 import (
 	"errors"
 	"fmt"
+	"strings"
 
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"
+	"google.golang.org/genproto/googleapis/rpc/errdetails"
 	spb "google.golang.org/genproto/googleapis/rpc/status"
 )
 
@@ -46,6 +48,17 @@ type Status struct {
 // New returns a Status representing c and msg.
 func New(c codes.Code, msg string) *Status {
 	return &Status{s: &spb.Status{Code: int32(c), Message: msg}}
+}
+
+// New returns a Status representing c and msg.
+func NewWithStacks(c codes.Code, e error) *Status {
+	newStatus := &Status{s: &spb.Status{Code: int32(c), Message: e.Error()}}
+	newStatusWithDetail, _ := newStatus.WithDetails(&errdetails.DebugInfo{
+		StackEntries: []string{
+			fmt.Sprintf("%+v", e),
+		},
+	})
+	return newStatusWithDetail
 }
 
 // Newf returns New(c, fmt.Sprintf(format, a...)).
@@ -137,7 +150,7 @@ func (s *Status) Details() []interface{} {
 }
 
 func (s *Status) String() string {
-	return fmt.Sprintf("rpc error: code = %s desc = %s", s.Code(), s.Message())
+	return fmt.Sprintf("%s", s.Message())
 }
 
 // Error wraps a pointer of a status proto. It implements error and Status,
@@ -153,6 +166,19 @@ func (e *Error) Error() string {
 // GRPCStatus returns the Status represented by se.
 func (e *Error) GRPCStatus() *Status {
 	return e.s
+}
+
+// Status returns the Status represented by se.
+func (e *Error) Stacks() string {
+	if e.s == nil {
+		return ""
+	}
+	if len(e.s.s.Details) == 0 {
+		return ""
+	}
+	stackTracesStr := strings.Replace(e.s.s.Details[0].String(), `\n`, "\n", -1)
+	stackTracesStr = strings.Replace(stackTracesStr, `\t`, "\t", -1)
+	return stackTracesStr
 }
 
 // Is implements future error.Is functionality.

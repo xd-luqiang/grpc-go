@@ -1286,8 +1286,7 @@ func (s *Server) processUnaryRPC(method string, t transport.ServerTransport, str
 		appStatus, ok := status.FromError(appErr)
 		if !ok {
 			// Convert appErr if it is not a grpc status error.
-			appErr = status.Error(codes.Unknown, appErr.Error())
-			appStatus, _ = status.FromError(appErr)
+			appStatus = status.ErrorWithStacks(codes.Unknown, appErr)
 		}
 		if trInfo != nil {
 			trInfo.tr.LazyLog(stringer(appStatus.Message()), true)
@@ -1317,16 +1316,20 @@ func (s *Server) processUnaryRPC(method string, t transport.ServerTransport, str
 	opts := &transport.Options{Last: true}
 
 	var rawReplyStruct interface{}
-	responseAttachment := make(TripleAttachment) // todo make it useful
+	responseAttachment := make(metadata.MD)
 
 	if result, ok := reply.(OuterResult); ok {
 		// proceess header trailer
 		outerAttachment := result.Attachments()
+		responseAttachment = make(metadata.MD, len(outerAttachment))
 		channelz.Infof(logger, s.channelzID, "unaryProcessor.processUnaryRPC: get outerAttachment = %+v", outerAttachment)
 		for k, v := range outerAttachment {
 			if str, ok := v.(string); ok {
-				responseAttachment[k] = str
+				responseAttachment[k] = []string{str}
+			} else if strs, ok := v.([]string); ok {
+				responseAttachment[k] = strs
 			}
+			// todo deal with unsupported attachment
 		}
 		channelz.Infof(logger, s.channelzID, "unaryProcessor.processUnaryRPC: get triple attachment = %+v", responseAttachment)
 		rawReplyStruct = result.Result()
@@ -1336,6 +1339,7 @@ func (s *Server) processUnaryRPC(method string, t transport.ServerTransport, str
 		rawReplyStruct = reply
 	}
 
+	stream.SetTrailer(responseAttachment)
 	if err := s.sendResponse(t, stream, rawReplyStruct, cp, opts, comp); err != nil {
 		if err == io.EOF {
 			// The entire stream is done (for unary RPC only).

@@ -20,6 +20,8 @@ package grpc
 
 import (
 	"context"
+	"fmt"
+	"github.com/dubbogo/grpc-go/metadata"
 )
 
 // Invoke sends the RPC request on the wire and returns after response is
@@ -70,5 +72,26 @@ func GRPCConnInvoke(ctx context.Context, method string, req, reply interface{}, 
 	if err := cs.SendMsg(req); err != nil {
 		return err
 	}
-	return cs.RecvMsg(reply)
+	if err := cs.RecvMsg(reply); err != nil {
+		return err
+	}
+	trailer := cs.Trailer()
+	fmt.Println(trailer)
+	return nil
+}
+
+func GRPCConnInvokeWithTrailer(ctx context.Context, method string, req, reply interface{}, cc *ClientConn, opts ...CallOption) (error, metadata.MD) {
+	cs, err := newClientStream(ctx, unaryStreamDesc, cc, method, opts...)
+	trailer := make(metadata.MD)
+	if err != nil {
+		return err, trailer
+	}
+	if err := cs.SendMsg(req); err != nil {
+		return err, trailer
+	}
+	if err := cs.RecvMsg(reply); err != nil {
+		return err, trailer
+	}
+	trailer = cs.Trailer()
+	return nil, trailer
 }

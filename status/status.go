@@ -58,6 +58,11 @@ func Error(c codes.Code, msg string) error {
 	return New(c, msg).Err()
 }
 
+// Error returns an error representing c and msg.  If c is OK, returns nil.
+func ErrorWithStacks(c codes.Code, e error) *Status {
+	return status.NewWithStacks(c, e)
+}
+
 // Errorf returns Error(c, fmt.Sprintf(format, a...)).
 func Errorf(c codes.Code, format string, a ...interface{}) error {
 	return Error(c, fmt.Sprintf(format, a...))
