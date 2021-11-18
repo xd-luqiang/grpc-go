@@ -28,15 +28,15 @@ import (
 // received.  This is typically called by generated code.
 //
 // All errors returned by Invoke are compatible with the status package.
-func (cc *ClientConn) Invoke(ctx context.Context, method string, args, reply interface{}, opts ...CallOption) error {
+func (cc *ClientConn) Invoke(ctx context.Context, method string, args, reply interface{}, opts ...CallOption) (metadata.MD, error) {
 	// allow interceptor to see all applicable call options, which means those
 	// configured as defaults from dial option as well as per-call options
 	opts = Combine(cc.dopts.callOptions, opts)
 
 	if cc.dopts.unaryInt != nil {
-		return cc.dopts.unaryInt(ctx, method, args, reply, cc, GRPCConnInvoke, opts...)
+		return cc.dopts.unaryInt(ctx, method, args, reply, cc, GRPCConnInvokeWithTrailer, opts...)
 	}
-	return GRPCConnInvoke(ctx, method, args, reply, cc, opts...)
+	return GRPCConnInvokeWithTrailer(ctx, method, args, reply, cc, opts...)
 }
 
 func Combine(o1 []CallOption, o2 []CallOption) []CallOption {
@@ -58,7 +58,7 @@ func Combine(o1 []CallOption, o2 []CallOption) []CallOption {
 // received.  This is typically called by generated code.
 //
 // DEPRECATED: Use ClientConn.Invoke instead.
-func Invoke(ctx context.Context, method string, args, reply interface{}, cc *ClientConn, opts ...CallOption) error {
+func Invoke(ctx context.Context, method string, args, reply interface{}, cc *ClientConn, opts ...CallOption) (metadata.MD, error) {
 	return cc.Invoke(ctx, method, args, reply, opts...)
 }
 
@@ -80,18 +80,18 @@ func GRPCConnInvoke(ctx context.Context, method string, req, reply interface{}, 
 	return nil
 }
 
-func GRPCConnInvokeWithTrailer(ctx context.Context, method string, req, reply interface{}, cc *ClientConn, opts ...CallOption) (error, metadata.MD) {
+func GRPCConnInvokeWithTrailer(ctx context.Context, method string, req, reply interface{}, cc *ClientConn, opts ...CallOption) (metadata.MD, error) {
 	cs, err := newClientStream(ctx, unaryStreamDesc, cc, method, opts...)
 	trailer := make(metadata.MD)
 	if err != nil {
-		return err, trailer
+		return trailer, err
 	}
 	if err := cs.SendMsg(req); err != nil {
-		return err, trailer
+		return trailer, err
 	}
 	if err := cs.RecvMsg(reply); err != nil {
-		return err, trailer
+		return trailer, err
 	}
 	trailer = cs.Trailer()
-	return nil, trailer
+	return trailer, nil
 }
