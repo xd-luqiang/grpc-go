@@ -37,37 +37,35 @@ func GetArgType(v interface{}) string {
 	case nil:
 		return "V"
 	case bool:
-		return "Z"
+		return "boolean"
 	case []bool:
 		return "[Z"
 	case byte:
-		return "B"
+		return "byte"
 	case []byte:
 		return "[B"
 	case int8:
-		return "B"
+		return "byte"
 	case []int8:
 		return "[B"
 	case int16:
-		return "S"
+		return "short"
 	case []int16:
 		return "[S"
 	case uint16: // Equivalent to Char of Java
-		return "C"
+		return "char"
 	case []uint16:
 		return "[C"
-	// case rune:
-	//	return "C"
-	case int:
-		return "J"
+	case int: // Equivalent to Long of Java
+		return "long"
 	case []int:
 		return "[J"
 	case int32:
-		return "I"
+		return "int"
 	case []int32:
 		return "[I"
 	case int64:
-		return "J"
+		return "long"
 	case []int64:
 		return "[J"
 	case time.Time:
@@ -75,11 +73,11 @@ func GetArgType(v interface{}) string {
 	case []time.Time:
 		return "[Ljava.util.Date"
 	case float32:
-		return "F"
+		return "float"
 	case []float32:
 		return "[F"
 	case float64:
-		return "D"
+		return "double"
 	case []float64:
 		return "[D"
 	case string:
