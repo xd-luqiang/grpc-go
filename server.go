@@ -1674,7 +1674,7 @@ func (s *Server) handleStream(t transport.ServerTransport, stream *transport.Str
 
 	// grpc proxy mode
 	if s.opts.proxyModeEnable {
-		// same with in triple.constant.ProxyInterface
+		// same with in triple.constant.ProxyServiceKey
 		srv, knownService = s.services["github.com.dubbogo.triple.proxy"]
 		if md, ok := srv.methods["InvokeWithArgs"]; ok {
 			s.processUnaryRPC(method, t, stream, srv, md, trInfo)
