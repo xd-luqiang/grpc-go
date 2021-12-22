@@ -165,6 +165,7 @@ type serverOptions struct {
 	maxHeaderListSize     *uint32
 	headerTableSize       *uint32
 	numServerWorkers      uint32
+	proxyModeEnable       bool
 }
 
 var defaultServerOptions = serverOptions{
@@ -509,6 +510,14 @@ func NumStreamWorkers(numServerWorkers uint32) ServerOption {
 	// number of CPUs available is most performant; requires thorough testing.
 	return newFuncServerOption(func(o *serverOptions) {
 		o.numServerWorkers = numServerWorkers
+	})
+}
+
+// ProxyModeEnable enable grpc server proxy mechanism.
+// grpc will search proxy service to handle stream when it does not find target service key
+func ProxyModeEnable(enable bool) ServerOption {
+	return newFuncServerOption(func(o *serverOptions) {
+		o.proxyModeEnable = enable
 	})
 }
 
@@ -1662,6 +1671,17 @@ func (s *Server) handleStream(t transport.ServerTransport, stream *transport.Str
 			return
 		}
 	}
+
+	// grpc proxy mode
+	if s.opts.proxyModeEnable {
+		// same with in triple.constant.ProxyInterface
+		srv, knownService = s.services["github.com.dubbogo.triple.proxy"]
+		if md, ok := srv.methods["InvokeWithArgs"]; ok {
+			s.processUnaryRPC(method, t, stream, srv, md, trInfo)
+			return
+		}
+	}
+
 	// Unknown service, or known server unknown method.
 	if unknownDesc := s.opts.unknownStreamDesc; unknownDesc != nil {
 		s.processStreamingRPC(t, stream, nil, unknownDesc, trInfo)
