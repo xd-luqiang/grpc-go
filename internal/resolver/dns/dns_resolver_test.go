@@ -29,7 +29,14 @@ import (
 	"sync"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+	"github.com/google/go-cmp/cmp/cmpopts"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	grpclbstate "github.com/dubbogo/grpc-go/balancer/grpclb/state"
 	"github.com/dubbogo/grpc-go/internal/envconfig"
@@ -37,8 +44,6 @@ import (
 	"github.com/dubbogo/grpc-go/internal/testutils"
 	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/dubbogo/grpc-go/serviceconfig"
-	"github.com/google/go-cmp/cmp"
-	"github.com/google/go-cmp/cmp/cmpopts"
 )
 
 func TestMain(m *testing.M) {

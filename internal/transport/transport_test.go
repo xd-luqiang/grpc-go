@@ -33,7 +33,16 @@ import (
 	"sync"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+
+	"golang.org/x/net/http2"
+	"golang.org/x/net/http2/hpack"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/attributes"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials"
@@ -42,9 +51,6 @@ import (
 	"github.com/dubbogo/grpc-go/internal/testutils"
 	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/dubbogo/grpc-go/status"
-	"github.com/google/go-cmp/cmp"
-	"golang.org/x/net/http2"
-	"golang.org/x/net/http2/hpack"
 )
 
 type s struct {

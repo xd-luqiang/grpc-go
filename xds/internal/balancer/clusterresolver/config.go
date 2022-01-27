@@ -22,7 +22,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"strings"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer/roundrobin"
 	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
 	"github.com/dubbogo/grpc-go/serviceconfig"

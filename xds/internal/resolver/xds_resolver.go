@@ -22,7 +22,9 @@ package resolver
 import (
 	"errors"
 	"fmt"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/internal/grpclog"
 	"github.com/dubbogo/grpc-go/internal/grpcsync"

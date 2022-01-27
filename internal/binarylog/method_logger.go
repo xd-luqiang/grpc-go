@@ -23,12 +23,17 @@ import (
 	"strings"
 	"sync/atomic"
 	"time"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+	"github.com/golang/protobuf/ptypes"
+)
+
+import (
 	pb "github.com/dubbogo/grpc-go/binarylog/grpc_binarylog_v1"
 	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/dubbogo/grpc-go/status"
-	"github.com/golang/protobuf/proto"
-	"github.com/golang/protobuf/ptypes"
 )
 
 type callIDGenerator struct {

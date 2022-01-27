@@ -26,14 +26,19 @@ import (
 	"strconv"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+	"github.com/golang/protobuf/ptypes"
+)
+
+import (
 	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
 	"github.com/dubbogo/grpc-go/connectivity"
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/internal/channelz"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/golang/protobuf/proto"
-	"github.com/golang/protobuf/ptypes"
 )
 
 func init() {

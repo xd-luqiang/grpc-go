@@ -24,7 +24,9 @@
 // All APIs in this package are experimental.
 package backoff
 
-import "time"
+import (
+	"time"
+)
 
 // Config defines the configuration options for backoff.
 type Config struct {

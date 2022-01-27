@@ -30,13 +30,19 @@ import (
 	"sync"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+	dpb "github.com/golang/protobuf/ptypes/duration"
+
+	epb "google.golang.org/genproto/googleapis/rpc/errdetails"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/dubbogo/grpc-go/status"
-	"github.com/golang/protobuf/proto"
-	dpb "github.com/golang/protobuf/ptypes/duration"
-	epb "google.golang.org/genproto/googleapis/rpc/errdetails"
 )
 
 func (s) TestHandlerTransport_NewServerHandlerTransport(t *testing.T) {

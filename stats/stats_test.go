@@ -27,16 +27,20 @@ import (
 	"sync"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
+	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
+	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
 	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/dubbogo/grpc-go/stats"
 	"github.com/dubbogo/grpc-go/status"
-	"github.com/golang/protobuf/proto"
-
-	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
 )
 
 const defaultTestTimeout = 10 * time.Second

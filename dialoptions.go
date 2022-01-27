@@ -21,13 +21,15 @@ package grpc
 import (
 	"context"
 	"fmt"
-	"github.com/dubbogo/grpc-go/encoding"
 	"net"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/backoff"
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/dubbogo/grpc-go/encoding"
 	"github.com/dubbogo/grpc-go/internal"
 	internalbackoff "github.com/dubbogo/grpc-go/internal/backoff"
 	"github.com/dubbogo/grpc-go/internal/envconfig"

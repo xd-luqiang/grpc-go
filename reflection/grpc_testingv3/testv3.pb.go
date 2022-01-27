@@ -14,13 +14,17 @@ It has these top-level messages:
 */
 package grpc_testingv3
 
-import proto "github.com/golang/protobuf/proto"
-import fmt "fmt"
-import math "math"
-
 import (
 	context "context"
+	fmt "fmt"
+	math "math"
+)
 
+import (
+	proto "github.com/golang/protobuf/proto"
+)
+
+import (
 	grpc "github.com/dubbogo/grpc-go"
 )
 

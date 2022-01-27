@@ -19,8 +19,11 @@
 package xdsclient
 
 import (
-	"github.com/dubbogo/grpc-go/internal/pretty"
 	"google.golang.org/protobuf/proto"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/internal/pretty"
 )
 
 type watcherInfoWithUpdate struct {

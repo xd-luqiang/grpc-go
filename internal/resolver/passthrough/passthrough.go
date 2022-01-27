@@ -20,7 +20,9 @@
 // name without scheme back to gRPC as resolved address.
 package passthrough
 
-import "github.com/dubbogo/grpc-go/resolver"
+import (
+	"github.com/dubbogo/grpc-go/resolver"
+)
 
 const scheme = "passthrough"
 

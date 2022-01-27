@@ -23,7 +23,9 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/attributes"
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/balancer/base"

@@ -20,12 +20,17 @@ package clustermanager
 
 import (
 	"testing"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
 	_ "github.com/dubbogo/grpc-go/xds/internal/balancer/cdsbalancer"
 	_ "github.com/dubbogo/grpc-go/xds/internal/balancer/weightedtarget"
-	"github.com/google/go-cmp/cmp"
 )
 
 const (

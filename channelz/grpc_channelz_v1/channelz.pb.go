@@ -28,15 +28,21 @@
 package grpc_channelz_v1
 
 import (
+	reflect "reflect"
+	sync "sync"
+)
+
+import (
 	proto "github.com/golang/protobuf/proto"
+
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+
 	anypb "google.golang.org/protobuf/types/known/anypb"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
 	wrapperspb "google.golang.org/protobuf/types/known/wrapperspb"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (

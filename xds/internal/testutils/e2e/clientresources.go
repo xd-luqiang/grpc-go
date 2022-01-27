@@ -22,11 +22,9 @@ import (
 	"fmt"
 	"net"
 	"strconv"
+)
 
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/envoyproxy/go-control-plane/pkg/wellknown"
-	"github.com/golang/protobuf/proto"
-
+import (
 	v3clusterpb "github.com/envoyproxy/go-control-plane/envoy/config/cluster/v3"
 	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
 	v3endpointpb "github.com/envoyproxy/go-control-plane/envoy/config/endpoint/v3"
@@ -35,7 +33,14 @@ import (
 	v3routerpb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/http/router/v3"
 	v3httppb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/network/http_connection_manager/v3"
 	v3tlspb "github.com/envoyproxy/go-control-plane/envoy/extensions/transport_sockets/tls/v3"
+	"github.com/envoyproxy/go-control-plane/pkg/wellknown"
+
+	"github.com/golang/protobuf/proto"
 	wrapperspb "github.com/golang/protobuf/ptypes/wrappers"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/internal/testutils"
 )
 
 const (

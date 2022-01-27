@@ -25,7 +25,14 @@ import (
 	"strings"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+	"github.com/google/go-cmp/cmp/cmpopts"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/balancer/base"
 	"github.com/dubbogo/grpc-go/balancer/roundrobin"
@@ -40,8 +47,6 @@ import (
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/load"
-	"github.com/google/go-cmp/cmp"
-	"github.com/google/go-cmp/cmp/cmpopts"
 )
 
 const (

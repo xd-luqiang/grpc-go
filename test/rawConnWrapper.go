@@ -24,7 +24,9 @@ import (
 	"strings"
 	"sync"
 	"time"
+)
 
+import (
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/hpack"
 )

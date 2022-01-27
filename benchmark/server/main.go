@@ -37,7 +37,9 @@ import (
 	"runtime"
 	"runtime/pprof"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/benchmark"
 	"github.com/dubbogo/grpc-go/grpclog"
 	"github.com/dubbogo/grpc-go/internal/syscall"

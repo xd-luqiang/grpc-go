@@ -19,9 +19,14 @@ package e2e
 
 import (
 	"testing"
+)
 
-	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
+import (
 	"github.com/google/go-cmp/cmp"
+)
+
+import (
+	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
 )
 
 func verifySubConnStates(t *testing.T, scs []*channelzpb.Subchannel, want map[channelzpb.ChannelConnectivityState_State]int) {

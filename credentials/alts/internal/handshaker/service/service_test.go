@@ -20,7 +20,9 @@ package service
 
 import (
 	"testing"
+)
 
+import (
 	grpc "github.com/dubbogo/grpc-go"
 )
 

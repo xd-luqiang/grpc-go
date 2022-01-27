@@ -21,7 +21,9 @@ package fakeclient
 
 import (
 	"context"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/grpcsync"
 	"github.com/dubbogo/grpc-go/internal/testutils"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"

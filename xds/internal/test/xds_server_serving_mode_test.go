@@ -28,17 +28,21 @@ import (
 	"net"
 	"testing"
 	"time"
+)
 
+import (
+	v3listenerpb "github.com/envoyproxy/go-control-plane/envoy/config/listener/v3"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/connectivity"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
 	xdscreds "github.com/dubbogo/grpc-go/credentials/xds"
 	"github.com/dubbogo/grpc-go/internal/testutils"
+	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
 	"github.com/dubbogo/grpc-go/xds"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
-
-	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
-	v3listenerpb "github.com/envoyproxy/go-control-plane/envoy/config/listener/v3"
 )
 
 // TestServerSideXDS_RedundantUpdateSuppression tests the scenario where the

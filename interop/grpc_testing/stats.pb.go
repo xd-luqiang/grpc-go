@@ -21,12 +21,20 @@
 package grpc_testing
 
 import (
-	core "github.com/dubbogo/grpc-go/interop/grpc_testing/core"
-	proto "github.com/golang/protobuf/proto"
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
+)
+
+import (
+	proto "github.com/golang/protobuf/proto"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
+)
+
+import (
+	core "github.com/dubbogo/grpc-go/interop/grpc_testing/core"
 )
 
 const (

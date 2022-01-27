@@ -28,7 +28,9 @@ package grpclog // import "github.com/dubbogo/grpc-go/grpclog"
 
 import (
 	"os"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/grpclog"
 )
 

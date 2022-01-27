@@ -21,7 +21,9 @@ package xdsclient
 import (
 	"regexp"
 	"strings"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/grpcutil"
 )
 

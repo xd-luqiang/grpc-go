@@ -25,7 +25,9 @@ import (
 	"net"
 	"reflect"
 	"strconv"
+)
 
+import (
 	v3clusterpb "github.com/envoyproxy/go-control-plane/envoy/config/cluster/v3"
 	v3endpointpb "github.com/envoyproxy/go-control-plane/envoy/config/endpoint/v3"
 	v3listenerpb "github.com/envoyproxy/go-control-plane/envoy/config/listener/v3"
@@ -35,7 +37,9 @@ import (
 	v3cache "github.com/envoyproxy/go-control-plane/pkg/cache/v3"
 	v3resource "github.com/envoyproxy/go-control-plane/pkg/resource/v3"
 	v3server "github.com/envoyproxy/go-control-plane/pkg/server/v3"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/grpclog"
 )

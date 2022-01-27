@@ -22,11 +22,9 @@ import (
 	"regexp"
 	"strings"
 	"testing"
+)
 
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/internal/xds/env"
-	"github.com/dubbogo/grpc-go/internal/xds/matcher"
-	"github.com/dubbogo/grpc-go/xds/internal/version"
+import (
 	v2xdspb "github.com/envoyproxy/go-control-plane/envoy/api/v2"
 	v2corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
 	v3clusterpb "github.com/envoyproxy/go-control-plane/envoy/config/cluster/v3"
@@ -35,10 +33,20 @@ import (
 	v3aggregateclusterpb "github.com/envoyproxy/go-control-plane/envoy/extensions/clusters/aggregate/v3"
 	v3tlspb "github.com/envoyproxy/go-control-plane/envoy/extensions/transport_sockets/tls/v3"
 	v3matcherpb "github.com/envoyproxy/go-control-plane/envoy/type/matcher/v3"
+
 	anypb "github.com/golang/protobuf/ptypes/any"
+
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
+
 	"google.golang.org/protobuf/types/known/wrapperspb"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/dubbogo/grpc-go/internal/xds/env"
+	"github.com/dubbogo/grpc-go/internal/xds/matcher"
+	"github.com/dubbogo/grpc-go/xds/internal/version"
 )
 
 const (

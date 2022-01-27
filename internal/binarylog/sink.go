@@ -24,9 +24,14 @@ import (
 	"io"
 	"sync"
 	"time"
+)
 
-	pb "github.com/dubbogo/grpc-go/binarylog/grpc_binarylog_v1"
+import (
 	"github.com/golang/protobuf/proto"
+)
+
+import (
+	pb "github.com/dubbogo/grpc-go/binarylog/grpc_binarylog_v1"
 )
 
 var (

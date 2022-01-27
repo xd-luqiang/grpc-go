@@ -26,8 +26,13 @@ import (
 	"strings"
 	"sync/atomic"
 	"time"
+)
 
+import (
 	xxhash "github.com/cespare/xxhash/v2"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/internal/grpcrand"
 	iresolver "github.com/dubbogo/grpc-go/internal/resolver"

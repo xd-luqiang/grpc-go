@@ -25,9 +25,10 @@ import (
 	"io"
 	"log"
 	"net"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
-
 	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
 )
 

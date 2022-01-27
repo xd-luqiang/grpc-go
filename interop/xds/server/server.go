@@ -26,20 +26,21 @@ import (
 	"log"
 	"net"
 	"os"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/admin"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
+	xdscreds "github.com/dubbogo/grpc-go/credentials/xds"
 	"github.com/dubbogo/grpc-go/grpclog"
 	"github.com/dubbogo/grpc-go/health"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/reflection"
-	"github.com/dubbogo/grpc-go/xds"
-
-	xdscreds "github.com/dubbogo/grpc-go/credentials/xds"
 	healthpb "github.com/dubbogo/grpc-go/health/grpc_health_v1"
 	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
 	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
+	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/dubbogo/grpc-go/reflection"
+	"github.com/dubbogo/grpc-go/xds"
 )
 
 var (

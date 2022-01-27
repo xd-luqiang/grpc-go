@@ -21,7 +21,9 @@ package primitives_test
 import (
 	"strconv"
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/codes"
 )
 

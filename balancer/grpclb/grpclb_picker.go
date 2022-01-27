@@ -21,7 +21,9 @@ package grpclb
 import (
 	"sync"
 	"sync/atomic"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	lbpb "github.com/dubbogo/grpc-go/balancer/grpclb/grpc_lb_v1"
 	"github.com/dubbogo/grpc-go/codes"

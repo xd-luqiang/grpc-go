@@ -26,19 +26,25 @@ package csds
 import (
 	"context"
 	"io"
+)
 
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/status"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+import (
 	v3adminpb "github.com/envoyproxy/go-control-plane/envoy/admin/v3"
 	v2corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
 	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
 	v3statusgrpc "github.com/envoyproxy/go-control-plane/envoy/service/status/v3"
 	v3statuspb "github.com/envoyproxy/go-control-plane/envoy/service/status/v3"
-	"github.com/golang/protobuf/proto"
-	"google.golang.org/protobuf/types/known/timestamppb"
 
+	"github.com/golang/protobuf/proto"
+
+	"google.golang.org/protobuf/types/known/timestamppb"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/grpclog"
+	"github.com/dubbogo/grpc-go/status"
+	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 	_ "github.com/dubbogo/grpc-go/xds/internal/xdsclient/v2" // Register v2 xds_client.
 	_ "github.com/dubbogo/grpc-go/xds/internal/xdsclient/v3" // Register v3 xds_client.
 )

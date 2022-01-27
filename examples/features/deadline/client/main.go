@@ -25,7 +25,9 @@ import (
 	"fmt"
 	"log"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"

@@ -22,7 +22,9 @@ import (
 	"sync"
 	"testing"
 	"time"
+)
 
+import (
 	healthpb "github.com/dubbogo/grpc-go/health/grpc_health_v1"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 )

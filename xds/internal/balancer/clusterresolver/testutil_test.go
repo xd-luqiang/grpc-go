@@ -22,15 +22,20 @@ import (
 	"reflect"
 	"strconv"
 	"time"
+)
 
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/xds/internal"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+import (
 	xdspb "github.com/envoyproxy/go-control-plane/envoy/api/v2"
 	corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
 	endpointpb "github.com/envoyproxy/go-control-plane/envoy/api/v2/endpoint"
 	typepb "github.com/envoyproxy/go-control-plane/envoy/type"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/balancer"
+	"github.com/dubbogo/grpc-go/xds/internal"
+	"github.com/dubbogo/grpc-go/xds/internal/testutils"
+	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 )
 
 // parseEDSRespProtoForTesting parses EDS response, and panic if parsing fails.

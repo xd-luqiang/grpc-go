@@ -20,7 +20,9 @@ package server
 
 import (
 	"sync"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 )
 

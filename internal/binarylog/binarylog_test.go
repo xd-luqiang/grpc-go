@@ -20,7 +20,9 @@ package binarylog
 
 import (
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 )
 

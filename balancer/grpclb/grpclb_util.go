@@ -22,7 +22,9 @@ import (
 	"fmt"
 	"sync"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/resolver"
 )
@@ -52,7 +54,6 @@ import (
 //  | +              +            |     +              +            | |
 //  |                             +---------------------------------+ |
 //  +-----------------------------------------------------------------+
-
 // lbManualResolver is used by the ClientConn inside grpclb. It's a manual
 // resolver with a special ResolveNow() function.
 //

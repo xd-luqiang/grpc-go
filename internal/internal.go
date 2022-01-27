@@ -23,7 +23,9 @@ package internal
 import (
 	"context"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/connectivity"
 	"github.com/dubbogo/grpc-go/serviceconfig"
 )

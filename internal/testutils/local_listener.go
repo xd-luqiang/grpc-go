@@ -18,7 +18,9 @@
 
 package testutils
 
-import "net"
+import (
+	"net"
+)
 
 // LocalTCPListener returns a net.Listener listening on local address and port.
 func LocalTCPListener() (net.Listener, error) {

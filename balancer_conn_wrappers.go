@@ -21,7 +21,9 @@ package grpc
 import (
 	"fmt"
 	"sync"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/connectivity"
 	"github.com/dubbogo/grpc-go/internal/buffer"

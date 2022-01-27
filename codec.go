@@ -19,7 +19,6 @@
 package grpc
 
 import (
-	//"github.com/dubbogo/grpc-go/encoding"
 	_ "github.com/dubbogo/grpc-go/encoding/proto" // to register the Codec for "proto"
 )
 
@@ -30,10 +29,8 @@ import (
 //	Marshal(v interface{}) ([]byte, error)
 //	Unmarshal(data []byte, v interface{}) error
 //}
-
 //var _ baseCodec = encoding.TwoWayCodec(nil)
 //var _ baseCodec = encoding.TwoWayCodec(nil)
-
 //// Codec defines the interface gRPC uses to encode and decode messages.
 //// Note that implementations of this interface must be thread safe;
 //// a Codec's methods can be called from concurrent goroutines.

@@ -21,14 +21,20 @@ package router
 
 import (
 	"fmt"
+)
 
-	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
-	"github.com/dubbogo/grpc-go/xds/internal/httpfilter"
+import (
+	pb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/http/router/v3"
+
 	"github.com/golang/protobuf/proto"
 	"github.com/golang/protobuf/ptypes"
-	"google.golang.org/protobuf/types/known/anypb"
 
-	pb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/http/router/v3"
+	"google.golang.org/protobuf/types/known/anypb"
+)
+
+import (
+	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
+	"github.com/dubbogo/grpc-go/xds/internal/httpfilter"
 )
 
 // TypeURL is the message type for the Router configuration.

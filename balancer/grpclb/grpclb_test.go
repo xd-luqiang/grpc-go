@@ -30,12 +30,20 @@ import (
 	"sync/atomic"
 	"testing"
 	"time"
+)
+
+import (
+	durationpb "github.com/golang/protobuf/ptypes/duration"
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/balancer"
+	lbgrpc "github.com/dubbogo/grpc-go/balancer/grpclb/grpc_lb_v1"
+	lbpb "github.com/dubbogo/grpc-go/balancer/grpclb/grpc_lb_v1"
 	grpclbstate "github.com/dubbogo/grpc-go/balancer/grpclb/state"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials"
@@ -46,11 +54,7 @@ import (
 	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/dubbogo/grpc-go/resolver/manual"
 	"github.com/dubbogo/grpc-go/status"
-
-	lbgrpc "github.com/dubbogo/grpc-go/balancer/grpclb/grpc_lb_v1"
-	lbpb "github.com/dubbogo/grpc-go/balancer/grpclb/grpc_lb_v1"
 	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
-	durationpb "github.com/golang/protobuf/ptypes/duration"
 )
 
 var (

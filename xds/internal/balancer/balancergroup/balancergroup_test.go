@@ -29,7 +29,13 @@ import (
 	"fmt"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/balancer/roundrobin"
@@ -40,7 +46,6 @@ import (
 	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/dubbogo/grpc-go/xds/internal/balancer/weightedtarget/weightedaggregator"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils"
-	"github.com/google/go-cmp/cmp"
 )
 
 var (

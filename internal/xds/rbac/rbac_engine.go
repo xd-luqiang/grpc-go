@@ -27,7 +27,13 @@ import (
 	"fmt"
 	"net"
 	"strconv"
+)
 
+import (
+	v3rbacpb "github.com/envoyproxy/go-control-plane/envoy/config/rbac/v3"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials"
@@ -36,7 +42,6 @@ import (
 	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/dubbogo/grpc-go/peer"
 	"github.com/dubbogo/grpc-go/status"
-	v3rbacpb "github.com/envoyproxy/go-control-plane/envoy/config/rbac/v3"
 )
 
 const logLevel = 2

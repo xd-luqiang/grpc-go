@@ -26,13 +26,18 @@ import (
 	"path"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+	"github.com/google/go-cmp/cmp/cmpopts"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/credentials/tls/certprovider"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 	"github.com/dubbogo/grpc-go/internal/testutils"
 	"github.com/dubbogo/grpc-go/testdata"
-	"github.com/google/go-cmp/cmp"
-	"github.com/google/go-cmp/cmp/cmpopts"
 )
 
 const (

@@ -21,7 +21,9 @@ package xdsclient
 import (
 	"context"
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/grpcrand"
 	"github.com/dubbogo/grpc-go/internal/grpcutil"
 	iresolver "github.com/dubbogo/grpc-go/internal/resolver"

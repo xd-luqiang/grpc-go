@@ -24,7 +24,9 @@ import (
 	"fmt"
 	"os"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	ppb "github.com/dubbogo/grpc-go/profiling/proto"
 )

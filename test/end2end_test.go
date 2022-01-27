@@ -40,7 +40,19 @@ import (
 	"syscall"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+	anypb "github.com/golang/protobuf/ptypes/any"
+
+	"golang.org/x/net/http2"
+	"golang.org/x/net/http2/hpack"
+
+	spb "google.golang.org/genproto/googleapis/rpc/status"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/connectivity"
@@ -69,11 +81,6 @@ import (
 	"github.com/dubbogo/grpc-go/test/bufconn"
 	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
 	"github.com/dubbogo/grpc-go/testdata"
-	"github.com/golang/protobuf/proto"
-	anypb "github.com/golang/protobuf/ptypes/any"
-	"golang.org/x/net/http2"
-	"golang.org/x/net/http2/hpack"
-	spb "google.golang.org/genproto/googleapis/rpc/status"
 )
 
 const defaultHealthService = "grpc.health.v1.Health"

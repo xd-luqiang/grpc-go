@@ -21,12 +21,17 @@
 package grpc_testing
 
 import (
-	proto "github.com/golang/protobuf/proto"
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoiface "google.golang.org/protobuf/runtime/protoiface"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
+)
+
+import (
+	proto "github.com/golang/protobuf/proto"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+
+	protoiface "google.golang.org/protobuf/runtime/protoiface"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (

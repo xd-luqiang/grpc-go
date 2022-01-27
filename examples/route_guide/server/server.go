@@ -34,14 +34,16 @@ import (
 	"net"
 	"sync"
 	"time"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
-
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/examples/data"
-
-	"github.com/golang/protobuf/proto"
-
 	pb "github.com/dubbogo/grpc-go/examples/route_guide/routeguide"
 )
 

@@ -24,12 +24,13 @@ import (
 	"log"
 	"net"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/channelz/service"
-	"github.com/dubbogo/grpc-go/internal/grpcrand"
-
 	pb "github.com/dubbogo/grpc-go/examples/helloworld/helloworld"
+	"github.com/dubbogo/grpc-go/internal/grpcrand"
 )
 
 var (

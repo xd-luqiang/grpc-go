@@ -20,12 +20,15 @@ package engine
 
 import (
 	"errors"
+)
 
-	expr "google.golang.org/genproto/googleapis/api/expr/v1alpha1"
-	"google.golang.org/protobuf/proto"
-
+import (
 	"github.com/google/cel-go/cel"
 	"github.com/google/cel-go/checker/decls"
+
+	expr "google.golang.org/genproto/googleapis/api/expr/v1alpha1"
+
+	"google.golang.org/protobuf/proto"
 )
 
 func compileCel(env *cel.Env, expr string) (*cel.Ast, error) {

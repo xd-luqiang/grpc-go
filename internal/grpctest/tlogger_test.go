@@ -20,7 +20,9 @@ package grpctest
 
 import (
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/grpclog"
 	grpclogi "github.com/dubbogo/grpc-go/internal/grpclog"
 )

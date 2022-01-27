@@ -25,8 +25,13 @@ import (
 	"fmt"
 	"log"
 	"time"
+)
 
+import (
 	"golang.org/x/oauth2"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/credentials/oauth"

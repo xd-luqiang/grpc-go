@@ -25,7 +25,9 @@ import (
 	"strings"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 	"github.com/dubbogo/grpc-go/testdata"
 )

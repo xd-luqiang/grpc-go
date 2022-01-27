@@ -21,7 +21,9 @@ package matcher
 import (
 	"regexp"
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/metadata"
 )
 

@@ -24,7 +24,19 @@ import (
 	"net"
 	"net/url"
 	"testing"
+)
 
+import (
+	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
+	v3rbacpb "github.com/envoyproxy/go-control-plane/envoy/config/rbac/v3"
+	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
+	v3matcherpb "github.com/envoyproxy/go-control-plane/envoy/type/matcher/v3"
+	v3typepb "github.com/envoyproxy/go-control-plane/envoy/type/v3"
+
+	wrapperspb "github.com/golang/protobuf/ptypes/wrappers"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials"
@@ -32,12 +44,6 @@ import (
 	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/dubbogo/grpc-go/peer"
 	"github.com/dubbogo/grpc-go/status"
-	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
-	v3rbacpb "github.com/envoyproxy/go-control-plane/envoy/config/rbac/v3"
-	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
-	v3matcherpb "github.com/envoyproxy/go-control-plane/envoy/type/matcher/v3"
-	v3typepb "github.com/envoyproxy/go-control-plane/envoy/type/v3"
-	wrapperspb "github.com/golang/protobuf/ptypes/wrappers"
 )
 
 type s struct {

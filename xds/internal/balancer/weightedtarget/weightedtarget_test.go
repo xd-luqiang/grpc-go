@@ -23,7 +23,13 @@ import (
 	"fmt"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/attributes"
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/balancer/roundrobin"
@@ -34,7 +40,6 @@ import (
 	"github.com/dubbogo/grpc-go/serviceconfig"
 	"github.com/dubbogo/grpc-go/xds/internal/balancer/balancergroup"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils"
-	"github.com/google/go-cmp/cmp"
 )
 
 type testConfigBalancerBuilder struct {

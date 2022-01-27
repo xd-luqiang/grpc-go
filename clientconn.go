@@ -29,9 +29,12 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/balancer/base"
+	_ "github.com/dubbogo/grpc-go/balancer/roundrobin" // To register roundrobin.
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/connectivity"
 	"github.com/dubbogo/grpc-go/credentials"
@@ -39,17 +42,15 @@ import (
 	"github.com/dubbogo/grpc-go/internal/channelz"
 	"github.com/dubbogo/grpc-go/internal/grpcsync"
 	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
+	_ "github.com/dubbogo/grpc-go/internal/resolver/dns"         // To register dns resolver.
+	_ "github.com/dubbogo/grpc-go/internal/resolver/passthrough" // To register passthrough resolver.
+	_ "github.com/dubbogo/grpc-go/internal/resolver/unix"        // To register unix resolver.
 	"github.com/dubbogo/grpc-go/internal/transport"
 	"github.com/dubbogo/grpc-go/keepalive"
 	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/dubbogo/grpc-go/serviceconfig"
 	"github.com/dubbogo/grpc-go/status"
-
-	_ "github.com/dubbogo/grpc-go/balancer/roundrobin"           // To register roundrobin.
-	_ "github.com/dubbogo/grpc-go/internal/resolver/dns"         // To register dns resolver.
-	_ "github.com/dubbogo/grpc-go/internal/resolver/passthrough" // To register passthrough resolver.
-	_ "github.com/dubbogo/grpc-go/internal/resolver/unix"        // To register unix resolver.
 )
 
 const (

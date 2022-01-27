@@ -22,7 +22,9 @@ package weightedtarget
 import (
 	"encoding/json"
 	"fmt"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/internal/grpclog"
 	"github.com/dubbogo/grpc-go/internal/hierarchy"

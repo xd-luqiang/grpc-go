@@ -29,19 +29,9 @@ import (
 	"strconv"
 	"strings"
 	"testing"
+)
 
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/credentials/insecure"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/internal/xds/env"
-	"github.com/dubbogo/grpc-go/status"
-	"github.com/dubbogo/grpc-go/xds"
-	"github.com/dubbogo/grpc-go/xds/internal/httpfilter/rbac"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
-
-	xdscreds "github.com/dubbogo/grpc-go/credentials/xds"
-	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
+import (
 	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
 	v3listenerpb "github.com/envoyproxy/go-control-plane/envoy/config/listener/v3"
 	v3rbacpb "github.com/envoyproxy/go-control-plane/envoy/config/rbac/v3"
@@ -50,8 +40,23 @@ import (
 	v3routerpb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/http/router/v3"
 	v3httppb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/network/http_connection_manager/v3"
 	v3matcherpb "github.com/envoyproxy/go-control-plane/envoy/type/matcher/v3"
+
 	anypb "github.com/golang/protobuf/ptypes/any"
 	wrapperspb "github.com/golang/protobuf/ptypes/wrappers"
+)
+
+import (
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/credentials/insecure"
+	xdscreds "github.com/dubbogo/grpc-go/credentials/xds"
+	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/dubbogo/grpc-go/internal/xds/env"
+	"github.com/dubbogo/grpc-go/status"
+	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
+	"github.com/dubbogo/grpc-go/xds"
+	"github.com/dubbogo/grpc-go/xds/internal/httpfilter/rbac"
+	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
 )
 
 const (

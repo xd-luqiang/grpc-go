@@ -26,7 +26,9 @@ import (
 	"strings"
 	"sync"
 	"time"
+)
 
+import (
 	"golang.org/x/net/trace"
 )
 

@@ -23,7 +23,9 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/grpcutil"
 	"github.com/dubbogo/grpc-go/metadata"
 )

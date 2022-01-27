@@ -20,14 +20,20 @@ package testutils
 import (
 	"net"
 	"strconv"
+)
 
-	"github.com/dubbogo/grpc-go/xds/internal"
+import (
 	v2xdspb "github.com/envoyproxy/go-control-plane/envoy/api/v2"
 	v2corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
 	v2endpointpb "github.com/envoyproxy/go-control-plane/envoy/api/v2/endpoint"
 	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
 	v2typepb "github.com/envoyproxy/go-control-plane/envoy/type"
+
 	wrapperspb "github.com/golang/protobuf/ptypes/wrappers"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/xds/internal"
 )
 
 // EmptyNodeProtoV2 is a v2 Node proto with no fields set.

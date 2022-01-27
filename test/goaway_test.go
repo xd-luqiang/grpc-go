@@ -23,7 +23,9 @@ import (
 	"net"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/internal/stubserver"
 	"github.com/dubbogo/grpc-go/keepalive"

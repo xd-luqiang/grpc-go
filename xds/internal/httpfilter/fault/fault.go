@@ -27,20 +27,26 @@ import (
 	"strconv"
 	"sync/atomic"
 	"time"
+)
 
+import (
+	cpb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/common/fault/v3"
+	fpb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/http/fault/v3"
+	tpb "github.com/envoyproxy/go-control-plane/envoy/type/v3"
+
+	"github.com/golang/protobuf/proto"
+	"github.com/golang/protobuf/ptypes"
+
+	"google.golang.org/protobuf/types/known/anypb"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/internal/grpcrand"
 	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
 	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/dubbogo/grpc-go/status"
 	"github.com/dubbogo/grpc-go/xds/internal/httpfilter"
-	"github.com/golang/protobuf/proto"
-	"github.com/golang/protobuf/ptypes"
-	"google.golang.org/protobuf/types/known/anypb"
-
-	cpb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/common/fault/v3"
-	fpb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/http/fault/v3"
-	tpb "github.com/envoyproxy/go-control-plane/envoy/type/v3"
 )
 
 const headerAbortHTTPStatus = "x-envoy-fault-abort-request"

@@ -23,13 +23,19 @@ import (
 	"fmt"
 	"regexp"
 	"testing"
+)
 
+import (
 	xxhash "github.com/cespare/xxhash/v2"
+
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
 	"github.com/dubbogo/grpc-go/metadata"
 	_ "github.com/dubbogo/grpc-go/xds/internal/balancer/cdsbalancer" // To parse LB config
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/google/go-cmp/cmp"
 )
 
 func (s) TestPruneActiveClusters(t *testing.T) {

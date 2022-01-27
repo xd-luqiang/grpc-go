@@ -21,11 +21,16 @@ package clusterresolver
 import (
 	"encoding/json"
 	"testing"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/internal/balancer/stub"
 	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
 	"github.com/dubbogo/grpc-go/xds/internal/balancer/ringhash"
-	"github.com/google/go-cmp/cmp"
 )
 
 func TestDiscoveryMechanismTypeMarshalJSON(t *testing.T) {

@@ -25,18 +25,19 @@ import (
 	"runtime"
 	"sync"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/benchmark"
 	"github.com/dubbogo/grpc-go/benchmark/stats"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/internal/syscall"
-	"github.com/dubbogo/grpc-go/status"
-	"github.com/dubbogo/grpc-go/testdata"
-
 	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
 	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
+	"github.com/dubbogo/grpc-go/status"
+	"github.com/dubbogo/grpc-go/testdata"
 )
 
 var caFile = flag.String("ca_file", "", "The file containing the CA root cert file")

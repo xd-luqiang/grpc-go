@@ -20,7 +20,9 @@ package health_test
 
 import (
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/health"
 	healthgrpc "github.com/dubbogo/grpc-go/health/grpc_health_v1"

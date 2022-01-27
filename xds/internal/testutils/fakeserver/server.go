@@ -25,18 +25,23 @@ import (
 	"io"
 	"net"
 	"time"
+)
 
+import (
+	discoverypb "github.com/envoyproxy/go-control-plane/envoy/api/v2"
+	adsgrpc "github.com/envoyproxy/go-control-plane/envoy/service/discovery/v2"
+	lrsgrpc "github.com/envoyproxy/go-control-plane/envoy/service/load_stats/v2"
+	lrspb "github.com/envoyproxy/go-control-plane/envoy/service/load_stats/v2"
+
+	"github.com/golang/protobuf/proto"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
 	"github.com/dubbogo/grpc-go/internal/testutils"
 	"github.com/dubbogo/grpc-go/status"
-	"github.com/golang/protobuf/proto"
-
-	discoverypb "github.com/envoyproxy/go-control-plane/envoy/api/v2"
-	adsgrpc "github.com/envoyproxy/go-control-plane/envoy/service/discovery/v2"
-	lrsgrpc "github.com/envoyproxy/go-control-plane/envoy/service/load_stats/v2"
-	lrspb "github.com/envoyproxy/go-control-plane/envoy/service/load_stats/v2"
 )
 
 const (

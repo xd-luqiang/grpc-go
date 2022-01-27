@@ -21,7 +21,9 @@ package xdsclient_test
 import (
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
 	"github.com/dubbogo/grpc-go/internal/grpctest"

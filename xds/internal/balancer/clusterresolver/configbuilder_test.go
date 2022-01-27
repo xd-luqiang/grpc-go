@@ -24,7 +24,13 @@ import (
 	"fmt"
 	"sort"
 	"testing"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/attributes"
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/balancer/roundrobin"
@@ -38,7 +44,6 @@ import (
 	"github.com/dubbogo/grpc-go/xds/internal/balancer/ringhash"
 	"github.com/dubbogo/grpc-go/xds/internal/balancer/weightedtarget"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/google/go-cmp/cmp"
 )
 
 const (

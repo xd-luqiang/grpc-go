@@ -23,7 +23,9 @@ package health
 import (
 	"context"
 	"sync"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/codes"
 	healthgrpc "github.com/dubbogo/grpc-go/health/grpc_health_v1"
 	healthpb "github.com/dubbogo/grpc-go/health/grpc_health_v1"

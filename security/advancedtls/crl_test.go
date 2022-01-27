@@ -37,8 +37,13 @@ import (
 	"strings"
 	"testing"
 	"time"
+)
 
+import (
 	lru "github.com/hashicorp/golang-lru"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/security/advancedtls/testdata"
 )
 

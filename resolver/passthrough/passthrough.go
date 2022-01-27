@@ -23,4 +23,6 @@
 // imported directly by users.
 package passthrough
 
-import _ "github.com/dubbogo/grpc-go/internal/resolver/passthrough" // import for side effects after package was moved
+import (
+	_ "github.com/dubbogo/grpc-go/internal/resolver/passthrough" // import for side effects after package was moved
+)

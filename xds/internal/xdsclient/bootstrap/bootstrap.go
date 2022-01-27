@@ -26,7 +26,17 @@ import (
 	"fmt"
 	"io/ioutil"
 	"strings"
+)
 
+import (
+	v2corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
+	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
+
+	"github.com/golang/protobuf/jsonpb"
+	"github.com/golang/protobuf/proto"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/credentials/google"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
@@ -35,10 +45,6 @@ import (
 	"github.com/dubbogo/grpc-go/internal/pretty"
 	"github.com/dubbogo/grpc-go/internal/xds/env"
 	"github.com/dubbogo/grpc-go/xds/internal/version"
-	v2corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
-	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
-	"github.com/golang/protobuf/jsonpb"
-	"github.com/golang/protobuf/proto"
 )
 
 const (

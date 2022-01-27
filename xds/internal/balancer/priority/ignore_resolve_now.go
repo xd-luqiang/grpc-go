@@ -20,7 +20,9 @@ package priority
 
 import (
 	"sync/atomic"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/resolver"
 )

@@ -20,7 +20,9 @@ package testutils
 
 import (
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 )
 

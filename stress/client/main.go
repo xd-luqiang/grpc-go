@@ -29,17 +29,18 @@ import (
 	"strings"
 	"sync"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/grpclog"
 	"github.com/dubbogo/grpc-go/interop"
-	"github.com/dubbogo/grpc-go/status"
-	"github.com/dubbogo/grpc-go/testdata"
-
 	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
+	"github.com/dubbogo/grpc-go/status"
 	metricspb "github.com/dubbogo/grpc-go/stress/grpc_testing"
+	"github.com/dubbogo/grpc-go/testdata"
 )
 
 var (

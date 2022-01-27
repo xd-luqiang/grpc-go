@@ -25,8 +25,13 @@ import (
 	"log"
 	"os"
 	"time"
+)
 
+import (
 	epb "google.golang.org/genproto/googleapis/rpc/errdetails"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	pb "github.com/dubbogo/grpc-go/examples/helloworld/helloworld"
 	"github.com/dubbogo/grpc-go/status"

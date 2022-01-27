@@ -18,7 +18,9 @@
 
 package adaptive
 
-import "time"
+import (
+	"time"
+)
 
 // lookback implements a moving sum over an int64 timeline.
 type lookback struct {

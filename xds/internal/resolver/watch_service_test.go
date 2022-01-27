@@ -23,13 +23,19 @@ import (
 	"fmt"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+	"github.com/google/go-cmp/cmp/cmpopts"
+
+	"google.golang.org/protobuf/proto"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/internal/testutils"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/google/go-cmp/cmp"
-	"github.com/google/go-cmp/cmp/cmpopts"
-	"google.golang.org/protobuf/proto"
 )
 
 func (s) TestFindBestMatchingVirtualHost(t *testing.T) {

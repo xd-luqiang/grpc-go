@@ -21,9 +21,14 @@ package grpclb
 import (
 	"encoding/json"
 	"testing"
+)
 
-	"github.com/dubbogo/grpc-go/serviceconfig"
+import (
 	"github.com/google/go-cmp/cmp"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/serviceconfig"
 )
 
 func (s) TestParse(t *testing.T) {

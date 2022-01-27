@@ -25,7 +25,9 @@ import (
 	"reflect"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/serviceconfig"
 )

@@ -24,7 +24,9 @@ import (
 	"net"
 	"sync"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/credentials/tls/certprovider"
 	xdsinternal "github.com/dubbogo/grpc-go/internal/credentials/xds"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"

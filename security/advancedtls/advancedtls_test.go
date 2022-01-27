@@ -26,8 +26,13 @@ import (
 	"fmt"
 	"net"
 	"testing"
+)
 
+import (
 	lru "github.com/hashicorp/golang-lru"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/credentials/tls/certprovider"
 	"github.com/dubbogo/grpc-go/internal/grpctest"

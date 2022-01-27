@@ -22,7 +22,13 @@ import (
 	"fmt"
 	"regexp"
 	"testing"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/attributes"
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/credentials/local"
@@ -37,7 +43,6 @@ import (
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/bootstrap"
-	"github.com/google/go-cmp/cmp"
 )
 
 const (

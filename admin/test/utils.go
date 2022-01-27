@@ -25,16 +25,22 @@ import (
 	"net"
 	"testing"
 	"time"
+)
 
+import (
+	v3statusgrpc "github.com/envoyproxy/go-control-plane/envoy/service/status/v3"
+	v3statuspb "github.com/envoyproxy/go-control-plane/envoy/service/status/v3"
+
+	"github.com/google/uuid"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/admin"
 	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/internal/xds"
 	"github.com/dubbogo/grpc-go/status"
-	v3statusgrpc "github.com/envoyproxy/go-control-plane/envoy/service/status/v3"
-	v3statuspb "github.com/envoyproxy/go-control-plane/envoy/service/status/v3"
-	"github.com/google/uuid"
 )
 
 const (

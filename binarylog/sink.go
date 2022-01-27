@@ -25,7 +25,9 @@ package binarylog
 import (
 	"fmt"
 	"io/ioutil"
+)
 
+import (
 	pb "github.com/dubbogo/grpc-go/binarylog/grpc_binarylog_v1"
 	iblog "github.com/dubbogo/grpc-go/internal/binarylog"
 )

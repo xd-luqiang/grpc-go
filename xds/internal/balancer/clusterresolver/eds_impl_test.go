@@ -22,7 +22,15 @@ import (
 	"sort"
 	"testing"
 	"time"
+)
 
+import (
+	corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
+
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/connectivity"
 	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
@@ -34,8 +42,6 @@ import (
 	"github.com/dubbogo/grpc-go/xds/internal/testutils"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
-	"github.com/google/go-cmp/cmp"
 )
 
 var (

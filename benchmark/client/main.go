@@ -47,13 +47,14 @@ import (
 	"runtime/pprof"
 	"sync"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/benchmark"
 	"github.com/dubbogo/grpc-go/benchmark/stats"
 	"github.com/dubbogo/grpc-go/grpclog"
 	"github.com/dubbogo/grpc-go/internal/syscall"
-
 	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
 	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
 )

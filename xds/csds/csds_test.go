@@ -25,19 +25,9 @@ import (
 	"strings"
 	"testing"
 	"time"
+)
 
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/internal/xds"
-	_ "github.com/dubbogo/grpc-go/xds/internal/httpfilter/router"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/golang/protobuf/proto"
-	"github.com/google/go-cmp/cmp"
-	"github.com/google/uuid"
-	"google.golang.org/protobuf/testing/protocmp"
-	"google.golang.org/protobuf/types/known/anypb"
-
+import (
 	v3adminpb "github.com/envoyproxy/go-control-plane/envoy/admin/v3"
 	v2corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
 	v3clusterpb "github.com/envoyproxy/go-control-plane/envoy/config/cluster/v3"
@@ -47,6 +37,25 @@ import (
 	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
 	v3statuspb "github.com/envoyproxy/go-control-plane/envoy/service/status/v3"
 	v3statuspbgrpc "github.com/envoyproxy/go-control-plane/envoy/service/status/v3"
+
+	"github.com/golang/protobuf/proto"
+
+	"github.com/google/go-cmp/cmp"
+
+	"github.com/google/uuid"
+
+	"google.golang.org/protobuf/testing/protocmp"
+
+	"google.golang.org/protobuf/types/known/anypb"
+)
+
+import (
+	"github.com/dubbogo/grpc-go"
+	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/dubbogo/grpc-go/internal/xds"
+	_ "github.com/dubbogo/grpc-go/xds/internal/httpfilter/router"
+	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
+	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 )
 
 const (

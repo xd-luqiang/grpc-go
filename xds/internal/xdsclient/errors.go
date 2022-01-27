@@ -18,7 +18,9 @@
 
 package xdsclient
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // ErrorType is the type of the error that the watcher will receive from the xds
 // client.

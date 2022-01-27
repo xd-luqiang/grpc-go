@@ -24,7 +24,9 @@ import (
 	"fmt"
 	"sort"
 	"strings"
+)
 
+import (
 	rlspb "github.com/dubbogo/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
 	"github.com/dubbogo/grpc-go/metadata"
 )

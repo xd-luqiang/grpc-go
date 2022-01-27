@@ -25,15 +25,20 @@ import (
 	"context"
 	"fmt"
 	"testing"
+)
 
+import (
+	v3clusterpb "github.com/envoyproxy/go-control-plane/envoy/config/cluster/v3"
+	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
+	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
 	"github.com/dubbogo/grpc-go/internal/xds/env"
 	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
-	v3clusterpb "github.com/envoyproxy/go-control-plane/envoy/config/cluster/v3"
-	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
-	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
 )
 
 const hashHeaderName = "session_id"

@@ -22,9 +22,14 @@ package glogger
 
 import (
 	"fmt"
+)
 
-	"github.com/dubbogo/grpc-go/grpclog"
+import (
 	"github.com/golang/glog"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/grpclog"
 )
 
 const d = 2

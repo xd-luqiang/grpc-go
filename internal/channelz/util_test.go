@@ -30,10 +30,15 @@ import (
 	"reflect"
 	"syscall"
 	"testing"
+)
 
+import (
+	"golang.org/x/sys/unix"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/internal/channelz"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"golang.org/x/sys/unix"
 )
 
 type s struct {

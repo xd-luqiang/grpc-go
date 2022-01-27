@@ -24,7 +24,9 @@ import (
 	"fmt"
 	"sync"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/bootstrap"
 )
 

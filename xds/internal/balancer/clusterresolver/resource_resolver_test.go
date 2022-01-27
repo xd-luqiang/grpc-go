@@ -22,13 +22,18 @@ import (
 	"context"
 	"fmt"
 	"testing"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/dubbogo/grpc-go/resolver/manual"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
 	xdsclient "github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/google/go-cmp/cmp"
 )
 
 const (

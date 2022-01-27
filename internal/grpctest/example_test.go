@@ -20,7 +20,9 @@ package grpctest_test
 
 import (
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 )
 

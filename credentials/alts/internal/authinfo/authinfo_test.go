@@ -21,7 +21,9 @@ package authinfo
 import (
 	"reflect"
 	"testing"
+)
 
+import (
 	altspb "github.com/dubbogo/grpc-go/credentials/alts/internal/proto/grpc_gcp"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 )

@@ -21,14 +21,20 @@ import (
 	"context"
 	"testing"
 	"time"
+)
 
+import (
+	corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
+
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/connectivity"
 	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/dubbogo/grpc-go/xds/internal/balancer/priority"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils"
-	corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
-	"github.com/google/go-cmp/cmp"
 )
 
 // When a high priority is ready, adding/removing lower locality doesn't cause

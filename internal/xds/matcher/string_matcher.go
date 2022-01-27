@@ -25,9 +25,14 @@ import (
 	"fmt"
 	"regexp"
 	"strings"
+)
 
-	"github.com/dubbogo/grpc-go/internal/grpcutil"
+import (
 	v3matcherpb "github.com/envoyproxy/go-control-plane/envoy/type/matcher/v3"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/internal/grpcutil"
 )
 
 // StringMatcher contains match criteria for matching a string, and is an

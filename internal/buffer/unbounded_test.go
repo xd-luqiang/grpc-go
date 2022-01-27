@@ -22,7 +22,9 @@ import (
 	"sort"
 	"sync"
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 )
 

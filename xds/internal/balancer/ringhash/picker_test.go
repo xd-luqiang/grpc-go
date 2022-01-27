@@ -22,11 +22,16 @@ import (
 	"context"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/connectivity"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils"
-	"github.com/google/go-cmp/cmp"
 )
 
 func newTestRing(cStats []connectivity.State) *ring {

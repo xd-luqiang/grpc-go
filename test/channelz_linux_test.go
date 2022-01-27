@@ -25,7 +25,9 @@ package test
 import (
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/channelz"
 	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
 )

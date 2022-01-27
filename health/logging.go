@@ -18,6 +18,8 @@
 
 package health
 
-import "github.com/dubbogo/grpc-go/grpclog"
+import (
+	"github.com/dubbogo/grpc-go/grpclog"
+)
 
 var logger = grpclog.Component("health_service")

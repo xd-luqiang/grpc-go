@@ -25,7 +25,19 @@ import (
 	"strconv"
 	"testing"
 	"time"
+)
 
+import (
+	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
+	v3listenerpb "github.com/envoyproxy/go-control-plane/envoy/config/listener/v3"
+	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
+	v3httppb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/network/http_connection_manager/v3"
+	v3tlspb "github.com/envoyproxy/go-control-plane/envoy/extensions/transport_sockets/tls/v3"
+
+	wrapperspb "github.com/golang/protobuf/ptypes/wrappers"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 	"github.com/dubbogo/grpc-go/internal/testutils"
 	"github.com/dubbogo/grpc-go/internal/xds/env"
@@ -33,12 +45,6 @@ import (
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
-	v3listenerpb "github.com/envoyproxy/go-control-plane/envoy/config/listener/v3"
-	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
-	v3httppb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/network/http_connection_manager/v3"
-	v3tlspb "github.com/envoyproxy/go-control-plane/envoy/extensions/transport_sockets/tls/v3"
-	wrapperspb "github.com/golang/protobuf/ptypes/wrappers"
 )
 
 const (

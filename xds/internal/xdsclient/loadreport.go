@@ -19,7 +19,9 @@ package xdsclient
 
 import (
 	"context"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/load"
 )

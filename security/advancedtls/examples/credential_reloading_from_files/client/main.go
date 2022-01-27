@@ -25,7 +25,9 @@ import (
 	"flag"
 	"log"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/credentials/tls/certprovider/pemfile"
 	pb "github.com/dubbogo/grpc-go/examples/helloworld/helloworld"

@@ -25,7 +25,9 @@ import (
 	"os"
 	"sort"
 	"strings"
+)
 
+import (
 	ppb "github.com/dubbogo/grpc-go/profiling/proto"
 )
 

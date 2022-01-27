@@ -22,7 +22,9 @@ package main
 
 import (
 	"os"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/grpclog"
 	ppb "github.com/dubbogo/grpc-go/profiling/proto"
 )

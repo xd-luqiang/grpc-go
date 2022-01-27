@@ -20,7 +20,9 @@ package xds
 
 import (
 	"net"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/connectivity"
 )

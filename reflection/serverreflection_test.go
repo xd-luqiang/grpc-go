@@ -26,14 +26,19 @@ import (
 	"sort"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+	dpb "github.com/golang/protobuf/protoc-gen-go/descriptor"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 	rpb "github.com/dubbogo/grpc-go/reflection/grpc_reflection_v1alpha"
 	pb "github.com/dubbogo/grpc-go/reflection/grpc_testing"
 	pbv3 "github.com/dubbogo/grpc-go/reflection/grpc_testingv3"
-	"github.com/golang/protobuf/proto"
-	dpb "github.com/golang/protobuf/protoc-gen-go/descriptor"
 )
 
 var (

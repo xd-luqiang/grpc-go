@@ -20,7 +20,9 @@ package channelz
 
 import (
 	"syscall"
+)
 
+import (
 	"golang.org/x/sys/unix"
 )
 

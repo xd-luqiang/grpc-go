@@ -23,8 +23,13 @@ import (
 	"math"
 	"sort"
 	"strconv"
+)
 
+import (
 	xxhash "github.com/cespare/xxhash/v2"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/resolver"
 )
 

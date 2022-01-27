@@ -22,7 +22,21 @@ import (
 	"context"
 	"testing"
 	"time"
+)
 
+import (
+	v2corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
+	endpointpb "github.com/envoyproxy/go-control-plane/envoy/api/v2/endpoint"
+	lrspb "github.com/envoyproxy/go-control-plane/envoy/service/load_stats/v2"
+
+	durationpb "github.com/golang/protobuf/ptypes/duration"
+
+	"github.com/google/go-cmp/cmp"
+
+	"google.golang.org/protobuf/testing/protocmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
@@ -31,13 +45,6 @@ import (
 	"github.com/dubbogo/grpc-go/xds/internal/version"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/bootstrap"
-	v2corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
-	endpointpb "github.com/envoyproxy/go-control-plane/envoy/api/v2/endpoint"
-	lrspb "github.com/envoyproxy/go-control-plane/envoy/service/load_stats/v2"
-	durationpb "github.com/golang/protobuf/ptypes/duration"
-	"github.com/google/go-cmp/cmp"
-	"google.golang.org/protobuf/testing/protocmp"
-
 	_ "github.com/dubbogo/grpc-go/xds/internal/xdsclient/v2" // Register the v2 xDS API client.
 )
 

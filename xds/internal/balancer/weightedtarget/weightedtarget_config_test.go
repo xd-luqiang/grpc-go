@@ -20,11 +20,16 @@ package weightedtarget
 
 import (
 	"testing"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
 	"github.com/dubbogo/grpc-go/xds/internal/balancer/priority"
-	"github.com/google/go-cmp/cmp"
 )
 
 const (

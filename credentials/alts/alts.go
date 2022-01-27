@@ -30,7 +30,9 @@ import (
 	"net"
 	"sync"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/credentials"
 	core "github.com/dubbogo/grpc-go/credentials/alts/internal"
 	"github.com/dubbogo/grpc-go/credentials/alts/internal/handshaker"

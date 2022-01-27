@@ -23,7 +23,9 @@ package binarylog
 import (
 	"fmt"
 	"os"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/grpclog"
 	"github.com/dubbogo/grpc-go/internal/grpcutil"
 )

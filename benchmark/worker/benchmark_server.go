@@ -27,7 +27,9 @@ import (
 	"strings"
 	"sync"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/benchmark"
 	"github.com/dubbogo/grpc-go/codes"

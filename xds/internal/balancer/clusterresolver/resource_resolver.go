@@ -20,7 +20,9 @@ package clusterresolver
 
 import (
 	"sync"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 )
 

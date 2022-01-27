@@ -20,12 +20,18 @@ package testutils
 
 import (
 	"testing"
+)
 
+import (
+	anypb "github.com/golang/protobuf/ptypes/any"
+
+	spb "google.golang.org/genproto/googleapis/rpc/status"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 	"github.com/dubbogo/grpc-go/status"
-	anypb "github.com/golang/protobuf/ptypes/any"
-	spb "google.golang.org/genproto/googleapis/rpc/status"
 )
 
 type s struct {

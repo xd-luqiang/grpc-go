@@ -31,12 +31,18 @@ import (
 	"reflect"
 	"strconv"
 	"testing"
+)
 
-	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
-	"github.com/dubbogo/grpc-go/internal/channelz"
+import (
 	"github.com/golang/protobuf/ptypes"
 	durpb "github.com/golang/protobuf/ptypes/duration"
+
 	"golang.org/x/sys/unix"
+)
+
+import (
+	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
+	"github.com/dubbogo/grpc-go/internal/channelz"
 )
 
 func init() {

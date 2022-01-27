@@ -8,6 +8,9 @@ package grpc_health_v1
 
 import (
 	context "context"
+)
+
+import (
 	grpc "github.com/dubbogo/grpc-go"
 	codes "github.com/dubbogo/grpc-go/codes"
 	status "github.com/dubbogo/grpc-go/status"

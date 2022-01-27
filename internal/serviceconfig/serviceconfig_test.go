@@ -22,10 +22,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"testing"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	externalserviceconfig "github.com/dubbogo/grpc-go/serviceconfig"
-	"github.com/google/go-cmp/cmp"
 )
 
 type testBalancerConfigType struct {

@@ -18,7 +18,9 @@
 
 package codes
 
-import "strconv"
+import (
+	"strconv"
+)
 
 func (c Code) String() string {
 	switch c {

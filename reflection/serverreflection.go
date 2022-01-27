@@ -45,13 +45,18 @@ import (
 	"reflect"
 	"sort"
 	"sync"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+	dpb "github.com/golang/protobuf/protoc-gen-go/descriptor"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	rpb "github.com/dubbogo/grpc-go/reflection/grpc_reflection_v1alpha"
 	"github.com/dubbogo/grpc-go/status"
-	"github.com/golang/protobuf/proto"
-	dpb "github.com/golang/protobuf/protoc-gen-go/descriptor"
 )
 
 // GRPCServer is the interface provided by a gRPC server. It is implemented by

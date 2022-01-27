@@ -22,7 +22,9 @@ package clustermanager
 import (
 	"encoding/json"
 	"fmt"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/grpclog"
 	internalgrpclog "github.com/dubbogo/grpc-go/internal/grpclog"

@@ -23,11 +23,12 @@ import (
 	"context"
 	"flag"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/credentials/alts"
 	"github.com/dubbogo/grpc-go/grpclog"
-
 	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
 	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
 )

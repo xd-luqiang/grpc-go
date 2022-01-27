@@ -28,15 +28,16 @@ import (
 	"net"
 	"strings"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/examples/data"
+	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
 	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/dubbogo/grpc-go/status"
-
-	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
 )
 
 var (

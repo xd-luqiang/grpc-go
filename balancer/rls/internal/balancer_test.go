@@ -23,7 +23,9 @@ import (
 	"net"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/balancer/rls/internal/testutils/fakeserver"

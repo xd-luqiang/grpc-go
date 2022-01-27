@@ -29,20 +29,21 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/admin"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
 	"github.com/dubbogo/grpc-go/credentials/xds"
 	"github.com/dubbogo/grpc-go/grpclog"
+	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
+	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
 	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/dubbogo/grpc-go/peer"
 	"github.com/dubbogo/grpc-go/reflection"
 	"github.com/dubbogo/grpc-go/status"
 	_ "github.com/dubbogo/grpc-go/xds"
-
-	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
 )
 
 func init() {

@@ -19,12 +19,19 @@ package orca
 import (
 	"strings"
 	"testing"
+)
 
+import (
 	orcapb "github.com/cncf/xds/go/xds/data/orca/v3"
+
+	"github.com/golang/protobuf/proto"
+
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/golang/protobuf/proto"
-	"github.com/google/go-cmp/cmp"
 )
 
 var (

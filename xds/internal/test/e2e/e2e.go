@@ -24,7 +24,9 @@ import (
 	"io"
 	"os"
 	"os/exec"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	channelzgrpc "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
 	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"

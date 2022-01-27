@@ -21,7 +21,9 @@ package testutils
 import (
 	"fmt"
 	"sync"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/wrr"
 )
 

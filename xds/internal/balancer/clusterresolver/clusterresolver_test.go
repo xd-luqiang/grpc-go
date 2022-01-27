@@ -23,7 +23,13 @@ import (
 	"fmt"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/connectivity"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
@@ -32,8 +38,6 @@ import (
 	"github.com/dubbogo/grpc-go/xds/internal"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/google/go-cmp/cmp"
-
 	_ "github.com/dubbogo/grpc-go/xds/internal/xdsclient/v2" // V2 client registration.
 )
 

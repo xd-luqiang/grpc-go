@@ -20,10 +20,15 @@ package weightedroundrobin
 
 import (
 	"testing"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/attributes"
 	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/google/go-cmp/cmp"
 )
 
 func TestAddrInfoToAndFromAttributes(t *testing.T) {

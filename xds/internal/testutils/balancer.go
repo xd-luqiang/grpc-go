@@ -24,7 +24,9 @@ import (
 	"errors"
 	"fmt"
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/connectivity"
 	"github.com/dubbogo/grpc-go/resolver"

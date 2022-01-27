@@ -21,7 +21,9 @@ package ringhash
 import (
 	"encoding/json"
 	"fmt"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/serviceconfig"
 )
 

@@ -29,7 +29,9 @@ import (
 	"net"
 	"os"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
 	xdscreds "github.com/dubbogo/grpc-go/credentials/xds"

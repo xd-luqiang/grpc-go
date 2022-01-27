@@ -22,10 +22,15 @@ import (
 	"context"
 	"testing"
 	"time"
+)
 
+import (
 	xdspb "github.com/envoyproxy/go-control-plane/envoy/api/v2"
-	"github.com/google/go-cmp/cmp/cmpopts"
 
+	"github.com/google/go-cmp/cmp/cmpopts"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeserver"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 )

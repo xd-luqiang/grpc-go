@@ -26,12 +26,13 @@ import (
 	"log"
 	"strings"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
 	xdscreds "github.com/dubbogo/grpc-go/credentials/xds"
 	pb "github.com/dubbogo/grpc-go/examples/helloworld/helloworld"
-
 	_ "github.com/dubbogo/grpc-go/xds" // To install the xds resolvers and balancers.
 )
 

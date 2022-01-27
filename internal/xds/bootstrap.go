@@ -25,7 +25,9 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/grpclog"
 	"github.com/dubbogo/grpc-go/internal/xds/env"
 )

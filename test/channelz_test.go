@@ -28,7 +28,13 @@ import (
 	"sync"
 	"testing"
 	"time"
+)
 
+import (
+	"golang.org/x/net/http2"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	_ "github.com/dubbogo/grpc-go/balancer/grpclb"
 	"github.com/dubbogo/grpc-go/balancer/roundrobin"
@@ -44,7 +50,6 @@ import (
 	"github.com/dubbogo/grpc-go/status"
 	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
 	"github.com/dubbogo/grpc-go/testdata"
-	"golang.org/x/net/http2"
 )
 
 func czCleanupWrapper(cleanup func() error, t *testing.T) {

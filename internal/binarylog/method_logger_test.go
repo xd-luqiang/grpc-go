@@ -24,12 +24,17 @@ import (
 	"net"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+	dpb "github.com/golang/protobuf/ptypes/duration"
+)
+
+import (
 	pb "github.com/dubbogo/grpc-go/binarylog/grpc_binarylog_v1"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/status"
-	"github.com/golang/protobuf/proto"
-	dpb "github.com/golang/protobuf/ptypes/duration"
 )
 
 func (s) TestLog(t *testing.T) {

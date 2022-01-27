@@ -24,10 +24,15 @@ package alts
 import (
 	"reflect"
 	"testing"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+)
+
+import (
 	altspb "github.com/dubbogo/grpc-go/credentials/alts/internal/proto/grpc_gcp"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/golang/protobuf/proto"
 )
 
 type s struct {

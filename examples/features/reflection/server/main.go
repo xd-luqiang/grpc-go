@@ -25,12 +25,13 @@ import (
 	"fmt"
 	"log"
 	"net"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/reflection"
-
 	ecpb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
 	hwpb "github.com/dubbogo/grpc-go/examples/helloworld/helloworld"
+	"github.com/dubbogo/grpc-go/reflection"
 )
 
 var port = flag.Int("port", 50051, "the port to serve on")

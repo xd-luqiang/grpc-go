@@ -25,13 +25,14 @@ import (
 	"fmt"
 	"net"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/connectivity"
 	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/dubbogo/grpc-go/resolver/manual"
 	"github.com/dubbogo/grpc-go/serviceconfig"
-
 	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
 )
 

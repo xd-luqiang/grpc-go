@@ -33,18 +33,21 @@ import (
 	"path"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/google/uuid"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
+	xdsinternal "github.com/dubbogo/grpc-go/internal/xds"
 	"github.com/dubbogo/grpc-go/resolver"
+	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
 	"github.com/dubbogo/grpc-go/testdata"
 	"github.com/dubbogo/grpc-go/xds"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
-
-	xdsinternal "github.com/dubbogo/grpc-go/internal/xds"
-	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
 )
 
 const (

@@ -37,7 +37,9 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/profiling/buffer"
 )
 

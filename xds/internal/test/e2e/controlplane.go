@@ -19,10 +19,15 @@ package e2e
 
 import (
 	"fmt"
+)
 
+import (
+	"github.com/google/uuid"
+)
+
+import (
 	xdsinternal "github.com/dubbogo/grpc-go/internal/xds"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
-	"github.com/google/uuid"
 )
 
 type controlPlane struct {

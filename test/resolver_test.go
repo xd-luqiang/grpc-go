@@ -23,7 +23,14 @@ import (
 	"fmt"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+	"github.com/google/go-cmp/cmp/cmpopts"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/codes"
 	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
 	"github.com/dubbogo/grpc-go/internal/serviceconfig"
@@ -34,8 +41,6 @@ import (
 	"github.com/dubbogo/grpc-go/resolver/manual"
 	"github.com/dubbogo/grpc-go/status"
 	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
-	"github.com/google/go-cmp/cmp"
-	"github.com/google/go-cmp/cmp/cmpopts"
 )
 
 type funcConfigSelector struct {

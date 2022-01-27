@@ -21,13 +21,16 @@ package authz
 import (
 	"strings"
 	"testing"
+)
 
-	"github.com/google/go-cmp/cmp"
-	"google.golang.org/protobuf/testing/protocmp"
-
+import (
 	v3rbacpb "github.com/envoyproxy/go-control-plane/envoy/config/rbac/v3"
 	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
 	v3matcherpb "github.com/envoyproxy/go-control-plane/envoy/type/matcher/v3"
+
+	"github.com/google/go-cmp/cmp"
+
+	"google.golang.org/protobuf/testing/protocmp"
 )
 
 func TestTranslatePolicy(t *testing.T) {

@@ -21,15 +21,22 @@ package v2
 import (
 	"testing"
 	"time"
+)
 
+import (
+	v2xdspb "github.com/envoyproxy/go-control-plane/envoy/api/v2"
+
+	anypb "github.com/golang/protobuf/ptypes/any"
+
+	"github.com/google/go-cmp/cmp/cmpopts"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/internal/testutils"
 	"github.com/dubbogo/grpc-go/xds/internal"
 	xtestutils "github.com/dubbogo/grpc-go/xds/internal/testutils"
 	"github.com/dubbogo/grpc-go/xds/internal/version"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	v2xdspb "github.com/envoyproxy/go-control-plane/envoy/api/v2"
-	anypb "github.com/golang/protobuf/ptypes/any"
-	"github.com/google/go-cmp/cmp/cmpopts"
 )
 
 var (

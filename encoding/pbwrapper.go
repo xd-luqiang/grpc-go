@@ -1,8 +1,11 @@
 package encoding
 
 import (
-	"github.com/dubbogo/grpc-go/encoding/proto_wrapper_api"
 	perrors "github.com/pkg/errors"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/encoding/proto_wrapper_api"
 )
 
 // PBWrapperTwoWayCodec is codec impl of pb

@@ -21,10 +21,15 @@ package proto
 import (
 	"fmt"
 	"testing"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/encoding"
 	"github.com/dubbogo/grpc-go/test/codec_perf"
-	"github.com/golang/protobuf/proto"
 )
 
 func setupBenchmarkProtoCodecInputs(payloadBaseSize uint32) []proto.Message {

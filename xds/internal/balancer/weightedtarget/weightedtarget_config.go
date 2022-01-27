@@ -20,7 +20,9 @@ package weightedtarget
 
 import (
 	"encoding/json"
+)
 
+import (
 	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
 	"github.com/dubbogo/grpc-go/serviceconfig"
 )

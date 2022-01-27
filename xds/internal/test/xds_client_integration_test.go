@@ -26,7 +26,15 @@ import (
 	"fmt"
 	"net"
 	"testing"
+)
 
+import (
+	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
+
+	wrapperspb "github.com/golang/protobuf/ptypes/wrappers"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
@@ -34,11 +42,8 @@ import (
 	"github.com/dubbogo/grpc-go/internal/testutils"
 	"github.com/dubbogo/grpc-go/internal/xds/env"
 	"github.com/dubbogo/grpc-go/status"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
-
 	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
-	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
-	wrapperspb "github.com/golang/protobuf/ptypes/wrappers"
+	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
 )
 
 // clientSetup performs a bunch of steps common to all xDS client tests here:

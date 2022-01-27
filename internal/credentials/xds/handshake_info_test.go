@@ -24,7 +24,9 @@ import (
 	"net/url"
 	"regexp"
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/xds/matcher"
 )
 

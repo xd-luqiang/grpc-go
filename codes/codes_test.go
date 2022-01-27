@@ -22,9 +22,14 @@ import (
 	"encoding/json"
 	"reflect"
 	"testing"
+)
 
-	"github.com/dubbogo/grpc-go/internal/grpctest"
+import (
 	cpb "google.golang.org/genproto/googleapis/rpc/code"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/internal/grpctest"
 )
 
 type s struct {

@@ -30,15 +30,16 @@ import (
 	"strconv"
 	"sync"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/grpclog"
 	"github.com/dubbogo/grpc-go/interop"
-	"github.com/dubbogo/grpc-go/status"
-
 	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
 	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
+	"github.com/dubbogo/grpc-go/status"
 )
 
 var (

@@ -20,7 +20,9 @@ package rls
 
 import (
 	"sync"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/grpclog"

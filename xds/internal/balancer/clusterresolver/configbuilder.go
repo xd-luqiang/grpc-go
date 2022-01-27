@@ -22,7 +22,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"sort"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer/roundrobin"
 	"github.com/dubbogo/grpc-go/balancer/weightedroundrobin"
 	"github.com/dubbogo/grpc-go/internal/hierarchy"

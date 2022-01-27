@@ -31,9 +31,13 @@ import (
 	"strings"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/google/go-cmp/cmp"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/credentials"
 	icredentials "github.com/dubbogo/grpc-go/internal/credentials"
 	"github.com/dubbogo/grpc-go/internal/grpctest"

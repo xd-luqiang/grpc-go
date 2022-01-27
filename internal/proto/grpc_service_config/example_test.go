@@ -19,11 +19,16 @@ package grpc_service_config_test
 
 import (
 	"testing"
+)
 
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	scpb "github.com/dubbogo/grpc-go/internal/proto/grpc_service_config"
+import (
 	"github.com/golang/protobuf/jsonpb"
 	wrapperspb "github.com/golang/protobuf/ptypes/wrappers"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/internal/grpctest"
+	scpb "github.com/dubbogo/grpc-go/internal/proto/grpc_service_config"
 )
 
 type s struct {

@@ -28,9 +28,16 @@ import (
 	"fmt"
 	"sync"
 	"time"
+)
 
+import (
+	durationpb "github.com/golang/protobuf/ptypes/duration"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/balancer"
+	lbpb "github.com/dubbogo/grpc-go/balancer/grpclb/grpc_lb_v1"
 	grpclbstate "github.com/dubbogo/grpc-go/balancer/grpclb/state"
 	"github.com/dubbogo/grpc-go/connectivity"
 	"github.com/dubbogo/grpc-go/credentials"
@@ -39,9 +46,6 @@ import (
 	"github.com/dubbogo/grpc-go/internal/backoff"
 	"github.com/dubbogo/grpc-go/internal/resolver/dns"
 	"github.com/dubbogo/grpc-go/resolver"
-
-	lbpb "github.com/dubbogo/grpc-go/balancer/grpclb/grpc_lb_v1"
-	durationpb "github.com/golang/protobuf/ptypes/duration"
 )
 
 const (

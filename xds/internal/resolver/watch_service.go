@@ -22,7 +22,9 @@ import (
 	"fmt"
 	"sync"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/grpclog"
 	"github.com/dubbogo/grpc-go/internal/pretty"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"

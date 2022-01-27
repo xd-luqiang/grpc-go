@@ -28,7 +28,9 @@ import (
 	"fmt"
 	"sync"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/internal/buffer"
 	"github.com/dubbogo/grpc-go/internal/grpclog"

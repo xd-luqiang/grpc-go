@@ -25,8 +25,15 @@ import (
 	"strings"
 	"testing"
 	"time"
+)
 
+import (
 	xxhash "github.com/cespare/xxhash/v2"
+
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
 	xdscreds "github.com/dubbogo/grpc-go/credentials/xds"
@@ -50,7 +57,6 @@ import (
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/bootstrap"
-	"github.com/google/go-cmp/cmp"
 )
 
 const (

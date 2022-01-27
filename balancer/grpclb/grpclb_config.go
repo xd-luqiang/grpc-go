@@ -20,7 +20,9 @@ package grpclb
 
 import (
 	"encoding/json"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/balancer/roundrobin"
 	"github.com/dubbogo/grpc-go/serviceconfig"

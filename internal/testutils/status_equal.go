@@ -19,8 +19,11 @@
 package testutils
 
 import (
-	"github.com/dubbogo/grpc-go/status"
 	"github.com/golang/protobuf/proto"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/status"
 )
 
 // StatusErrEqual returns true iff both err1 and err2 wrap status.Status errors

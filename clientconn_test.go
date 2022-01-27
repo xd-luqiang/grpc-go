@@ -28,7 +28,13 @@ import (
 	"sync/atomic"
 	"testing"
 	"time"
+)
 
+import (
+	"golang.org/x/net/http2"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/backoff"
 	"github.com/dubbogo/grpc-go/connectivity"
 	"github.com/dubbogo/grpc-go/credentials"
@@ -38,7 +44,6 @@ import (
 	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/dubbogo/grpc-go/resolver/manual"
 	"github.com/dubbogo/grpc-go/testdata"
-	"golang.org/x/net/http2"
 )
 
 func (s) TestDialWithTimeout(t *testing.T) {

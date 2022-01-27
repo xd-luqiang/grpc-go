@@ -56,7 +56,9 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/benchmark"
 	bm "github.com/dubbogo/grpc-go/benchmark"
@@ -65,12 +67,11 @@ import (
 	"github.com/dubbogo/grpc-go/benchmark/stats"
 	"github.com/dubbogo/grpc-go/grpclog"
 	"github.com/dubbogo/grpc-go/internal/channelz"
+	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
+	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
 	"github.com/dubbogo/grpc-go/keepalive"
 	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/dubbogo/grpc-go/test/bufconn"
-
-	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
 )
 
 var (

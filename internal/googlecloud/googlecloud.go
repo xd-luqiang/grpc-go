@@ -30,7 +30,9 @@ import (
 	"runtime"
 	"strings"
 	"sync"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/grpclog"
 	internalgrpclog "github.com/dubbogo/grpc-go/internal/grpclog"
 )

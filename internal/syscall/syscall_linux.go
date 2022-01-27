@@ -25,9 +25,14 @@ import (
 	"net"
 	"syscall"
 	"time"
+)
 
-	"github.com/dubbogo/grpc-go/grpclog"
+import (
 	"golang.org/x/sys/unix"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/grpclog"
 )
 
 var logger = grpclog.Component("core")

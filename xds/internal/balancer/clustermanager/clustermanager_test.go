@@ -23,7 +23,13 @@ import (
 	"fmt"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/balancer/roundrobin"
 	"github.com/dubbogo/grpc-go/codes"
@@ -37,7 +43,6 @@ import (
 	"github.com/dubbogo/grpc-go/status"
 	"github.com/dubbogo/grpc-go/xds/internal/balancer/balancergroup"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils"
-	"github.com/google/go-cmp/cmp"
 )
 
 type s struct {

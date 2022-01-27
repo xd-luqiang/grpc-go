@@ -25,10 +25,11 @@ import (
 	"fmt"
 	"log"
 	"net"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	_ "github.com/dubbogo/grpc-go/encoding/gzip" // Install the gzip compressor
-
 	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
 )
 

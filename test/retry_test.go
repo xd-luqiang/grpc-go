@@ -29,7 +29,13 @@ import (
 	"sync"
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/internal/envconfig"
@@ -38,7 +44,6 @@ import (
 	"github.com/dubbogo/grpc-go/stats"
 	"github.com/dubbogo/grpc-go/status"
 	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
-	"github.com/golang/protobuf/proto"
 )
 
 func enableRetry() func() {

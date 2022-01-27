@@ -23,7 +23,26 @@ import (
 	"errors"
 	"testing"
 	"time"
+)
 
+import (
+	xdspb "github.com/envoyproxy/go-control-plane/envoy/api/v2"
+	basepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
+	routepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/route"
+	httppb "github.com/envoyproxy/go-control-plane/envoy/config/filter/network/http_connection_manager/v2"
+	listenerpb "github.com/envoyproxy/go-control-plane/envoy/config/listener/v2"
+
+	"github.com/golang/protobuf/proto"
+	anypb "github.com/golang/protobuf/ptypes/any"
+	structpb "github.com/golang/protobuf/ptypes/struct"
+
+	"github.com/google/go-cmp/cmp"
+	"github.com/google/go-cmp/cmp/cmpopts"
+
+	"google.golang.org/protobuf/testing/protocmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
 	"github.com/dubbogo/grpc-go/internal/grpclog"
@@ -34,18 +53,6 @@ import (
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeserver"
 	"github.com/dubbogo/grpc-go/xds/internal/version"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/golang/protobuf/proto"
-	"github.com/google/go-cmp/cmp"
-	"github.com/google/go-cmp/cmp/cmpopts"
-	"google.golang.org/protobuf/testing/protocmp"
-
-	xdspb "github.com/envoyproxy/go-control-plane/envoy/api/v2"
-	basepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
-	routepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/route"
-	httppb "github.com/envoyproxy/go-control-plane/envoy/config/filter/network/http_connection_manager/v2"
-	listenerpb "github.com/envoyproxy/go-control-plane/envoy/config/listener/v2"
-	anypb "github.com/golang/protobuf/ptypes/any"
-	structpb "github.com/golang/protobuf/ptypes/struct"
 )
 
 type s struct {

@@ -28,14 +28,18 @@ import (
 	"os/exec"
 	"syscall"
 	"time"
+)
 
+import (
 	"golang.org/x/sys/unix"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	_ "github.com/dubbogo/grpc-go/balancer/grpclb"
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/credentials/alts"
 	"github.com/dubbogo/grpc-go/credentials/google"
-
 	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
 	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
 )

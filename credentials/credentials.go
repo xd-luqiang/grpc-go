@@ -27,10 +27,15 @@ import (
 	"errors"
 	"fmt"
 	"net"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/attributes"
 	icredentials "github.com/dubbogo/grpc-go/internal/credentials"
-	"github.com/golang/protobuf/proto"
 )
 
 // PerRPCCredentials defines the common interface for the credentials which need to

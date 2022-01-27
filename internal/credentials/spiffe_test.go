@@ -25,7 +25,9 @@ import (
 	"io/ioutil"
 	"net/url"
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 	"github.com/dubbogo/grpc-go/testdata"
 )

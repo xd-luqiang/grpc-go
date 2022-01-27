@@ -26,12 +26,17 @@ import (
 	"strconv"
 	"testing"
 	"time"
+)
 
+import (
+	v3clusterpb "github.com/envoyproxy/go-control-plane/envoy/config/cluster/v3"
+	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
+)
+
+import (
 	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
 	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
 	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
-	v3clusterpb "github.com/envoyproxy/go-control-plane/envoy/config/cluster/v3"
-	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
 )
 
 var (

@@ -22,10 +22,16 @@ import (
 	"strings"
 	"testing"
 	"unicode"
+)
 
-	"github.com/dubbogo/grpc-go/internal/grpctest"
+import (
 	corepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/core"
+
 	"github.com/google/go-cmp/cmp"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/internal/grpctest"
 )
 
 const ignorePrefix = "XXX_"

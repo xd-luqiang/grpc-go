@@ -21,7 +21,9 @@ package rls
 import (
 	"context"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	rlspb "github.com/dubbogo/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
 )

@@ -22,7 +22,9 @@ package service
 
 import (
 	"sync"
+)
 
+import (
 	grpc "github.com/dubbogo/grpc-go"
 )
 

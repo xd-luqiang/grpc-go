@@ -21,12 +21,17 @@ package status_test
 import (
 	"errors"
 	"testing"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 	"github.com/dubbogo/grpc-go/status"
 	"github.com/dubbogo/grpc-go/test/grpc_testing"
-	"github.com/golang/protobuf/proto"
 )
 
 type s struct {

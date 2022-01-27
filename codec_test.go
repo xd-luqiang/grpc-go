@@ -20,7 +20,9 @@ package grpc
 
 import (
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/encoding"
 	"github.com/dubbogo/grpc-go/encoding/proto"
 )

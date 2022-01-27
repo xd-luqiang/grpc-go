@@ -22,19 +22,25 @@ package v3
 import (
 	"context"
 	"fmt"
+)
 
+import (
+	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
+	v3adsgrpc "github.com/envoyproxy/go-control-plane/envoy/service/discovery/v3"
+	v3discoverypb "github.com/envoyproxy/go-control-plane/envoy/service/discovery/v3"
+
+	"github.com/golang/protobuf/proto"
+
+	statuspb "google.golang.org/genproto/googleapis/rpc/status"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/internal/grpclog"
 	"github.com/dubbogo/grpc-go/internal/pretty"
 	"github.com/dubbogo/grpc-go/xds/internal/version"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/golang/protobuf/proto"
-	statuspb "google.golang.org/genproto/googleapis/rpc/status"
-
-	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
-	v3adsgrpc "github.com/envoyproxy/go-control-plane/envoy/service/discovery/v3"
-	v3discoverypb "github.com/envoyproxy/go-control-plane/envoy/service/discovery/v3"
 )
 
 func init() {

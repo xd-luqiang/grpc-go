@@ -25,10 +25,11 @@ import (
 	"fmt"
 	"log"
 	"net"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/credentials/alts"
-
 	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
 )
 

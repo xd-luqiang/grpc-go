@@ -24,7 +24,9 @@ import (
 	"errors"
 	"testing"
 	"time"
+)
 
+import (
 	grpc "github.com/dubbogo/grpc-go"
 	core "github.com/dubbogo/grpc-go/credentials/alts/internal"
 	altspb "github.com/dubbogo/grpc-go/credentials/alts/internal/proto/grpc_gcp"

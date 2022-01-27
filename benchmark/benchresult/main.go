@@ -34,7 +34,9 @@ import (
 	"os"
 	"strings"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/benchmark/stats"
 )
 

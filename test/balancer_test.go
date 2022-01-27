@@ -26,9 +26,13 @@ import (
 	"reflect"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/google/go-cmp/cmp"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/attributes"
 	"github.com/dubbogo/grpc-go/balancer"

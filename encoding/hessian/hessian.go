@@ -2,6 +2,9 @@ package hessian
 
 import (
 	hessian "github.com/apache/dubbo-go-hessian2"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/encoding"
 	"github.com/dubbogo/grpc-go/encoding/raw_proto"
 	"github.com/dubbogo/grpc-go/encoding/tools"

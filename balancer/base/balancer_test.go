@@ -20,7 +20,9 @@ package base
 
 import (
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/attributes"
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/connectivity"

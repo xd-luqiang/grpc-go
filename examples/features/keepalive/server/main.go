@@ -26,11 +26,12 @@ import (
 	"log"
 	"net"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/keepalive"
-
 	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
+	"github.com/dubbogo/grpc-go/keepalive"
 )
 
 var port = flag.Int("port", 50052, "port number")

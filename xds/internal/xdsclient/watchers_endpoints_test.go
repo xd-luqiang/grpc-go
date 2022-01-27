@@ -22,10 +22,15 @@ import (
 	"context"
 	"fmt"
 	"testing"
+)
 
+import (
 	"github.com/google/go-cmp/cmp"
-	"google.golang.org/protobuf/types/known/anypb"
 
+	"google.golang.org/protobuf/types/known/anypb"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/internal/testutils"
 	"github.com/dubbogo/grpc-go/xds/internal"
 )

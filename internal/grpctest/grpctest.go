@@ -24,7 +24,9 @@ import (
 	"strings"
 	"sync/atomic"
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/leakcheck"
 )
 

@@ -22,7 +22,9 @@ package envconfig
 import (
 	"os"
 	"strings"
+)
 
+import (
 	xdsenv "github.com/dubbogo/grpc-go/internal/xds/env"
 )
 

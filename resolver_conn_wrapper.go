@@ -22,7 +22,9 @@ import (
 	"fmt"
 	"strings"
 	"sync"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/internal/channelz"

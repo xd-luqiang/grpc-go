@@ -23,24 +23,31 @@ import (
 	"regexp"
 	"testing"
 	"time"
+)
 
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/internal/xds/env"
-	"github.com/dubbogo/grpc-go/xds/internal/httpfilter"
-	"github.com/dubbogo/grpc-go/xds/internal/version"
-	"github.com/google/go-cmp/cmp"
-	"github.com/google/go-cmp/cmp/cmpopts"
-	"google.golang.org/protobuf/types/known/durationpb"
-
+import (
 	v2xdspb "github.com/envoyproxy/go-control-plane/envoy/api/v2"
 	v2routepb "github.com/envoyproxy/go-control-plane/envoy/api/v2/route"
 	v3corepb "github.com/envoyproxy/go-control-plane/envoy/config/core/v3"
 	v3routepb "github.com/envoyproxy/go-control-plane/envoy/config/route/v3"
 	v3matcherpb "github.com/envoyproxy/go-control-plane/envoy/type/matcher/v3"
 	v3typepb "github.com/envoyproxy/go-control-plane/envoy/type/v3"
+
 	anypb "github.com/golang/protobuf/ptypes/any"
 	wrapperspb "github.com/golang/protobuf/ptypes/wrappers"
+
+	"github.com/google/go-cmp/cmp"
+	"github.com/google/go-cmp/cmp/cmpopts"
+
+	"google.golang.org/protobuf/types/known/durationpb"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/codes"
+	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/dubbogo/grpc-go/internal/xds/env"
+	"github.com/dubbogo/grpc-go/xds/internal/httpfilter"
+	"github.com/dubbogo/grpc-go/xds/internal/version"
 )
 
 func (s) TestRDSGenerateRDSUpdateFromRouteConfiguration(t *testing.T) {

@@ -20,7 +20,9 @@ package clusterresolver
 
 import (
 	"fmt"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/dubbogo/grpc-go/serviceconfig"
 )

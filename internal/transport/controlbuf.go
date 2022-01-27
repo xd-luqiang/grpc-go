@@ -26,11 +26,16 @@ import (
 	"strconv"
 	"sync"
 	"sync/atomic"
+)
 
-	"github.com/dubbogo/grpc-go/internal/grpcutil"
-	"github.com/dubbogo/grpc-go/status"
+import (
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/hpack"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/internal/grpcutil"
+	"github.com/dubbogo/grpc-go/status"
 )
 
 var updateHeaderTblSize = func(e *hpack.Encoder, v uint32) {

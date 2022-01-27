@@ -22,7 +22,9 @@ import (
 	"bytes"
 	"sync"
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/encoding"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 	"github.com/dubbogo/grpc-go/test/codec_perf"

@@ -23,7 +23,9 @@ import (
 	"crypto/x509"
 	"fmt"
 	"io/ioutil"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/security/advancedtls/testdata"
 )
 

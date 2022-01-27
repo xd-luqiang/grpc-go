@@ -30,7 +30,23 @@ import (
 	"reflect"
 	"testing"
 	"time"
+)
 
+import (
+	v3listenerpb "github.com/envoyproxy/go-control-plane/envoy/config/listener/v3"
+	cpb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/common/fault/v3"
+	fpb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/http/fault/v3"
+	v3httppb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/network/http_connection_manager/v3"
+	tpb "github.com/envoyproxy/go-control-plane/envoy/type/v3"
+
+	"github.com/golang/protobuf/ptypes"
+
+	"github.com/google/uuid"
+
+	"google.golang.org/protobuf/types/known/wrapperspb"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
@@ -40,20 +56,10 @@ import (
 	"github.com/dubbogo/grpc-go/internal/xds"
 	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/dubbogo/grpc-go/status"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
-	"github.com/golang/protobuf/ptypes"
-	"github.com/google/uuid"
-	"google.golang.org/protobuf/types/known/wrapperspb"
-
 	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
-	v3listenerpb "github.com/envoyproxy/go-control-plane/envoy/config/listener/v3"
-	cpb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/common/fault/v3"
-	fpb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/http/fault/v3"
-	v3httppb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/network/http_connection_manager/v3"
-	tpb "github.com/envoyproxy/go-control-plane/envoy/type/v3"
-
-	_ "github.com/dubbogo/grpc-go/xds/internal/balancer"     // Register the balancers.
-	_ "github.com/dubbogo/grpc-go/xds/internal/resolver"     // Register the xds_resolver.
+	_ "github.com/dubbogo/grpc-go/xds/internal/balancer" // Register the balancers.
+	_ "github.com/dubbogo/grpc-go/xds/internal/resolver" // Register the xds_resolver.
+	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
 	_ "github.com/dubbogo/grpc-go/xds/internal/xdsclient/v3" // Register the v3 xDS API client.
 )
 

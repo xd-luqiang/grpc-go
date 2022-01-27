@@ -29,7 +29,9 @@ import (
 	"log"
 	"math/rand"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/examples/data"

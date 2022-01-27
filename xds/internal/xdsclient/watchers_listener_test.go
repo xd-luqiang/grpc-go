@@ -22,11 +22,17 @@ import (
 	"context"
 	"fmt"
 	"testing"
+)
 
-	"github.com/dubbogo/grpc-go/internal/testutils"
+import (
 	v3listenerpb "github.com/envoyproxy/go-control-plane/envoy/config/listener/v3"
 	v3httppb "github.com/envoyproxy/go-control-plane/envoy/extensions/filters/network/http_connection_manager/v3"
+
 	"google.golang.org/protobuf/types/known/anypb"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/internal/testutils"
 )
 
 // TestLDSWatch covers the cases:

@@ -21,7 +21,9 @@ package attributes_test
 import (
 	"fmt"
 	"testing"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/attributes"
 )
 

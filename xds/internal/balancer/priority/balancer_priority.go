@@ -21,7 +21,9 @@ package priority
 import (
 	"errors"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/balancer/base"
 	"github.com/dubbogo/grpc-go/connectivity"

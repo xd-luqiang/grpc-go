@@ -31,16 +31,21 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
+)
 
-	"github.com/dubbogo/grpc-go/internal/grpcutil"
+import (
 	"github.com/golang/protobuf/proto"
+
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/hpack"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/internal/channelz"
 	"github.com/dubbogo/grpc-go/internal/grpcrand"
+	"github.com/dubbogo/grpc-go/internal/grpcutil"
 	"github.com/dubbogo/grpc-go/keepalive"
 	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/dubbogo/grpc-go/peer"

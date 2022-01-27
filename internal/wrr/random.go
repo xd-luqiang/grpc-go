@@ -20,7 +20,9 @@ package wrr
 import (
 	"fmt"
 	"sync"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/grpcrand"
 )
 

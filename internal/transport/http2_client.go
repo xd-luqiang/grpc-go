@@ -31,7 +31,14 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
+)
 
+import (
+	"golang.org/x/net/http2"
+	"golang.org/x/net/http2/hpack"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/internal/channelz"
@@ -46,8 +53,6 @@ import (
 	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/dubbogo/grpc-go/stats"
 	"github.com/dubbogo/grpc-go/status"
-	"golang.org/x/net/http2"
-	"golang.org/x/net/http2/hpack"
 )
 
 // clientConnectionCounter counts the number of connections a client has

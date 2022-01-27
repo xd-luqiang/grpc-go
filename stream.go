@@ -26,7 +26,13 @@ import (
 	"strconv"
 	"sync"
 	"time"
+)
 
+import (
+	"golang.org/x/net/trace"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/encoding"
@@ -42,7 +48,6 @@ import (
 	"github.com/dubbogo/grpc-go/peer"
 	"github.com/dubbogo/grpc-go/stats"
 	"github.com/dubbogo/grpc-go/status"
-	"golang.org/x/net/trace"
 )
 
 // StreamHandler defines the handler called by gRPC server to complete the
@@ -1362,6 +1367,10 @@ func (as *addrConnStream) finish(err error) {
 	as.mu.Unlock()
 }
 
+type CtxSetterStream interface {
+	SetContext(ctx context.Context)
+}
+
 // ServerStream defines the server-side behavior of a streaming RPC.
 //
 // All errors returned from ServerStream methods are compatible with the
@@ -1438,6 +1447,10 @@ type serverStream struct {
 	serverHeaderBinlogged bool
 
 	mu sync.Mutex // protects trInfo.tr after the service handler runs.
+}
+
+func (ss *serverStream) SetContext(ctx context.Context) {
+	ss.ctx = ctx
 }
 
 func (ss *serverStream) Context() context.Context {

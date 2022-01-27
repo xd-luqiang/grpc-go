@@ -28,19 +28,24 @@ import (
 	"os"
 	"strings"
 	"time"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+
+	"golang.org/x/oauth2"
+	"golang.org/x/oauth2/google"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/benchmark/stats"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/status"
-	"github.com/golang/protobuf/proto"
-	"golang.org/x/oauth2"
-	"golang.org/x/oauth2/google"
-
 	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
 	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
+	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/dubbogo/grpc-go/status"
 )
 
 var (

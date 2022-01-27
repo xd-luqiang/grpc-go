@@ -24,7 +24,9 @@ import (
 	"strings"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials"
@@ -32,7 +34,6 @@ import (
 	"github.com/dubbogo/grpc-go/internal/stubserver"
 	"github.com/dubbogo/grpc-go/peer"
 	"github.com/dubbogo/grpc-go/status"
-
 	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
 )
 

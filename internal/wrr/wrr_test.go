@@ -22,9 +22,14 @@ import (
 	"math"
 	"math/rand"
 	"testing"
+)
 
-	"github.com/dubbogo/grpc-go/internal/grpctest"
+import (
 	"github.com/google/go-cmp/cmp"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/internal/grpctest"
 )
 
 type s struct {

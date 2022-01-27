@@ -28,7 +28,9 @@ import (
 	"os"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/authz"
 	"github.com/dubbogo/grpc-go/codes"

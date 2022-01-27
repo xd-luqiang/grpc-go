@@ -21,10 +21,15 @@ package resolver
 import (
 	"testing"
 	"time"
+)
 
+import (
+	"github.com/google/go-cmp/cmp"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 	"github.com/dubbogo/grpc-go/internal/serviceconfig"
-	"github.com/google/go-cmp/cmp"
 )
 
 type s struct {

@@ -31,7 +31,9 @@ import (
 	"strings"
 	"sync"
 	"time"
+)
 
+import (
 	grpclbstate "github.com/dubbogo/grpc-go/balancer/grpclb/state"
 	"github.com/dubbogo/grpc-go/grpclog"
 	"github.com/dubbogo/grpc-go/internal/backoff"

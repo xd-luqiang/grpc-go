@@ -22,7 +22,9 @@ package resolver
 import (
 	"context"
 	"sync"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/internal/serviceconfig"
 	"github.com/dubbogo/grpc-go/metadata"
 	"github.com/dubbogo/grpc-go/resolver"

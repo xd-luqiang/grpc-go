@@ -20,15 +20,23 @@ import (
 	"reflect"
 	"sort"
 	"testing"
+)
 
+import (
 	pb "github.com/envoyproxy/go-control-plane/envoy/config/rbac/v2"
+
 	"github.com/google/cel-go/cel"
 	"github.com/google/cel-go/checker/decls"
 	"github.com/google/cel-go/common/types"
 	"github.com/google/cel-go/common/types/ref"
 	"github.com/google/cel-go/interpreter"
+
 	"github.com/google/go-cmp/cmp"
+
 	expr "google.golang.org/genproto/googleapis/api/expr/v1alpha1"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/internal/grpctest"
 	"github.com/dubbogo/grpc-go/peer"

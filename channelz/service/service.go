@@ -22,7 +22,14 @@ package service
 import (
 	"context"
 	"net"
+)
 
+import (
+	"github.com/golang/protobuf/ptypes"
+	wrpb "github.com/golang/protobuf/ptypes/wrappers"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	channelzgrpc "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
 	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
@@ -32,8 +39,6 @@ import (
 	"github.com/dubbogo/grpc-go/grpclog"
 	"github.com/dubbogo/grpc-go/internal/channelz"
 	"github.com/dubbogo/grpc-go/status"
-	"github.com/golang/protobuf/ptypes"
-	wrpb "github.com/golang/protobuf/ptypes/wrappers"
 )
 
 func init() {

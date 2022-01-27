@@ -24,7 +24,9 @@ import (
 	"flag"
 	"log"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	pb "github.com/dubbogo/grpc-go/examples/helloworld/helloworld"
 )

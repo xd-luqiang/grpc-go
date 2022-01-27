@@ -20,6 +20,9 @@ package clusterimpl
 
 import (
 	orcapb "github.com/cncf/xds/go/xds/data/orca/v3"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/connectivity"

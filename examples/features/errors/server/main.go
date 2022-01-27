@@ -26,13 +26,17 @@ import (
 	"log"
 	"net"
 	"sync"
+)
 
+import (
+	epb "google.golang.org/genproto/googleapis/rpc/errdetails"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/status"
-
-	epb "google.golang.org/genproto/googleapis/rpc/errdetails"
 	pb "github.com/dubbogo/grpc-go/examples/helloworld/helloworld"
+	"github.com/dubbogo/grpc-go/status"
 )
 
 var port = flag.Int("port", 50052, "port number")

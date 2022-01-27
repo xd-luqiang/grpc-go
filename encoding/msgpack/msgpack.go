@@ -1,10 +1,12 @@
 package msgpack
 
 import (
+	mp "github.com/ugorji/go/codec"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/encoding"
 	"github.com/dubbogo/grpc-go/encoding/raw_proto"
-
-	mp "github.com/ugorji/go/codec"
 )
 
 func init() {

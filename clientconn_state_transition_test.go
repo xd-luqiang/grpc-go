@@ -24,13 +24,18 @@ import (
 	"sync"
 	"testing"
 	"time"
+)
 
+import (
+	"golang.org/x/net/http2"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/connectivity"
 	"github.com/dubbogo/grpc-go/internal/testutils"
 	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/dubbogo/grpc-go/resolver/manual"
-	"golang.org/x/net/http2"
 )
 
 const stateRecordingBalancerName = "state_recoding_balancer"

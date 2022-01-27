@@ -23,11 +23,18 @@ import (
 	"fmt"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"google.golang.org/protobuf/types/known/anypb"
 
+	"google.golang.org/protobuf/testing/protocmp"
+
+	"google.golang.org/protobuf/types/known/anypb"
+)
+
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/credentials/insecure"
 	"github.com/dubbogo/grpc-go/internal/grpcsync"
@@ -36,7 +43,6 @@ import (
 	xdstestutils "github.com/dubbogo/grpc-go/xds/internal/testutils"
 	"github.com/dubbogo/grpc-go/xds/internal/version"
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/bootstrap"
-	"google.golang.org/protobuf/testing/protocmp"
 )
 
 type s struct {

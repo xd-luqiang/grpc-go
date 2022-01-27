@@ -20,15 +20,17 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/dubbogo/grpc-go/internal/xds/rbac"
 	"io/ioutil"
 	"sync/atomic"
 	"time"
 	"unsafe"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/grpclog"
+	"github.com/dubbogo/grpc-go/internal/xds/rbac"
 	"github.com/dubbogo/grpc-go/status"
 )
 

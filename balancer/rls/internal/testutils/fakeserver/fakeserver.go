@@ -26,7 +26,9 @@ import (
 	"fmt"
 	"net"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	rlsgrpc "github.com/dubbogo/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
 	rlspb "github.com/dubbogo/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"

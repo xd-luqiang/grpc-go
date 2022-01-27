@@ -19,7 +19,9 @@ package cdsbalancer
 import (
 	"errors"
 	"sync"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
 )
 

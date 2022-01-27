@@ -28,12 +28,13 @@ import (
 	"net"
 	"strings"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/status"
-
 	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
+	"github.com/dubbogo/grpc-go/status"
 )
 
 var port = flag.Int("port", 50052, "port number")

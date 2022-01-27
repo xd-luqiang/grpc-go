@@ -32,9 +32,13 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
+)
 
+import (
 	"golang.org/x/net/trace"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/credentials"
 	"github.com/dubbogo/grpc-go/encoding"

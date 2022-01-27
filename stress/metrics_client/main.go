@@ -24,7 +24,9 @@ import (
 	"flag"
 	"fmt"
 	"io"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/grpclog"
 	metricspb "github.com/dubbogo/grpc-go/stress/grpc_testing"

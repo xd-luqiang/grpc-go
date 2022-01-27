@@ -26,7 +26,9 @@ import (
 	"sync"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	"github.com/dubbogo/grpc-go/balancer/roundrobin"
 	"github.com/dubbogo/grpc-go/codes"

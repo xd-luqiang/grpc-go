@@ -25,7 +25,13 @@ import (
 	"math"
 	"reflect"
 	"testing"
+)
 
+import (
+	"github.com/golang/protobuf/proto"
+)
+
+import (
 	"github.com/dubbogo/grpc-go/codes"
 	"github.com/dubbogo/grpc-go/encoding"
 	protoenc "github.com/dubbogo/grpc-go/encoding/proto"
@@ -33,7 +39,6 @@ import (
 	"github.com/dubbogo/grpc-go/internal/transport"
 	"github.com/dubbogo/grpc-go/status"
 	perfpb "github.com/dubbogo/grpc-go/test/codec_perf"
-	"github.com/golang/protobuf/proto"
 )
 
 type fullReader struct {

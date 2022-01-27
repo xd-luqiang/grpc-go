@@ -22,7 +22,9 @@ import (
 	"context"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	"github.com/dubbogo/grpc-go/balancer/roundrobin"
 	grpctestutils "github.com/dubbogo/grpc-go/internal/testutils"

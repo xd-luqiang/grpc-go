@@ -24,7 +24,9 @@ import (
 	"strings"
 	"testing"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go/balancer"
 	_ "github.com/dubbogo/grpc-go/balancer/grpclb"               // grpclb for config parsing.
 	_ "github.com/dubbogo/grpc-go/internal/resolver/passthrough" // passthrough resolver.

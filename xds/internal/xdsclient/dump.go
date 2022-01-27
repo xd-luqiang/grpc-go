@@ -18,7 +18,9 @@
 
 package xdsclient
 
-import anypb "github.com/golang/protobuf/ptypes/any"
+import (
+	anypb "github.com/golang/protobuf/ptypes/any"
+)
 
 // UpdateWithMD contains the raw message of the update and the metadata,
 // including version, raw message, timestamp.

@@ -27,7 +27,9 @@ import (
 	"net"
 	"strconv"
 	"time"
+)
 
+import (
 	"github.com/dubbogo/grpc-go"
 	_ "github.com/dubbogo/grpc-go/balancer/grpclb"
 	"github.com/dubbogo/grpc-go/credentials"
@@ -36,10 +38,9 @@ import (
 	"github.com/dubbogo/grpc-go/credentials/oauth"
 	"github.com/dubbogo/grpc-go/grpclog"
 	"github.com/dubbogo/grpc-go/interop"
+	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
 	"github.com/dubbogo/grpc-go/resolver"
 	"github.com/dubbogo/grpc-go/testdata"
-
-	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
 )
 
 const (

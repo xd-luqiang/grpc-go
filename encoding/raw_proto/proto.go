@@ -1,8 +1,11 @@
 package raw_proto
 
 import (
-	"github.com/dubbogo/grpc-go/encoding"
 	"github.com/golang/protobuf/proto"
+)
+
+import (
+	"github.com/dubbogo/grpc-go/encoding"
 )
 
 // ProtobufCodec is the protobuf impl of Codec interface
