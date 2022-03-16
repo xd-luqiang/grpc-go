@@ -1300,7 +1300,7 @@ func (s *Server) processUnaryRPC(method string, t transport.ServerTransport, str
 		appStatus, ok := status.FromError(appErr)
 		if !ok {
 			// Convert appErr if it is not a grpc status error.
-			appStatus = status.ErrorWithStacks(codes.Unknown, appErr)
+			appStatus = status.ErrorWithoutStacks(appStatus.Code(), appErr)
 		}
 		if trInfo != nil {
 			trInfo.tr.LazyLog(stringer(appStatus.Message()), true)
