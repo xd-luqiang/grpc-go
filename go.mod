@@ -8,7 +8,7 @@ require (
 	github.com/cncf/udpa/go v0.0.0-20210930031921-04548b0d99d4
 	github.com/cncf/xds/go v0.0.0-20211011173535-cb28da3451f1
 	github.com/dubbogo/triple v1.0.9
-	github.com/envoyproxy/go-control-plane v0.10.0
+	github.com/envoyproxy/go-control-plane v0.10.1
 	github.com/golang/glog v1.0.0
 	github.com/golang/protobuf v1.5.2
 	github.com/google/go-cmp v0.5.6
