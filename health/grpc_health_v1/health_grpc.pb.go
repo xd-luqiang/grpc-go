@@ -8,11 +8,11 @@ package grpc_health_v1
 
 import (
 	context "context"
-)
 
-import (
 	grpc "github.com/dubbogo/grpc-go"
+
 	codes "github.com/dubbogo/grpc-go/codes"
+
 	status "github.com/dubbogo/grpc-go/status"
 )
 
@@ -56,7 +56,7 @@ func NewHealthClient(cc grpc.ClientConnInterface) HealthClient {
 
 func (c *healthClient) Check(ctx context.Context, in *HealthCheckRequest, opts ...grpc.CallOption) (*HealthCheckResponse, error) {
 	out := new(HealthCheckResponse)
-	err := c.cc.Invoke(ctx, "/grpc.health.v1.Health/Check", in, out, opts...)
+	_, err := c.cc.Invoke(ctx, "/grpc.health.v1.Health/Check", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
