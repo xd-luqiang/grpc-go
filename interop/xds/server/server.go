@@ -29,18 +29,18 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/admin"
-	"github.com/dubbogo/grpc-go/credentials/insecure"
-	xdscreds "github.com/dubbogo/grpc-go/credentials/xds"
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/health"
-	healthpb "github.com/dubbogo/grpc-go/health/grpc_health_v1"
-	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/reflection"
-	"github.com/dubbogo/grpc-go/xds"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/admin"
+	"github.com/xd-luqiang/grpc-go/credentials/insecure"
+	xdscreds "github.com/xd-luqiang/grpc-go/credentials/xds"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/health"
+	healthpb "github.com/xd-luqiang/grpc-go/health/grpc_health_v1"
+	testgrpc "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
+	testpb "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/reflection"
+	"github.com/xd-luqiang/grpc-go/xds"
 )
 
 var (

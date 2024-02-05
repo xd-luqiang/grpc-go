@@ -29,7 +29,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/transport"
+	"github.com/xd-luqiang/grpc-go/internal/transport"
 )
 
 type emptyServiceServer interface{}

@@ -28,7 +28,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials/alts/internal/conn"
+	"github.com/xd-luqiang/grpc-go/credentials/alts/internal/conn"
 )
 
 // Stats is used to collect statistics about concurrent handshake calls.

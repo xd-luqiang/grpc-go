@@ -32,13 +32,13 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/encoding"
-	protoenc "github.com/dubbogo/grpc-go/encoding/proto"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/internal/transport"
-	"github.com/dubbogo/grpc-go/status"
-	perfpb "github.com/dubbogo/grpc-go/test/codec_perf"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/encoding"
+	protoenc "github.com/xd-luqiang/grpc-go/encoding/proto"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/internal/transport"
+	"github.com/xd-luqiang/grpc-go/status"
+	perfpb "github.com/xd-luqiang/grpc-go/test/codec_perf"
 )
 
 type fullReader struct {

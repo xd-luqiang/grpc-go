@@ -28,8 +28,8 @@ import (
 )
 
 import (
-	pb "github.com/dubbogo/grpc-go/binarylog/grpc_binarylog_v1"
-	iblog "github.com/dubbogo/grpc-go/internal/binarylog"
+	pb "github.com/xd-luqiang/grpc-go/binarylog/grpc_binarylog_v1"
+	iblog "github.com/xd-luqiang/grpc-go/internal/binarylog"
 )
 
 // SetSink sets the destination for the binary log entries.

@@ -27,9 +27,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/admin/test"
-	"github.com/dubbogo/grpc-go/codes"
-	_ "github.com/dubbogo/grpc-go/xds"
+	"github.com/xd-luqiang/grpc-go/admin/test"
+	"github.com/xd-luqiang/grpc-go/codes"
+	_ "github.com/xd-luqiang/grpc-go/xds"
 )
 
 func TestRegisterWithCSDS(t *testing.T) {

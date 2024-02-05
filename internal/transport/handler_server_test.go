@@ -40,9 +40,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 func (s) TestHandlerTransport_NewServerHandlerTransport(t *testing.T) {

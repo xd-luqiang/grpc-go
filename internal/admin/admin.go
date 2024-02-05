@@ -20,7 +20,7 @@
 package admin
 
 import (
-	"github.com/dubbogo/grpc-go"
+	"github.com/xd-luqiang/grpc-go"
 )
 
 // services is a map from name to service register functions.

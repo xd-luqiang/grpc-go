@@ -1,4 +1,4 @@
-module github.com/dubbogo/grpc-go/test/tools
+module github.com/xd-luqiang/grpc-go/test/tools
 
 go 1.14
 

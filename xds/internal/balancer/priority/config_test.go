@@ -27,8 +27,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer/roundrobin"
-	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/balancer/roundrobin"
+	internalserviceconfig "github.com/xd-luqiang/grpc-go/internal/serviceconfig"
 )
 
 func TestParseConfig(t *testing.T) {

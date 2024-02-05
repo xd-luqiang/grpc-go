@@ -29,7 +29,7 @@ import (
 )
 
 import (
-	credinternal "github.com/dubbogo/grpc-go/internal/credentials"
+	credinternal "github.com/xd-luqiang/grpc-go/internal/credentials"
 )
 
 // TLSInfo contains the auth information for a TLS authenticated connection.

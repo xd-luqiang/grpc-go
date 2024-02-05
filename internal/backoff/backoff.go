@@ -27,8 +27,8 @@ import (
 )
 
 import (
-	grpcbackoff "github.com/dubbogo/grpc-go/backoff"
-	"github.com/dubbogo/grpc-go/internal/grpcrand"
+	grpcbackoff "github.com/xd-luqiang/grpc-go/backoff"
+	"github.com/xd-luqiang/grpc-go/internal/grpcrand"
 )
 
 // Strategy defines the methodology for backing off after a grpc connection

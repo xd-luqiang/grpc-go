@@ -33,21 +33,21 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/encoding"
-	"github.com/dubbogo/grpc-go/internal/balancerload"
-	"github.com/dubbogo/grpc-go/internal/binarylog"
-	"github.com/dubbogo/grpc-go/internal/channelz"
-	"github.com/dubbogo/grpc-go/internal/grpcrand"
-	"github.com/dubbogo/grpc-go/internal/grpcutil"
-	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
-	"github.com/dubbogo/grpc-go/internal/serviceconfig"
-	"github.com/dubbogo/grpc-go/internal/transport"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/peer"
-	"github.com/dubbogo/grpc-go/stats"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/encoding"
+	"github.com/xd-luqiang/grpc-go/internal/balancerload"
+	"github.com/xd-luqiang/grpc-go/internal/binarylog"
+	"github.com/xd-luqiang/grpc-go/internal/channelz"
+	"github.com/xd-luqiang/grpc-go/internal/grpcrand"
+	"github.com/xd-luqiang/grpc-go/internal/grpcutil"
+	iresolver "github.com/xd-luqiang/grpc-go/internal/resolver"
+	"github.com/xd-luqiang/grpc-go/internal/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/internal/transport"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/peer"
+	"github.com/xd-luqiang/grpc-go/stats"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 // StreamHandler defines the handler called by gRPC server to complete the

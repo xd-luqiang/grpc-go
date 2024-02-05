@@ -26,8 +26,8 @@ import (
 )
 
 import (
-	xdsinternal "github.com/dubbogo/grpc-go/internal/xds"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
+	xdsinternal "github.com/xd-luqiang/grpc-go/internal/xds"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/e2e"
 )
 
 type controlPlane struct {

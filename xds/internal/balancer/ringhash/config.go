@@ -24,7 +24,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
 )
 
 // LBConfig is the balancer config for ring_hash balancer.

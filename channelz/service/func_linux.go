@@ -28,9 +28,9 @@ import (
 )
 
 import (
-	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
-	"github.com/dubbogo/grpc-go/internal/channelz"
-	"github.com/dubbogo/grpc-go/internal/testutils"
+	channelzpb "github.com/xd-luqiang/grpc-go/channelz/grpc_channelz_v1"
+	"github.com/xd-luqiang/grpc-go/internal/channelz"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
 )
 
 func convertToPtypesDuration(sec int64, usec int64) *durpb.Duration {

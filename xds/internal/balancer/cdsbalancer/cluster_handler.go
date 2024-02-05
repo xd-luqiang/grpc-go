@@ -22,7 +22,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
 )
 
 var errNotReceivedUpdate = errors.New("tried to construct a cluster update on a cluster that has not received an update")

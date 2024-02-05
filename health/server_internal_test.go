@@ -25,8 +25,8 @@ import (
 )
 
 import (
-	healthpb "github.com/dubbogo/grpc-go/health/grpc_health_v1"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
+	healthpb "github.com/xd-luqiang/grpc-go/health/grpc_health_v1"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
 )
 
 type s struct {

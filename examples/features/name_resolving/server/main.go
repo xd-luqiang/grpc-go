@@ -27,8 +27,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
+	"github.com/xd-luqiang/grpc-go"
+	pb "github.com/xd-luqiang/grpc-go/examples/features/proto/echo"
 )
 
 const addr = "localhost:50051"

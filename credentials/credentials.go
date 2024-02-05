@@ -20,7 +20,7 @@
 // which encapsulate all the state needed by a client to authenticate with a
 // server and make various assertions, e.g., about the client's identity, role,
 // or whether it is authorized to make a particular call.
-package credentials // import "github.com/dubbogo/grpc-go/credentials"
+package credentials // import "github.com/xd-luqiang/grpc-go/credentials"
 
 import (
 	"context"
@@ -34,8 +34,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/attributes"
-	icredentials "github.com/dubbogo/grpc-go/internal/credentials"
+	"github.com/xd-luqiang/grpc-go/attributes"
+	icredentials "github.com/xd-luqiang/grpc-go/internal/credentials"
 )
 
 // PerRPCCredentials defines the common interface for the credentials which need to

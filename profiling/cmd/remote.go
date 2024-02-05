@@ -27,8 +27,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	ppb "github.com/dubbogo/grpc-go/profiling/proto"
+	"github.com/xd-luqiang/grpc-go"
+	ppb "github.com/xd-luqiang/grpc-go/profiling/proto"
 )
 
 func setEnabled(ctx context.Context, c ppb.ProfilingClient, enabled bool) error {

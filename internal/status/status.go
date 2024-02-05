@@ -44,7 +44,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/codes"
 )
 
 // Status represents an RPC status code, message, and details.  It is immutable

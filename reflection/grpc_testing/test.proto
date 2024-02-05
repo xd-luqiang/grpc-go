@@ -14,7 +14,7 @@
 
 syntax = "proto3";
 
-option go_package = "github.com/dubbogo/grpc-go/reflection/grpc_testing";
+option go_package = "github.com/xd-luqiang/grpc-go/reflection/grpc_testing";
 
 package grpc.testing;
 

@@ -31,7 +31,7 @@ import (
 )
 
 import (
-	pb "github.com/dubbogo/grpc-go/binarylog/grpc_binarylog_v1"
+	pb "github.com/xd-luqiang/grpc-go/binarylog/grpc_binarylog_v1"
 )
 
 var (

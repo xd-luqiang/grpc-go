@@ -26,7 +26,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/backoff"
+	"github.com/xd-luqiang/grpc-go/backoff"
 )
 
 // DefaultBackoffConfig uses values specified for backoff in

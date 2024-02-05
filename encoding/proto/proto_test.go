@@ -25,9 +25,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/encoding"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/dubbogo/grpc-go/test/codec_perf"
+	"github.com/xd-luqiang/grpc-go/encoding"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/test/codec_perf"
 )
 
 func marshalAndUnmarshal(t *testing.T, codec encoding.TwoWayCodec, expectedBody []byte) {

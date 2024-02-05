@@ -24,7 +24,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/metadata"
 )
 
 // Invoke sends the RPC request on the wire and returns after response is

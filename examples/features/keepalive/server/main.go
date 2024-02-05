@@ -29,9 +29,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
-	"github.com/dubbogo/grpc-go/keepalive"
+	"github.com/xd-luqiang/grpc-go"
+	pb "github.com/xd-luqiang/grpc-go/examples/features/proto/echo"
+	"github.com/xd-luqiang/grpc-go/keepalive"
 )
 
 var port = flag.Int("port", 50052, "port number")

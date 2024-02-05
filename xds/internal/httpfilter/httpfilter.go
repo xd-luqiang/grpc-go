@@ -25,7 +25,7 @@ import (
 )
 
 import (
-	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
+	iresolver "github.com/xd-luqiang/grpc-go/internal/resolver"
 )
 
 // FilterConfig represents an opaque data structure holding configuration for a

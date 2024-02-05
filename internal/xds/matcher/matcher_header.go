@@ -26,8 +26,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpcutil"
-	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/internal/grpcutil"
+	"github.com/xd-luqiang/grpc-go/metadata"
 )
 
 // HeaderMatcher is an interface for header matchers. These are

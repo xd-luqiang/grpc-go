@@ -34,13 +34,13 @@ import (
 )
 
 import (
-	grpclbstate "github.com/dubbogo/grpc-go/balancer/grpclb/state"
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/internal/backoff"
-	"github.com/dubbogo/grpc-go/internal/envconfig"
-	"github.com/dubbogo/grpc-go/internal/grpcrand"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/serviceconfig"
+	grpclbstate "github.com/xd-luqiang/grpc-go/balancer/grpclb/state"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/backoff"
+	"github.com/xd-luqiang/grpc-go/internal/envconfig"
+	"github.com/xd-luqiang/grpc-go/internal/grpcrand"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
 )
 
 // EnableSRVLookups controls whether the DNS resolver attempts to fetch gRPCLB

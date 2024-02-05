@@ -27,14 +27,14 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/balancer/base"
-	"github.com/dubbogo/grpc-go/balancer/weightedroundrobin"
-	"github.com/dubbogo/grpc-go/connectivity"
-	"github.com/dubbogo/grpc-go/internal/grpclog"
-	"github.com/dubbogo/grpc-go/internal/pretty"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/balancer/base"
+	"github.com/xd-luqiang/grpc-go/balancer/weightedroundrobin"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/internal/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/pretty"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
 )
 
 // Name is the name of the ring_hash balancer.

@@ -28,7 +28,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/authz"
+	"github.com/xd-luqiang/grpc-go/authz"
 )
 
 func createTmpPolicyFile(t *testing.T, dirSuffix string, policy []byte) string {

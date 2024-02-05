@@ -24,7 +24,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/attributes"
+	"github.com/xd-luqiang/grpc-go/attributes"
 )
 
 type stringVal struct {

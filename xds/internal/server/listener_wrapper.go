@@ -31,15 +31,15 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/backoff"
-	"github.com/dubbogo/grpc-go/connectivity"
-	"github.com/dubbogo/grpc-go/grpclog"
-	internalbackoff "github.com/dubbogo/grpc-go/internal/backoff"
-	internalgrpclog "github.com/dubbogo/grpc-go/internal/grpclog"
-	"github.com/dubbogo/grpc-go/internal/grpcsync"
-	"github.com/dubbogo/grpc-go/internal/xds/env"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/bootstrap"
+	"github.com/xd-luqiang/grpc-go/backoff"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	internalbackoff "github.com/xd-luqiang/grpc-go/internal/backoff"
+	internalgrpclog "github.com/xd-luqiang/grpc-go/internal/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/grpcsync"
+	"github.com/xd-luqiang/grpc-go/internal/xds/env"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/bootstrap"
 )
 
 var (

@@ -24,7 +24,7 @@ import (
 )
 
 import (
-	core "github.com/dubbogo/grpc-go/credentials/alts/internal"
+	core "github.com/xd-luqiang/grpc-go/credentials/alts/internal"
 )
 
 const (

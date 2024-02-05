@@ -23,8 +23,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/grpclog"
-	internalgrpclog "github.com/dubbogo/grpc-go/internal/grpclog"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	internalgrpclog "github.com/xd-luqiang/grpc-go/internal/grpclog"
 )
 
 const prefix = "[xds-resolver %p] "

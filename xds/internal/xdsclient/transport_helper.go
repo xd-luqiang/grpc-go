@@ -29,10 +29,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/internal/buffer"
-	"github.com/dubbogo/grpc-go/internal/grpclog"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/load"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/internal/buffer"
+	"github.com/xd-luqiang/grpc-go/internal/grpclog"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/load"
 )
 
 // ErrResourceTypeUnsupported is an error used to indicate an unsupported xDS

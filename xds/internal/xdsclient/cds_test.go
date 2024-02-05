@@ -43,10 +43,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/internal/xds/env"
-	"github.com/dubbogo/grpc-go/internal/xds/matcher"
-	"github.com/dubbogo/grpc-go/xds/internal/version"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/internal/xds/env"
+	"github.com/xd-luqiang/grpc-go/internal/xds/matcher"
+	"github.com/xd-luqiang/grpc-go/xds/internal/version"
 )
 
 const (

@@ -26,10 +26,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/codes"
-	healthgrpc "github.com/dubbogo/grpc-go/health/grpc_health_v1"
-	healthpb "github.com/dubbogo/grpc-go/health/grpc_health_v1"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/codes"
+	healthgrpc "github.com/xd-luqiang/grpc-go/health/grpc_health_v1"
+	healthpb "github.com/xd-luqiang/grpc-go/health/grpc_health_v1"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 // Server implements `service Health`.

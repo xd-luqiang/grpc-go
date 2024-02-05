@@ -32,9 +32,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	pb "github.com/dubbogo/grpc-go/examples/helloworld/helloworld"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go"
+	pb "github.com/xd-luqiang/grpc-go/examples/helloworld/helloworld"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 var addr = flag.String("addr", "localhost:50052", "the address to connect to")

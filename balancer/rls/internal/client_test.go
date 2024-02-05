@@ -33,12 +33,12 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	rlspb "github.com/dubbogo/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
-	"github.com/dubbogo/grpc-go/balancer/rls/internal/testutils/fakeserver"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go"
+	rlspb "github.com/xd-luqiang/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
+	"github.com/xd-luqiang/grpc-go/balancer/rls/internal/testutils/fakeserver"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 const (

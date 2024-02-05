@@ -24,10 +24,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/balancer/rls/internal/cache"
-	"github.com/dubbogo/grpc-go/balancer/rls/internal/keys"
-	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/balancer/rls/internal/cache"
+	"github.com/xd-luqiang/grpc-go/balancer/rls/internal/keys"
+	"github.com/xd-luqiang/grpc-go/metadata"
 )
 
 var errRLSThrottled = errors.New("RLS call throttled at client side")

@@ -17,7 +17,7 @@
  */
 
 // Package xds contains types that need to be shared between code under
-// github.com/dubbogo/grpc-go/xds/... and the rest of gRPC.
+// github.com/xd-luqiang/grpc-go/xds/... and the rest of gRPC.
 package xds
 
 import (
@@ -28,8 +28,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/internal/xds/env"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/xds/env"
 )
 
 var logger = grpclog.Component("internal/xds")

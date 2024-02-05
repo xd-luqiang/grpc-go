@@ -25,13 +25,13 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/internal/grpclog"
-	"github.com/dubbogo/grpc-go/internal/grpcsync"
-	"github.com/dubbogo/grpc-go/internal/pretty"
-	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/internal/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/grpcsync"
+	"github.com/xd-luqiang/grpc-go/internal/pretty"
+	iresolver "github.com/xd-luqiang/grpc-go/internal/resolver"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
 )
 
 const xdsScheme = "xds"

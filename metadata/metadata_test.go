@@ -27,7 +27,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
 )
 
 const defaultTestTimeout = 10 * time.Second

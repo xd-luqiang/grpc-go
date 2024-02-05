@@ -22,8 +22,8 @@
 package metadata
 
 import (
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/resolver"
 )
 
 type mdKeyType string

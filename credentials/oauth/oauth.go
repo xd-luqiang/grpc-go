@@ -34,7 +34,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials"
 )
 
 // TokenSource supplies PerRPCCredentials from an oauth2.TokenSource.

@@ -32,15 +32,15 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/interop"
-	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	"github.com/dubbogo/grpc-go/status"
-	metricspb "github.com/dubbogo/grpc-go/stress/grpc_testing"
-	"github.com/dubbogo/grpc-go/testdata"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/interop"
+	testgrpc "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
+	"github.com/xd-luqiang/grpc-go/status"
+	metricspb "github.com/xd-luqiang/grpc-go/stress/grpc_testing"
+	"github.com/xd-luqiang/grpc-go/testdata"
 )
 
 var (

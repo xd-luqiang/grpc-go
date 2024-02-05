@@ -25,12 +25,12 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/internal/channelz"
-	"github.com/dubbogo/grpc-go/internal/grpcsync"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/internal/channelz"
+	"github.com/xd-luqiang/grpc-go/internal/grpcsync"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
 )
 
 // ccResolverWrapper is a wrapper on top of cc for resolvers.

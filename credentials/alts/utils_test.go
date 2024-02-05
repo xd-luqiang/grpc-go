@@ -29,10 +29,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/codes"
-	altspb "github.com/dubbogo/grpc-go/credentials/alts/internal/proto/grpc_gcp"
-	"github.com/dubbogo/grpc-go/peer"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/codes"
+	altspb "github.com/xd-luqiang/grpc-go/credentials/alts/internal/proto/grpc_gcp"
+	"github.com/xd-luqiang/grpc-go/peer"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 const (

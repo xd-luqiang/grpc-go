@@ -40,7 +40,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/profiling/buffer"
+	"github.com/xd-luqiang/grpc-go/internal/profiling/buffer"
 )
 
 // 0 or 1 representing profiling off and on, respectively. Use IsEnabled and
@@ -192,7 +192,7 @@ var statsInitialized int32
 
 // Stats for the last defaultStreamStatsBufsize RPCs will be stored in memory.
 // This is can be configured by the registering server at profiling service
-// initialization with github.com/dubbogo/grpc-go/profiling/service.ProfilingConfig
+// initialization with github.com/xd-luqiang/grpc-go/profiling/service.ProfilingConfig
 const defaultStreamStatsSize uint32 = 16 << 10
 
 // StreamStats is a CircularBuffer containing data from the last N RPC calls

@@ -19,7 +19,7 @@
 package grpc
 
 import (
-	_ "github.com/dubbogo/grpc-go/encoding/proto" // to register the Codec for "proto"
+	_ "github.com/xd-luqiang/grpc-go/encoding/proto" // to register the Codec for "proto"
 )
 
 //// baseCodec contains the functionality of both Codec and encoding.TwoWayCodec, but

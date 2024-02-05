@@ -44,7 +44,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/security/advancedtls/testdata"
+	"github.com/xd-luqiang/grpc-go/security/advancedtls/testdata"
 )
 
 func TestX509NameHash(t *testing.T) {

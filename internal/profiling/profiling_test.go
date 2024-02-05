@@ -27,8 +27,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/dubbogo/grpc-go/internal/profiling/buffer"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/internal/profiling/buffer"
 )
 
 type s struct {

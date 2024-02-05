@@ -36,8 +36,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/syscall"
-	"github.com/dubbogo/grpc-go/keepalive"
+	"github.com/xd-luqiang/grpc-go/internal/syscall"
+	"github.com/xd-luqiang/grpc-go/keepalive"
 )
 
 const defaultTestTimeout = 10 * time.Second

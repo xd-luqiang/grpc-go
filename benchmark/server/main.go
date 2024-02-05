@@ -40,9 +40,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/benchmark"
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/internal/syscall"
+	"github.com/xd-luqiang/grpc-go/benchmark"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/syscall"
 )
 
 var (

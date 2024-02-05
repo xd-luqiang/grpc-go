@@ -29,20 +29,20 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/attributes"
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/credentials/local"
-	"github.com/dubbogo/grpc-go/credentials/tls/certprovider"
-	"github.com/dubbogo/grpc-go/credentials/xds"
-	"github.com/dubbogo/grpc-go/internal"
-	xdscredsinternal "github.com/dubbogo/grpc-go/internal/credentials/xds"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/internal/xds/matcher"
-	"github.com/dubbogo/grpc-go/resolver"
-	xdstestutils "github.com/dubbogo/grpc-go/xds/internal/testutils"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/bootstrap"
+	"github.com/xd-luqiang/grpc-go/attributes"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/credentials/local"
+	"github.com/xd-luqiang/grpc-go/credentials/tls/certprovider"
+	"github.com/xd-luqiang/grpc-go/credentials/xds"
+	"github.com/xd-luqiang/grpc-go/internal"
+	xdscredsinternal "github.com/xd-luqiang/grpc-go/internal/credentials/xds"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/internal/xds/matcher"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	xdstestutils "github.com/xd-luqiang/grpc-go/xds/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/fakeclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/bootstrap"
 )
 
 const (

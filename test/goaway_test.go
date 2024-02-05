@@ -26,10 +26,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/internal/stubserver"
-	"github.com/dubbogo/grpc-go/keepalive"
-	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/internal/stubserver"
+	"github.com/xd-luqiang/grpc-go/keepalive"
+	testpb "github.com/xd-luqiang/grpc-go/test/grpc_testing"
 )
 
 // TestGracefulClientOnGoAway attempts to ensure that when the server sends a

@@ -27,9 +27,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/attributes"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/attributes"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
 )
 
 var (

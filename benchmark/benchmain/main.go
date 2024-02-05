@@ -59,19 +59,19 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/benchmark"
-	bm "github.com/dubbogo/grpc-go/benchmark"
-	"github.com/dubbogo/grpc-go/benchmark/flags"
-	"github.com/dubbogo/grpc-go/benchmark/latency"
-	"github.com/dubbogo/grpc-go/benchmark/stats"
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/internal/channelz"
-	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	"github.com/dubbogo/grpc-go/keepalive"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/test/bufconn"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/benchmark"
+	bm "github.com/xd-luqiang/grpc-go/benchmark"
+	"github.com/xd-luqiang/grpc-go/benchmark/flags"
+	"github.com/xd-luqiang/grpc-go/benchmark/latency"
+	"github.com/xd-luqiang/grpc-go/benchmark/stats"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/channelz"
+	testgrpc "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
+	testpb "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
+	"github.com/xd-luqiang/grpc-go/keepalive"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/test/bufconn"
 )
 
 var (

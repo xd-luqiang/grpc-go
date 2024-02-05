@@ -24,11 +24,11 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpcsync"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/bootstrap"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/load"
+	"github.com/xd-luqiang/grpc-go/internal/grpcsync"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/bootstrap"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/load"
 )
 
 // Client is a fake implementation of an xds client. It exposes a bunch of

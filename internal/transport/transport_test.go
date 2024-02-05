@@ -43,14 +43,14 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/attributes"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/dubbogo/grpc-go/internal/leakcheck"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/attributes"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/internal/leakcheck"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 type s struct {

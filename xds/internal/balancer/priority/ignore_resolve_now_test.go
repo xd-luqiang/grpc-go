@@ -25,11 +25,11 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/balancer/roundrobin"
-	grpctestutils "github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/balancer/roundrobin"
+	grpctestutils "github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils"
 )
 
 const resolveNowBalancerName = "test-resolve-now-balancer"

@@ -9,11 +9,11 @@ package grpc_health_v1
 import (
 	context "context"
 
-	grpc "github.com/dubbogo/grpc-go"
+	grpc "github.com/xd-luqiang/grpc-go"
 
-	codes "github.com/dubbogo/grpc-go/codes"
+	codes "github.com/xd-luqiang/grpc-go/codes"
 
-	status "github.com/dubbogo/grpc-go/status"
+	status "github.com/xd-luqiang/grpc-go/status"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -23,7 +23,7 @@ const _ = grpc.SupportPackageIsVersion7
 
 // HealthClient is the client API for Health service.
 //
-// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/github.com/dubbogo/grpc-go/?tab=doc#ClientConn.NewStream.
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/github.com/xd-luqiang/grpc-go/?tab=doc#ClientConn.NewStream.
 type HealthClient interface {
 	// If the requested service is unknown, the call will fail with status
 	// NOT_FOUND.

@@ -34,14 +34,14 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/keepalive"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/stats"
-	"github.com/dubbogo/grpc-go/status"
-	"github.com/dubbogo/grpc-go/tap"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/keepalive"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/stats"
+	"github.com/xd-luqiang/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/tap"
 )
 
 const logLevel = 2

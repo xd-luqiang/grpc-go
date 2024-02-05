@@ -31,9 +31,9 @@ import (
 )
 
 import (
-	pb "github.com/dubbogo/grpc-go/binarylog/grpc_binarylog_v1"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/status"
+	pb "github.com/xd-luqiang/grpc-go/binarylog/grpc_binarylog_v1"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 type callIDGenerator struct {

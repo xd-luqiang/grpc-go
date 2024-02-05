@@ -38,13 +38,13 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/internal/xds/env"
-	_ "github.com/dubbogo/grpc-go/xds/internal/httpfilter/router"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/internal/xds/env"
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/httpfilter/router"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/e2e"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/fakeclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
 )
 
 const (

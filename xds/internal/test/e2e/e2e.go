@@ -27,11 +27,11 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	channelzgrpc "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
-	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
-	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
+	"github.com/xd-luqiang/grpc-go"
+	channelzgrpc "github.com/xd-luqiang/grpc-go/channelz/grpc_channelz_v1"
+	channelzpb "github.com/xd-luqiang/grpc-go/channelz/grpc_channelz_v1"
+	testgrpc "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
+	testpb "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
 )
 
 func cmd(path string, logger io.Writer, args []string, env []string) (*exec.Cmd, error) {

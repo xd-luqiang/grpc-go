@@ -21,7 +21,7 @@
 package passthrough
 
 import (
-	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/resolver"
 )
 
 const scheme = "passthrough"

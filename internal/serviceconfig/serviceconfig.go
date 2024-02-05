@@ -26,10 +26,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/grpclog"
-	externalserviceconfig "github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	externalserviceconfig "github.com/xd-luqiang/grpc-go/serviceconfig"
 )
 
 var logger = grpclog.Component("core")

@@ -20,7 +20,7 @@
 package stub
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/balancer"
 )
 
 // BalancerFuncs contains all balancer.Balancer functions with a preceding

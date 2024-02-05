@@ -23,7 +23,7 @@ The service implemented is defined in:
 https://github.com/grpc/grpc/blob/master/src/proto/grpc/reflection/v1alpha/reflection.proto.
 
 To register server reflection on a gRPC server:
-	import "github.com/dubbogo/grpc-go/reflection"
+	import "github.com/xd-luqiang/grpc-go/reflection"
 
 	s := grpc.NewServer()
 	pb.RegisterYourOwnServer(s, &server{})
@@ -34,7 +34,7 @@ To register server reflection on a gRPC server:
 	s.Serve(lis)
 
 */
-package reflection // import "github.com/dubbogo/grpc-go/reflection"
+package reflection // import "github.com/xd-luqiang/grpc-go/reflection"
 
 import (
 	"bytes"
@@ -53,10 +53,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/codes"
-	rpb "github.com/dubbogo/grpc-go/reflection/grpc_reflection_v1alpha"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/codes"
+	rpb "github.com/xd-luqiang/grpc-go/reflection/grpc_reflection_v1alpha"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 // GRPCServer is the interface provided by a gRPC server. It is implemented by

@@ -27,13 +27,13 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/balancer/roundrobin"
-	"github.com/dubbogo/grpc-go/internal"
-	"github.com/dubbogo/grpc-go/internal/balancer/stub"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/resolver/manual"
-	"github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/balancer/roundrobin"
+	"github.com/xd-luqiang/grpc-go/internal"
+	"github.com/xd-luqiang/grpc-go/internal/balancer/stub"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/resolver/manual"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
 )
 
 var _ balancer.Builder = &magicalLB{}

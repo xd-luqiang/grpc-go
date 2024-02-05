@@ -17,7 +17,7 @@
  */
 
 // Package stubserver is a stubbable implementation of
-// github.com/dubbogo/grpc-go/test/grpc_testing for testing purposes.
+// github.com/xd-luqiang/grpc-go/test/grpc_testing for testing purposes.
 package stubserver
 
 import (
@@ -28,12 +28,12 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/connectivity"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/resolver/manual"
-	"github.com/dubbogo/grpc-go/serviceconfig"
-	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/resolver/manual"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
+	testpb "github.com/xd-luqiang/grpc-go/test/grpc_testing"
 )
 
 // StubServer is a server that is easy to customize within individual test

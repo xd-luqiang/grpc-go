@@ -23,7 +23,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/metadata"
 )
 
 type mdExtraKey struct{}

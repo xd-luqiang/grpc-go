@@ -28,8 +28,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/dubbogo/grpc-go/internal/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/internal/serviceconfig"
 )
 
 type s struct {

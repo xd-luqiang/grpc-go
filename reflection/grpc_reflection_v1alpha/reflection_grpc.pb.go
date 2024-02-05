@@ -11,9 +11,9 @@ import (
 )
 
 import (
-	grpc "github.com/dubbogo/grpc-go"
-	codes "github.com/dubbogo/grpc-go/codes"
-	status "github.com/dubbogo/grpc-go/status"
+	grpc "github.com/xd-luqiang/grpc-go"
+	codes "github.com/xd-luqiang/grpc-go/codes"
+	status "github.com/xd-luqiang/grpc-go/status"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -23,7 +23,7 @@ const _ = grpc.SupportPackageIsVersion7
 
 // ServerReflectionClient is the client API for ServerReflection service.
 //
-// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/github.com/dubbogo/grpc-go/?tab=doc#ClientConn.NewStream.
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/github.com/xd-luqiang/grpc-go/?tab=doc#ClientConn.NewStream.
 type ServerReflectionClient interface {
 	// The reflection service is structured as a bidirectional stream, ensuring
 	// all related requests go to a single server.

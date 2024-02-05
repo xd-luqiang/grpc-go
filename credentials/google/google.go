@@ -26,11 +26,11 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/credentials/alts"
-	"github.com/dubbogo/grpc-go/credentials/oauth"
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/internal"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials/alts"
+	"github.com/xd-luqiang/grpc-go/credentials/oauth"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal"
 )
 
 const tokenRequestTimeout = 30 * time.Second

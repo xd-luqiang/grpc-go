@@ -23,7 +23,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpcrand"
+	"github.com/xd-luqiang/grpc-go/internal/grpcrand"
 )
 
 // weightedItem is a wrapped weighted item that is used to implement weighted random algorithm.

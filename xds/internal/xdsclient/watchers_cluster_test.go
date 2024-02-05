@@ -31,7 +31,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
 )
 
 // TestClusterWatch covers the cases:

@@ -36,12 +36,12 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/internal/xds/env"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/xds/internal/version"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/bootstrap"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/internal/xds/env"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/xds/internal/version"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/bootstrap"
 )
 
 type emptyResolver struct {

@@ -33,20 +33,20 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/balancer/base"
-	"github.com/dubbogo/grpc-go/balancer/roundrobin"
-	"github.com/dubbogo/grpc-go/connectivity"
-	"github.com/dubbogo/grpc-go/internal"
-	"github.com/dubbogo/grpc-go/internal/balancer/stub"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
-	"github.com/dubbogo/grpc-go/resolver"
-	xdsinternal "github.com/dubbogo/grpc-go/xds/internal"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/load"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/balancer/base"
+	"github.com/xd-luqiang/grpc-go/balancer/roundrobin"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/internal"
+	"github.com/xd-luqiang/grpc-go/internal/balancer/stub"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	internalserviceconfig "github.com/xd-luqiang/grpc-go/internal/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	xdsinternal "github.com/xd-luqiang/grpc-go/xds/internal"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/fakeclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/load"
 )
 
 const (

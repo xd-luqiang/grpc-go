@@ -24,5 +24,5 @@
 package passthrough
 
 import (
-	_ "github.com/dubbogo/grpc-go/internal/resolver/passthrough" // import for side effects after package was moved
+	_ "github.com/xd-luqiang/grpc-go/internal/resolver/passthrough" // import for side effects after package was moved
 )

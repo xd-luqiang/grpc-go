@@ -25,8 +25,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/testdata"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/testdata"
 )
 
 func (s) TestClientConnAuthority(t *testing.T) {

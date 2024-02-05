@@ -31,15 +31,15 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/authz"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/status"
-	pb "github.com/dubbogo/grpc-go/test/grpc_testing"
-	"github.com/dubbogo/grpc-go/testdata"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/authz"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/status"
+	pb "github.com/xd-luqiang/grpc-go/test/grpc_testing"
+	"github.com/xd-luqiang/grpc-go/testdata"
 )
 
 type testServer struct {

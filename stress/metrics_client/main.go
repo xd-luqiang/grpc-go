@@ -27,9 +27,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/grpclog"
-	metricspb "github.com/dubbogo/grpc-go/stress/grpc_testing"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	metricspb "github.com/xd-luqiang/grpc-go/stress/grpc_testing"
 )
 
 var (

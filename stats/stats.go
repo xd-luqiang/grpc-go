@@ -19,7 +19,7 @@
 // Package stats is for collecting and reporting various network and RPC stats.
 // This package is for monitoring purpose only. All fields are read-only.
 // All APIs are experimental.
-package stats // import "github.com/dubbogo/grpc-go/stats"
+package stats // import "github.com/xd-luqiang/grpc-go/stats"
 
 import (
 	"context"
@@ -28,7 +28,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/metadata"
 )
 
 // RPCStats contains stats information about RPCs.

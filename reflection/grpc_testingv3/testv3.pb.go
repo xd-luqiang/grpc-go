@@ -25,7 +25,7 @@ import (
 )
 
 import (
-	grpc "github.com/dubbogo/grpc-go"
+	grpc "github.com/xd-luqiang/grpc-go"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

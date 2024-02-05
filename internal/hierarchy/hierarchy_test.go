@@ -27,8 +27,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/attributes"
-	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/attributes"
+	"github.com/xd-luqiang/grpc-go/resolver"
 )
 
 func TestGet(t *testing.T) {

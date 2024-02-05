@@ -23,8 +23,8 @@ import (
 )
 
 import (
-	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
-	"github.com/dubbogo/grpc-go/serviceconfig"
+	internalserviceconfig "github.com/xd-luqiang/grpc-go/internal/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
 )
 
 // DropConfig contains the category, and drop ratio.

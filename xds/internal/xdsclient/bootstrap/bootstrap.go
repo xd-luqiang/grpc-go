@@ -37,14 +37,14 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/credentials/google"
-	"github.com/dubbogo/grpc-go/credentials/insecure"
-	"github.com/dubbogo/grpc-go/credentials/tls/certprovider"
-	"github.com/dubbogo/grpc-go/internal"
-	"github.com/dubbogo/grpc-go/internal/pretty"
-	"github.com/dubbogo/grpc-go/internal/xds/env"
-	"github.com/dubbogo/grpc-go/xds/internal/version"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/credentials/google"
+	"github.com/xd-luqiang/grpc-go/credentials/insecure"
+	"github.com/xd-luqiang/grpc-go/credentials/tls/certprovider"
+	"github.com/xd-luqiang/grpc-go/internal"
+	"github.com/xd-luqiang/grpc-go/internal/pretty"
+	"github.com/xd-luqiang/grpc-go/internal/xds/env"
+	"github.com/xd-luqiang/grpc-go/xds/internal/version"
 )
 
 const (

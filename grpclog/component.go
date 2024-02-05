@@ -23,7 +23,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/grpclog"
 )
 
 // componentData records the settings for a component.

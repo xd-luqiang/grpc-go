@@ -25,15 +25,15 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/internal/grpclog"
-	"github.com/dubbogo/grpc-go/internal/hierarchy"
-	"github.com/dubbogo/grpc-go/internal/pretty"
-	"github.com/dubbogo/grpc-go/internal/wrr"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/serviceconfig"
-	"github.com/dubbogo/grpc-go/xds/internal/balancer/balancergroup"
-	"github.com/dubbogo/grpc-go/xds/internal/balancer/weightedtarget/weightedaggregator"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/internal/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/hierarchy"
+	"github.com/xd-luqiang/grpc-go/internal/pretty"
+	"github.com/xd-luqiang/grpc-go/internal/wrr"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/xds/internal/balancer/balancergroup"
+	"github.com/xd-luqiang/grpc-go/xds/internal/balancer/weightedtarget/weightedaggregator"
 )
 
 // Name is the name of the weighted_target balancer.

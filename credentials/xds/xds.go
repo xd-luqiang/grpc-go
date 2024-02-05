@@ -31,9 +31,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
-	credinternal "github.com/dubbogo/grpc-go/internal/credentials"
-	xdsinternal "github.com/dubbogo/grpc-go/internal/credentials/xds"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	credinternal "github.com/xd-luqiang/grpc-go/internal/credentials"
+	xdsinternal "github.com/xd-luqiang/grpc-go/internal/credentials/xds"
 )
 
 // ClientOptions contains parameters to configure a new client-side xDS

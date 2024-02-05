@@ -37,13 +37,13 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	grpclbstate "github.com/dubbogo/grpc-go/balancer/grpclb/state"
-	"github.com/dubbogo/grpc-go/internal/envconfig"
-	"github.com/dubbogo/grpc-go/internal/leakcheck"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	grpclbstate "github.com/xd-luqiang/grpc-go/balancer/grpclb/state"
+	"github.com/xd-luqiang/grpc-go/internal/envconfig"
+	"github.com/xd-luqiang/grpc-go/internal/leakcheck"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
 )
 
 func TestMain(m *testing.M) {

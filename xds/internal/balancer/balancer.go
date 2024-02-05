@@ -20,10 +20,10 @@
 package balancer
 
 import (
-	_ "github.com/dubbogo/grpc-go/xds/internal/balancer/cdsbalancer"     // Register the CDS balancer
-	_ "github.com/dubbogo/grpc-go/xds/internal/balancer/clusterimpl"     // Register the xds_cluster_impl balancer
-	_ "github.com/dubbogo/grpc-go/xds/internal/balancer/clustermanager"  // Register the xds_cluster_manager balancer
-	_ "github.com/dubbogo/grpc-go/xds/internal/balancer/clusterresolver" // Register the xds_cluster_resolver balancer
-	_ "github.com/dubbogo/grpc-go/xds/internal/balancer/priority"        // Register the priority balancer
-	_ "github.com/dubbogo/grpc-go/xds/internal/balancer/weightedtarget"  // Register the weighted_target balancer
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/balancer/cdsbalancer"     // Register the CDS balancer
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/balancer/clusterimpl"     // Register the xds_cluster_impl balancer
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/balancer/clustermanager"  // Register the xds_cluster_manager balancer
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/balancer/clusterresolver" // Register the xds_cluster_resolver balancer
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/balancer/priority"        // Register the priority balancer
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/balancer/weightedtarget"  // Register the weighted_target balancer
 )

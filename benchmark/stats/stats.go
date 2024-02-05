@@ -32,7 +32,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
+	"github.com/xd-luqiang/grpc-go"
 )
 
 // FeatureIndex is an enum for features that usually differ across individual

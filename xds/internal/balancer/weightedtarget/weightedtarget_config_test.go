@@ -27,9 +27,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
-	"github.com/dubbogo/grpc-go/xds/internal/balancer/priority"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	internalserviceconfig "github.com/xd-luqiang/grpc-go/internal/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/xds/internal/balancer/priority"
 )
 
 const (

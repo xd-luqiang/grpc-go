@@ -35,12 +35,12 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/admin"
-	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/internal/xds"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/admin"
+	channelzpb "github.com/xd-luqiang/grpc-go/channelz/grpc_channelz_v1"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/internal/xds"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 const (

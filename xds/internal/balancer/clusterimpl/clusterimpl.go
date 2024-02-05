@@ -31,19 +31,19 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/connectivity"
-	"github.com/dubbogo/grpc-go/internal"
-	"github.com/dubbogo/grpc-go/internal/buffer"
-	"github.com/dubbogo/grpc-go/internal/grpclog"
-	"github.com/dubbogo/grpc-go/internal/grpcsync"
-	"github.com/dubbogo/grpc-go/internal/pretty"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/serviceconfig"
-	xdsinternal "github.com/dubbogo/grpc-go/xds/internal"
-	"github.com/dubbogo/grpc-go/xds/internal/balancer/loadstore"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/load"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/internal"
+	"github.com/xd-luqiang/grpc-go/internal/buffer"
+	"github.com/xd-luqiang/grpc-go/internal/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/grpcsync"
+	"github.com/xd-luqiang/grpc-go/internal/pretty"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
+	xdsinternal "github.com/xd-luqiang/grpc-go/xds/internal"
+	"github.com/xd-luqiang/grpc-go/xds/internal/balancer/loadstore"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/load"
 )
 
 const (

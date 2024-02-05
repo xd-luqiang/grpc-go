@@ -41,12 +41,12 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/credentials/insecure"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	xdstestutils "github.com/dubbogo/grpc-go/xds/internal/testutils"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/bootstrap"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/credentials/insecure"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	xdstestutils "github.com/xd-luqiang/grpc-go/xds/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/bootstrap"
 )
 
 const defaultTestWatchExpiryTimeout = 500 * time.Millisecond

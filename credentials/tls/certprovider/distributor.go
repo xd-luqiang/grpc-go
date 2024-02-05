@@ -24,7 +24,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpcsync"
+	"github.com/xd-luqiang/grpc-go/internal/grpcsync"
 )
 
 // Distributor makes it easy for provider implementations to furnish new key

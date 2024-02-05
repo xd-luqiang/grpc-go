@@ -29,8 +29,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	externalserviceconfig "github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	externalserviceconfig "github.com/xd-luqiang/grpc-go/serviceconfig"
 )
 
 type testBalancerConfigType struct {

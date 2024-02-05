@@ -32,10 +32,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/credentials/tls/certprovider"
-	xdsinternal "github.com/dubbogo/grpc-go/internal/credentials/xds"
-	"github.com/dubbogo/grpc-go/testdata"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials/tls/certprovider"
+	xdsinternal "github.com/xd-luqiang/grpc-go/internal/credentials/xds"
+	"github.com/xd-luqiang/grpc-go/testdata"
 )
 
 func makeClientTLSConfig(t *testing.T, mTLS bool) *tls.Config {

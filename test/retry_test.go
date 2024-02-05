@@ -36,14 +36,14 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/internal/envconfig"
-	"github.com/dubbogo/grpc-go/internal/stubserver"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/stats"
-	"github.com/dubbogo/grpc-go/status"
-	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/internal/envconfig"
+	"github.com/xd-luqiang/grpc-go/internal/stubserver"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/stats"
+	"github.com/xd-luqiang/grpc-go/status"
+	testpb "github.com/xd-luqiang/grpc-go/test/grpc_testing"
 )
 
 func enableRetry() func() {

@@ -32,25 +32,25 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/balancer/base"
-	_ "github.com/dubbogo/grpc-go/balancer/roundrobin" // To register roundrobin.
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/connectivity"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/internal/backoff"
-	"github.com/dubbogo/grpc-go/internal/channelz"
-	"github.com/dubbogo/grpc-go/internal/grpcsync"
-	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
-	_ "github.com/dubbogo/grpc-go/internal/resolver/dns"         // To register dns resolver.
-	_ "github.com/dubbogo/grpc-go/internal/resolver/passthrough" // To register passthrough resolver.
-	_ "github.com/dubbogo/grpc-go/internal/resolver/unix"        // To register unix resolver.
-	"github.com/dubbogo/grpc-go/internal/transport"
-	"github.com/dubbogo/grpc-go/keepalive"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/serviceconfig"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/balancer/base"
+	_ "github.com/xd-luqiang/grpc-go/balancer/roundrobin" // To register roundrobin.
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/internal/backoff"
+	"github.com/xd-luqiang/grpc-go/internal/channelz"
+	"github.com/xd-luqiang/grpc-go/internal/grpcsync"
+	iresolver "github.com/xd-luqiang/grpc-go/internal/resolver"
+	_ "github.com/xd-luqiang/grpc-go/internal/resolver/dns"         // To register dns resolver.
+	_ "github.com/xd-luqiang/grpc-go/internal/resolver/passthrough" // To register passthrough resolver.
+	_ "github.com/xd-luqiang/grpc-go/internal/resolver/unix"        // To register unix resolver.
+	"github.com/xd-luqiang/grpc-go/internal/transport"
+	"github.com/xd-luqiang/grpc-go/keepalive"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 const (

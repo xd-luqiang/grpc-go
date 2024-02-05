@@ -41,17 +41,17 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/internal/channelz"
-	"github.com/dubbogo/grpc-go/internal/grpcrand"
-	"github.com/dubbogo/grpc-go/internal/grpcutil"
-	"github.com/dubbogo/grpc-go/keepalive"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/peer"
-	"github.com/dubbogo/grpc-go/stats"
-	"github.com/dubbogo/grpc-go/status"
-	"github.com/dubbogo/grpc-go/tap"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/internal/channelz"
+	"github.com/xd-luqiang/grpc-go/internal/grpcrand"
+	"github.com/xd-luqiang/grpc-go/internal/grpcutil"
+	"github.com/xd-luqiang/grpc-go/keepalive"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/peer"
+	"github.com/xd-luqiang/grpc-go/stats"
+	"github.com/xd-luqiang/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/tap"
 )
 
 var (

@@ -34,8 +34,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpcutil"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/internal/grpcutil"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 var updateHeaderTblSize = func(e *hpack.Encoder, v uint32) {

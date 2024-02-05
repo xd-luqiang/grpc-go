@@ -29,7 +29,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/resolver"
 )
 
 func testAddr(addr string, weight uint32) resolver.Address {

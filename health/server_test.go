@@ -23,10 +23,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/health"
-	healthgrpc "github.com/dubbogo/grpc-go/health/grpc_health_v1"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/health"
+	healthgrpc "github.com/xd-luqiang/grpc-go/health/grpc_health_v1"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
 )
 
 type s struct {

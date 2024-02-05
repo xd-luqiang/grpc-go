@@ -28,8 +28,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/encoding"
-	"github.com/dubbogo/grpc-go/test/codec_perf"
+	"github.com/xd-luqiang/grpc-go/encoding"
+	"github.com/xd-luqiang/grpc-go/test/codec_perf"
 )
 
 func setupBenchmarkProtoCodecInputs(payloadBaseSize uint32) []proto.Message {

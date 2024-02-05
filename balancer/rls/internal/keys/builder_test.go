@@ -29,8 +29,8 @@ import (
 )
 
 import (
-	rlspb "github.com/dubbogo/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
-	"github.com/dubbogo/grpc-go/metadata"
+	rlspb "github.com/xd-luqiang/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
+	"github.com/xd-luqiang/grpc-go/metadata"
 )
 
 var (

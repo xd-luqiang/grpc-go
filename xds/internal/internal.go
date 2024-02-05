@@ -25,7 +25,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/resolver"
 )
 
 // LocalityID is xds.Locality without XXX fields, so it can be used as map

@@ -19,7 +19,7 @@
 // Package grpclb defines a grpclb balancer.
 //
 // To install grpclb balancer, import this package as:
-//    import _ "github.com/dubbogo/grpc-go/balancer/grpclb"
+//    import _ "github.com/xd-luqiang/grpc-go/balancer/grpclb"
 package grpclb
 
 import (
@@ -35,17 +35,17 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/balancer"
-	lbpb "github.com/dubbogo/grpc-go/balancer/grpclb/grpc_lb_v1"
-	grpclbstate "github.com/dubbogo/grpc-go/balancer/grpclb/state"
-	"github.com/dubbogo/grpc-go/connectivity"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/internal"
-	"github.com/dubbogo/grpc-go/internal/backoff"
-	"github.com/dubbogo/grpc-go/internal/resolver/dns"
-	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	lbpb "github.com/xd-luqiang/grpc-go/balancer/grpclb/grpc_lb_v1"
+	grpclbstate "github.com/xd-luqiang/grpc-go/balancer/grpclb/state"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal"
+	"github.com/xd-luqiang/grpc-go/internal/backoff"
+	"github.com/xd-luqiang/grpc-go/internal/resolver/dns"
+	"github.com/xd-luqiang/grpc-go/resolver"
 )
 
 const (

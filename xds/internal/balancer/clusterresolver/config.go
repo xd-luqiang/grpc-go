@@ -25,10 +25,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer/roundrobin"
-	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
-	"github.com/dubbogo/grpc-go/serviceconfig"
-	"github.com/dubbogo/grpc-go/xds/internal/balancer/ringhash"
+	"github.com/xd-luqiang/grpc-go/balancer/roundrobin"
+	internalserviceconfig "github.com/xd-luqiang/grpc-go/internal/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/xds/internal/balancer/ringhash"
 )
 
 // DiscoveryMechanismType is the type of discovery mechanism.

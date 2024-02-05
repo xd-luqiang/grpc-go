@@ -31,12 +31,12 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/attributes"
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/balancer/weightedroundrobin"
-	"github.com/dubbogo/grpc-go/connectivity"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/attributes"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/balancer/weightedroundrobin"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils"
 )
 
 var (

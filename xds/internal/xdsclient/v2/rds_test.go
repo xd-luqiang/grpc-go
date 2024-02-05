@@ -31,8 +31,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeserver"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/fakeserver"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
 )
 
 // doLDS makes a LDS watch, and waits for the response and ack to finish.

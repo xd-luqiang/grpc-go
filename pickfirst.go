@@ -24,8 +24,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/connectivity"
 )
 
 // PickFirstBalancerName is the name of the pick_first balancer.

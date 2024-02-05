@@ -22,8 +22,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/load"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/load"
 )
 
 // ReportLoad starts an load reporting stream to the given server. If the server

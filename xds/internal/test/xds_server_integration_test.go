@@ -46,17 +46,17 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/credentials/insecure"
-	xdscreds "github.com/dubbogo/grpc-go/credentials/xds"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/internal/xds/env"
-	"github.com/dubbogo/grpc-go/status"
-	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
-	"github.com/dubbogo/grpc-go/xds"
-	"github.com/dubbogo/grpc-go/xds/internal/httpfilter/rbac"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/credentials/insecure"
+	xdscreds "github.com/xd-luqiang/grpc-go/credentials/xds"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/internal/xds/env"
+	"github.com/xd-luqiang/grpc-go/status"
+	testpb "github.com/xd-luqiang/grpc-go/test/grpc_testing"
+	"github.com/xd-luqiang/grpc-go/xds"
+	"github.com/xd-luqiang/grpc-go/xds/internal/httpfilter/rbac"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/e2e"
 )
 
 const (

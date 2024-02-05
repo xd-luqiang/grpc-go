@@ -24,8 +24,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	rlspb "github.com/dubbogo/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
+	"github.com/xd-luqiang/grpc-go"
+	rlspb "github.com/xd-luqiang/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
 )
 
 // For gRPC services using RLS, the value of target_type in the

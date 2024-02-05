@@ -23,9 +23,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/balancer/roundrobin"
-	"github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/balancer/roundrobin"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
 )
 
 const (

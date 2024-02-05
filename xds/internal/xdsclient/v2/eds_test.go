@@ -32,11 +32,11 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/xds/internal"
-	xtestutils "github.com/dubbogo/grpc-go/xds/internal/testutils"
-	"github.com/dubbogo/grpc-go/xds/internal/version"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/xds/internal"
+	xtestutils "github.com/xd-luqiang/grpc-go/xds/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/xds/internal/version"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
 )
 
 var (

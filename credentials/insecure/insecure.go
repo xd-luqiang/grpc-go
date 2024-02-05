@@ -31,7 +31,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials"
 )
 
 // NewCredentials returns a credentials which disables transport security.

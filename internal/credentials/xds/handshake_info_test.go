@@ -27,7 +27,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/xds/matcher"
+	"github.com/xd-luqiang/grpc-go/internal/xds/matcher"
 )
 
 func TestDNSMatch(t *testing.T) {

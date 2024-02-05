@@ -19,7 +19,7 @@ that registers itself, and is imported anonymously.  For example:
 ```go
 package proto
 
-import "github.com/dubbogo/grpc-go/encoding"
+import "github.com/xd-luqiang/grpc-go/encoding"
 
 func init() {
 	encoding.RegisterCodec(protoCodec{})
@@ -29,7 +29,7 @@ func init() {
 ```
 
 For an example, gRPC's implementation of the `proto` codec can be found in
-[`encoding/proto`](https://godoc.org/github.com/dubbogo/grpc-go/encoding/proto).
+[`encoding/proto`](https://godoc.org/github.com/xd-luqiang/grpc-go/encoding/proto).
 
 ### Using a `Codec`
 
@@ -95,7 +95,7 @@ function that registers itself, and is imported anonymously.  For example:
 ```go
 package gzip
 
-import "github.com/dubbogo/grpc-go/encoding"
+import "github.com/xd-luqiang/grpc-go/encoding"
 
 func init() {
 	encoding.RegisterCompressor(compressor{})
@@ -105,7 +105,7 @@ func init() {
 ```
 
 An implementation of a `gzip` compressor can be found in
-[`encoding/gzip`](https://godoc.org/github.com/dubbogo/grpc-go/encoding/gzip).
+[`encoding/gzip`](https://godoc.org/github.com/xd-luqiang/grpc-go/encoding/gzip).
 
 ### Using a `Compressor`
 
@@ -115,7 +115,7 @@ By default, gRPC does not register or use any compressors.  To use a
 ```go
 package myclient
 
-import _ "github.com/dubbogo/grpc-go/encoding/gzip"
+import _ "github.com/xd-luqiang/grpc-go/encoding/gzip"
 ```
 
 `Compressor`s, by definition, must be symmetric, so the same desired

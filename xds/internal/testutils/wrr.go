@@ -24,7 +24,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/wrr"
+	"github.com/xd-luqiang/grpc-go/internal/wrr"
 )
 
 // testWRR is a deterministic WRR implementation.

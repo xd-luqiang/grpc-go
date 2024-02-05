@@ -28,14 +28,14 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/credentials/local"
-	"github.com/dubbogo/grpc-go/internal/stubserver"
-	"github.com/dubbogo/grpc-go/peer"
-	"github.com/dubbogo/grpc-go/status"
-	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials/local"
+	"github.com/xd-luqiang/grpc-go/internal/stubserver"
+	"github.com/xd-luqiang/grpc-go/peer"
+	"github.com/xd-luqiang/grpc-go/status"
+	testpb "github.com/xd-luqiang/grpc-go/test/grpc_testing"
 )
 
 func testLocalCredsE2ESucceed(network, address string) error {

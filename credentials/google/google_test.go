@@ -25,10 +25,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/internal"
-	icredentials "github.com/dubbogo/grpc-go/internal/credentials"
-	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/internal"
+	icredentials "github.com/xd-luqiang/grpc-go/internal/credentials"
+	"github.com/xd-luqiang/grpc-go/resolver"
 )
 
 type testCreds struct {

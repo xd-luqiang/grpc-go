@@ -23,7 +23,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
 )
 
 // rdsHandlerUpdate wraps the full RouteConfigUpdate that are dynamically

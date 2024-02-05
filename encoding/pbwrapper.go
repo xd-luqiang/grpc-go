@@ -5,7 +5,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/encoding/proto_wrapper_api"
+	"github.com/xd-luqiang/grpc-go/encoding/proto_wrapper_api"
 )
 
 // PBWrapperTwoWayCodec is codec impl of pb

@@ -28,9 +28,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	ecpb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
-	hwpb "github.com/dubbogo/grpc-go/examples/helloworld/helloworld"
+	"github.com/xd-luqiang/grpc-go"
+	ecpb "github.com/xd-luqiang/grpc-go/examples/features/proto/echo"
+	hwpb "github.com/xd-luqiang/grpc-go/examples/helloworld/helloworld"
 )
 
 var addr = flag.String("addr", "localhost:50051", "the address to connect to")

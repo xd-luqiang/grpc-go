@@ -38,8 +38,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials/tls/certprovider"
-	"github.com/dubbogo/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/credentials/tls/certprovider"
+	"github.com/xd-luqiang/grpc-go/grpclog"
 )
 
 const defaultCertRefreshDuration = 1 * time.Hour

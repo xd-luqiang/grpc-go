@@ -1,4 +1,4 @@
-module github.com/dubbogo/grpc-go
+module github.com/xd-luqiang/grpc-go
 
 go 1.14
 

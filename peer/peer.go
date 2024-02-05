@@ -26,7 +26,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials"
 )
 
 // Peer contains the information of the peer for an RPC, such as the address

@@ -24,9 +24,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/balancer/base"
-	"github.com/dubbogo/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/balancer/base"
+	"github.com/xd-luqiang/grpc-go/connectivity"
 )
 
 var (

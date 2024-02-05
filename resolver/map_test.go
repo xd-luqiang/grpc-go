@@ -29,7 +29,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/attributes"
+	"github.com/xd-luqiang/grpc-go/attributes"
 )
 
 // Note: each address is different from addr1 by one value.  addr7 matches

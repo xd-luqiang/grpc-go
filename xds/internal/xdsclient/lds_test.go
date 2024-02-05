@@ -52,12 +52,12 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/internal/xds/env"
-	"github.com/dubbogo/grpc-go/xds/internal/httpfilter"
-	_ "github.com/dubbogo/grpc-go/xds/internal/httpfilter/router"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
-	"github.com/dubbogo/grpc-go/xds/internal/version"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/internal/xds/env"
+	"github.com/xd-luqiang/grpc-go/xds/internal/httpfilter"
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/httpfilter/router"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/e2e"
+	"github.com/xd-luqiang/grpc-go/xds/internal/version"
 )
 
 func (s) TestUnmarshalListener_ClientSide(t *testing.T) {

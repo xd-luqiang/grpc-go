@@ -32,13 +32,13 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/credentials/insecure"
-	xdscreds "github.com/dubbogo/grpc-go/credentials/xds"
-	pb "github.com/dubbogo/grpc-go/examples/helloworld/helloworld"
-	"github.com/dubbogo/grpc-go/health"
-	healthpb "github.com/dubbogo/grpc-go/health/grpc_health_v1"
-	"github.com/dubbogo/grpc-go/xds"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/credentials/insecure"
+	xdscreds "github.com/xd-luqiang/grpc-go/credentials/xds"
+	pb "github.com/xd-luqiang/grpc-go/examples/helloworld/helloworld"
+	"github.com/xd-luqiang/grpc-go/health"
+	healthpb "github.com/xd-luqiang/grpc-go/health/grpc_health_v1"
+	"github.com/xd-luqiang/grpc-go/xds"
 )
 
 var (

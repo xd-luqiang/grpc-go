@@ -40,14 +40,14 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	xdsinternal "github.com/dubbogo/grpc-go/internal/xds"
-	"github.com/dubbogo/grpc-go/resolver"
-	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
-	"github.com/dubbogo/grpc-go/testdata"
-	"github.com/dubbogo/grpc-go/xds"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	xdsinternal "github.com/xd-luqiang/grpc-go/internal/xds"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	testpb "github.com/xd-luqiang/grpc-go/test/grpc_testing"
+	"github.com/xd-luqiang/grpc-go/testdata"
+	"github.com/xd-luqiang/grpc-go/xds"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/e2e"
 )
 
 const (

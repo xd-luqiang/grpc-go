@@ -24,8 +24,8 @@
 package dns
 
 import (
-	"github.com/dubbogo/grpc-go/internal/resolver/dns"
-	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/internal/resolver/dns"
+	"github.com/xd-luqiang/grpc-go/resolver"
 )
 
 // NewBuilder creates a dnsBuilder which is used to factory DNS resolvers.

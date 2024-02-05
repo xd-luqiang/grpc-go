@@ -43,16 +43,16 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/credentials/insecure"
-	"github.com/dubbogo/grpc-go/internal/grpclog"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/resolver/manual"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeserver"
-	"github.com/dubbogo/grpc-go/xds/internal/version"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/credentials/insecure"
+	"github.com/xd-luqiang/grpc-go/internal/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/resolver/manual"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/fakeserver"
+	"github.com/xd-luqiang/grpc-go/xds/internal/version"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
 )
 
 type s struct {

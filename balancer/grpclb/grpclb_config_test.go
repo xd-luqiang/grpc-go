@@ -28,7 +28,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
 )
 
 func (s) TestParse(t *testing.T) {

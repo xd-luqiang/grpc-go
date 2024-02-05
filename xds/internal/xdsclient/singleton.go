@@ -27,7 +27,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/bootstrap"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/bootstrap"
 )
 
 const defaultWatchExpiryTimeout = 15 * time.Second

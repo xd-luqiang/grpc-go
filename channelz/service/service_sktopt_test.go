@@ -41,8 +41,8 @@ import (
 )
 
 import (
-	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
-	"github.com/dubbogo/grpc-go/internal/channelz"
+	channelzpb "github.com/xd-luqiang/grpc-go/channelz/grpc_channelz_v1"
+	"github.com/xd-luqiang/grpc-go/internal/channelz"
 )
 
 func init() {

@@ -34,7 +34,7 @@ import (
 )
 
 import (
-	core "github.com/dubbogo/grpc-go/interop/grpc_testing/core"
+	core "github.com/xd-luqiang/grpc-go/interop/grpc_testing/core"
 )
 
 const (

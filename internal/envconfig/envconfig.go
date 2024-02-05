@@ -25,7 +25,7 @@ import (
 )
 
 import (
-	xdsenv "github.com/dubbogo/grpc-go/internal/xds/env"
+	xdsenv "github.com/xd-luqiang/grpc-go/internal/xds/env"
 )
 
 const (

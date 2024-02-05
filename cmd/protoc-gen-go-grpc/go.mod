@@ -1,4 +1,4 @@
-module github.com/dubbogo/grpc-go/cmd/protoc-gen-go-grpc
+module github.com/xd-luqiang/grpc-go/cmd/protoc-gen-go-grpc
 
 go 1.9
 

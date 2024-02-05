@@ -30,15 +30,15 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/connectivity"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/xds/internal"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	_ "github.com/dubbogo/grpc-go/xds/internal/xdsclient/v2" // V2 client registration.
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/xds/internal"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/fakeclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/v2" // V2 client registration.
 )
 
 const (

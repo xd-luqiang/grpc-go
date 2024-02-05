@@ -32,10 +32,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/examples/data"
-	pb "github.com/dubbogo/grpc-go/examples/route_guide/routeguide"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/examples/data"
+	pb "github.com/xd-luqiang/grpc-go/examples/route_guide/routeguide"
 )
 
 var (

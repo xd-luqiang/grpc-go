@@ -24,7 +24,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/codes"
 )
 
 type codeBench uint32

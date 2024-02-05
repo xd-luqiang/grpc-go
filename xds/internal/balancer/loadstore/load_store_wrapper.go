@@ -24,7 +24,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient/load"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/load"
 )
 
 // NewWrapper creates a Wrapper.

@@ -30,7 +30,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
 )
 
 // TestLDSHandleResponse starts a fake xDS server, makes a ClientConn to it,

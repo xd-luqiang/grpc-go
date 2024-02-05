@@ -35,13 +35,13 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	_ "github.com/dubbogo/grpc-go/balancer/grpclb"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/credentials/alts"
-	"github.com/dubbogo/grpc-go/credentials/google"
-	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
+	"github.com/xd-luqiang/grpc-go"
+	_ "github.com/xd-luqiang/grpc-go/balancer/grpclb"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials/alts"
+	"github.com/xd-luqiang/grpc-go/credentials/google"
+	testgrpc "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
+	testpb "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
 )
 
 var (

@@ -26,7 +26,7 @@ import (
 )
 
 import (
-	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
+	channelzpb "github.com/xd-luqiang/grpc-go/channelz/grpc_channelz_v1"
 )
 
 func protoToTime(protoTime *channelzpb.SocketOptionTimeout) *unix.Timeval {

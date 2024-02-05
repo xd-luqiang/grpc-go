@@ -28,9 +28,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/encoding/gzip" // Install the gzip compressor
-	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/encoding/gzip" // Install the gzip compressor
+	pb "github.com/xd-luqiang/grpc-go/examples/features/proto/echo"
 )
 
 var addr = flag.String("addr", "localhost:50051", "the address to connect to")

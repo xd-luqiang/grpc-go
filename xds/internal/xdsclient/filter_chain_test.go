@@ -45,13 +45,13 @@ import (
 )
 
 import (
-	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/internal/xds/env"
-	"github.com/dubbogo/grpc-go/xds/internal/httpfilter"
-	"github.com/dubbogo/grpc-go/xds/internal/httpfilter/router"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
-	"github.com/dubbogo/grpc-go/xds/internal/version"
+	iresolver "github.com/xd-luqiang/grpc-go/internal/resolver"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/internal/xds/env"
+	"github.com/xd-luqiang/grpc-go/xds/internal/httpfilter"
+	"github.com/xd-luqiang/grpc-go/xds/internal/httpfilter/router"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/e2e"
+	"github.com/xd-luqiang/grpc-go/xds/internal/version"
 )
 
 const (

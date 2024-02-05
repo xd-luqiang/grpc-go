@@ -31,7 +31,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials/tls/certprovider"
+	"github.com/xd-luqiang/grpc-go/credentials/tls/certprovider"
 )
 
 const (

@@ -58,11 +58,11 @@ receives an error with details:
 exit status 1
 ```
 
-[status]:       https://godoc.org/github.com/dubbogo/grpc-go/status#Status
-[new-status]:   https://godoc.org/github.com/dubbogo/grpc-go/status#New
-[code]:         https://godoc.org/github.com/dubbogo/grpc-go/codes#Code
-[with-details]: https://godoc.org/github.com/dubbogo/grpc-go/internal/status#Status.WithDetails
-[details]:      https://godoc.org/github.com/dubbogo/grpc-go/internal/status#Status.Details
-[status-err]:   https://godoc.org/github.com/dubbogo/grpc-go/internal/status#Status.Err
-[status-error]: https://godoc.org/github.com/dubbogo/grpc-go/status#Error
+[status]:       https://godoc.org/github.com/xd-luqiang/grpc-go/status#Status
+[new-status]:   https://godoc.org/github.com/xd-luqiang/grpc-go/status#New
+[code]:         https://godoc.org/github.com/xd-luqiang/grpc-go/codes#Code
+[with-details]: https://godoc.org/github.com/xd-luqiang/grpc-go/internal/status#Status.WithDetails
+[details]:      https://godoc.org/github.com/xd-luqiang/grpc-go/internal/status#Status.Details
+[status-err]:   https://godoc.org/github.com/xd-luqiang/grpc-go/internal/status#Status.Err
+[status-error]: https://godoc.org/github.com/xd-luqiang/grpc-go/status#Error
 [example]:      https://github.com/grpc/grpc-go/tree/master/examples/features/errors

@@ -26,8 +26,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/internal/grpcutil"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/grpcutil"
 )
 
 // Logger is the global binary logger. It can be used to get binary logger for

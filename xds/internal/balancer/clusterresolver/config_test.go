@@ -28,9 +28,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/balancer/stub"
-	internalserviceconfig "github.com/dubbogo/grpc-go/internal/serviceconfig"
-	"github.com/dubbogo/grpc-go/xds/internal/balancer/ringhash"
+	"github.com/xd-luqiang/grpc-go/internal/balancer/stub"
+	internalserviceconfig "github.com/xd-luqiang/grpc-go/internal/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/xds/internal/balancer/ringhash"
 )
 
 func TestDiscoveryMechanismTypeMarshalJSON(t *testing.T) {

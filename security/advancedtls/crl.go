@@ -36,7 +36,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/grpclog"
 )
 
 var grpclogLogger = grpclog.Component("advancedtls")

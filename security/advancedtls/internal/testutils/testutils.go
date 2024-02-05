@@ -26,7 +26,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/security/advancedtls/testdata"
+	"github.com/xd-luqiang/grpc-go/security/advancedtls/testdata"
 )
 
 // CertStore contains all the certificates used in the integration tests.

@@ -29,14 +29,14 @@ import (
 )
 
 import (
-	grpc "github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/credentials"
-	core "github.com/dubbogo/grpc-go/credentials/alts/internal"
-	"github.com/dubbogo/grpc-go/credentials/alts/internal/authinfo"
-	"github.com/dubbogo/grpc-go/credentials/alts/internal/conn"
-	altsgrpc "github.com/dubbogo/grpc-go/credentials/alts/internal/proto/grpc_gcp"
-	altspb "github.com/dubbogo/grpc-go/credentials/alts/internal/proto/grpc_gcp"
+	grpc "github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	core "github.com/xd-luqiang/grpc-go/credentials/alts/internal"
+	"github.com/xd-luqiang/grpc-go/credentials/alts/internal/authinfo"
+	"github.com/xd-luqiang/grpc-go/credentials/alts/internal/conn"
+	altsgrpc "github.com/xd-luqiang/grpc-go/credentials/alts/internal/proto/grpc_gcp"
+	altspb "github.com/xd-luqiang/grpc-go/credentials/alts/internal/proto/grpc_gcp"
 )
 
 const (

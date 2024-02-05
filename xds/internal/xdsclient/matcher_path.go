@@ -24,7 +24,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpcutil"
+	"github.com/xd-luqiang/grpc-go/internal/grpcutil"
 )
 
 type pathMatcher interface {

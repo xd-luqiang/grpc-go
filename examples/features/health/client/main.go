@@ -28,11 +28,11 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
-	_ "github.com/dubbogo/grpc-go/health"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/resolver/manual"
+	"github.com/xd-luqiang/grpc-go"
+	pb "github.com/xd-luqiang/grpc-go/examples/features/proto/echo"
+	_ "github.com/xd-luqiang/grpc-go/health"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/resolver/manual"
 )
 
 var serviceConfig = `{

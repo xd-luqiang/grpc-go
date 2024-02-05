@@ -24,11 +24,11 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	lbpb "github.com/dubbogo/grpc-go/balancer/grpclb/grpc_lb_v1"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/internal/grpcrand"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	lbpb "github.com/xd-luqiang/grpc-go/balancer/grpclb/grpc_lb_v1"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/internal/grpcrand"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 // rpcStats is same as lbpb.ClientStats, except that numCallsDropped is a map

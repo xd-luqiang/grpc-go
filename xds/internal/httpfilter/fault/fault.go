@@ -41,12 +41,12 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/internal/grpcrand"
-	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/status"
-	"github.com/dubbogo/grpc-go/xds/internal/httpfilter"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/internal/grpcrand"
+	iresolver "github.com/xd-luqiang/grpc-go/internal/resolver"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/xds/internal/httpfilter"
 )
 
 const headerAbortHTTPStatus = "x-envoy-fault-abort-request"

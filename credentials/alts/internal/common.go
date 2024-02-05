@@ -25,7 +25,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials"
 )
 
 const (

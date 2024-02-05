@@ -37,7 +37,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/benchmark/stats"
+	"github.com/xd-luqiang/grpc-go/benchmark/stats"
 )
 
 func createMap(fileName string) map[string]stats.BenchResults {

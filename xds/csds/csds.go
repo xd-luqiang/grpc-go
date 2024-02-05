@@ -41,12 +41,12 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/status"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
-	_ "github.com/dubbogo/grpc-go/xds/internal/xdsclient/v2" // Register v2 xds_client.
-	_ "github.com/dubbogo/grpc-go/xds/internal/xdsclient/v3" // Register v3 xds_client.
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/v2" // Register v2 xds_client.
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/v3" // Register v3 xds_client.
 )
 
 var (

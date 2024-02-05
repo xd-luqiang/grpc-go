@@ -32,18 +32,18 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/admin"
-	"github.com/dubbogo/grpc-go/credentials/insecure"
-	"github.com/dubbogo/grpc-go/credentials/xds"
-	"github.com/dubbogo/grpc-go/grpclog"
-	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/peer"
-	"github.com/dubbogo/grpc-go/reflection"
-	"github.com/dubbogo/grpc-go/status"
-	_ "github.com/dubbogo/grpc-go/xds"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/admin"
+	"github.com/xd-luqiang/grpc-go/credentials/insecure"
+	"github.com/xd-luqiang/grpc-go/credentials/xds"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	testgrpc "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
+	testpb "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/peer"
+	"github.com/xd-luqiang/grpc-go/reflection"
+	"github.com/xd-luqiang/grpc-go/status"
+	_ "github.com/xd-luqiang/grpc-go/xds"
 )
 
 func init() {

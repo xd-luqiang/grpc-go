@@ -32,15 +32,15 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/credentials/tls/certprovider"
-	icredentials "github.com/dubbogo/grpc-go/internal/credentials"
-	xdsinternal "github.com/dubbogo/grpc-go/internal/credentials/xds"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/internal/xds/matcher"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/testdata"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials/tls/certprovider"
+	icredentials "github.com/xd-luqiang/grpc-go/internal/credentials"
+	xdsinternal "github.com/xd-luqiang/grpc-go/internal/credentials/xds"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/internal/xds/matcher"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/testdata"
 )
 
 const (

@@ -28,8 +28,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/channelz"
-	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
+	"github.com/xd-luqiang/grpc-go/internal/channelz"
+	testpb "github.com/xd-luqiang/grpc-go/test/grpc_testing"
 )
 
 func (s) TestCZSocketMetricsSocketOption(t *testing.T) {

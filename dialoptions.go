@@ -26,17 +26,17 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/backoff"
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/encoding"
-	"github.com/dubbogo/grpc-go/internal"
-	internalbackoff "github.com/dubbogo/grpc-go/internal/backoff"
-	"github.com/dubbogo/grpc-go/internal/envconfig"
-	"github.com/dubbogo/grpc-go/internal/transport"
-	"github.com/dubbogo/grpc-go/keepalive"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/stats"
+	"github.com/xd-luqiang/grpc-go/backoff"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/encoding"
+	"github.com/xd-luqiang/grpc-go/internal"
+	internalbackoff "github.com/xd-luqiang/grpc-go/internal/backoff"
+	"github.com/xd-luqiang/grpc-go/internal/envconfig"
+	"github.com/xd-luqiang/grpc-go/internal/transport"
+	"github.com/xd-luqiang/grpc-go/keepalive"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/stats"
 )
 
 // dialOptions configure a Dial call. dialOptions are set by the DialOption

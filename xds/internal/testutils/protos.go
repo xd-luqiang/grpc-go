@@ -33,7 +33,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/xds/internal"
+	"github.com/xd-luqiang/grpc-go/xds/internal"
 )
 
 // EmptyNodeProtoV2 is a v2 Node proto with no fields set.

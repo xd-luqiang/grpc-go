@@ -24,11 +24,11 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpcrand"
-	"github.com/dubbogo/grpc-go/internal/grpcutil"
-	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
-	"github.com/dubbogo/grpc-go/internal/xds/matcher"
-	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/internal/grpcrand"
+	"github.com/xd-luqiang/grpc-go/internal/grpcutil"
+	iresolver "github.com/xd-luqiang/grpc-go/internal/resolver"
+	"github.com/xd-luqiang/grpc-go/internal/xds/matcher"
+	"github.com/xd-luqiang/grpc-go/metadata"
 )
 
 func TestAndMatcherMatch(t *testing.T) {

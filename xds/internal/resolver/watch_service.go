@@ -25,9 +25,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpclog"
-	"github.com/dubbogo/grpc-go/internal/pretty"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/internal/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/pretty"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
 )
 
 // serviceUpdate contains information received from the LDS/RDS responses which

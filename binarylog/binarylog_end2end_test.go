@@ -34,16 +34,16 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/binarylog"
-	pb "github.com/dubbogo/grpc-go/binarylog/grpc_binarylog_v1"
-	"github.com/dubbogo/grpc-go/grpclog"
-	iblog "github.com/dubbogo/grpc-go/internal/binarylog"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	testpb "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/binarylog"
+	pb "github.com/xd-luqiang/grpc-go/binarylog/grpc_binarylog_v1"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	iblog "github.com/xd-luqiang/grpc-go/internal/binarylog"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	testgrpc "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
+	testpb "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 var grpclogLogger = grpclog.Component("binarylog")

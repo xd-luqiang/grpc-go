@@ -32,30 +32,25 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
-)
 
-import (
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/encoding"
+	"github.com/xd-luqiang/grpc-go/encoding/proto"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal"
+	"github.com/xd-luqiang/grpc-go/internal/binarylog"
+	"github.com/xd-luqiang/grpc-go/internal/channelz"
+	"github.com/xd-luqiang/grpc-go/internal/grpcrand"
+	"github.com/xd-luqiang/grpc-go/internal/grpcsync"
+	"github.com/xd-luqiang/grpc-go/internal/transport"
+	"github.com/xd-luqiang/grpc-go/keepalive"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/peer"
+	"github.com/xd-luqiang/grpc-go/stats"
+	"github.com/xd-luqiang/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/tap"
 	"golang.org/x/net/trace"
-)
-
-import (
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/encoding"
-	"github.com/dubbogo/grpc-go/encoding/proto"
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/internal"
-	"github.com/dubbogo/grpc-go/internal/binarylog"
-	"github.com/dubbogo/grpc-go/internal/channelz"
-	"github.com/dubbogo/grpc-go/internal/grpcrand"
-	"github.com/dubbogo/grpc-go/internal/grpcsync"
-	"github.com/dubbogo/grpc-go/internal/transport"
-	"github.com/dubbogo/grpc-go/keepalive"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/peer"
-	"github.com/dubbogo/grpc-go/stats"
-	"github.com/dubbogo/grpc-go/status"
-	"github.com/dubbogo/grpc-go/tap"
 )
 
 const (
@@ -1345,11 +1340,11 @@ func (s *Server) processUnaryRPC(method string, t transport.ServerTransport, str
 			}
 			// todo deal with unsupported attachment
 		}
-		channelz.Infof(logger, s.channelzID, "unaryProcessor.processUnaryRPC: get triple attachment = %+v", responseAttachment)
+		// channelz.Infof(logger, s.channelzID, "unaryProcessor.processUnaryRPC: get triple attachment = %+v", responseAttachment)
 		rawReplyStruct = result.Result()
-		channelz.Infof(logger, s.channelzID, "unaryProcessor.processUnaryRPC: get reply %+v to be marshal", rawReplyStruct)
+		// channelz.Infof(logger, s.channelzID, "unaryProcessor.processUnaryRPC: get reply %+v to be marshal", rawReplyStruct)
 	} else {
-		channelz.Infof(logger, s.channelzID, "unaryProcessor.processUnaryRPC: DEPRECATED! reply from service not impl common.OuterResult")
+		// channelz.Infof(logger, s.channelzID, "unaryProcessor.processUnaryRPC: DEPRECATED! reply from service not impl common.OuterResult")
 		rawReplyStruct = reply
 	}
 

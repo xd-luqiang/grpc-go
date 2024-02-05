@@ -32,10 +32,10 @@ import (
 )
 
 import (
-	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
-	"github.com/dubbogo/grpc-go/metadata"
-	_ "github.com/dubbogo/grpc-go/xds/internal/balancer/cdsbalancer" // To parse LB config
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+	iresolver "github.com/xd-luqiang/grpc-go/internal/resolver"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/balancer/cdsbalancer" // To parse LB config
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
 )
 
 func (s) TestPruneActiveClusters(t *testing.T) {

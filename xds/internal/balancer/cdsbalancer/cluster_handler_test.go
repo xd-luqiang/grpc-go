@@ -27,8 +27,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/fakeclient"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
 )
 
 const (

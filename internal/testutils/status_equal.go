@@ -23,7 +23,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 // StatusErrEqual returns true iff both err1 and err2 wrap status.Status errors

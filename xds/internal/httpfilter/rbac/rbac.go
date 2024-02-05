@@ -37,10 +37,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/resolver"
-	"github.com/dubbogo/grpc-go/internal/xds/env"
-	"github.com/dubbogo/grpc-go/internal/xds/rbac"
-	"github.com/dubbogo/grpc-go/xds/internal/httpfilter"
+	"github.com/xd-luqiang/grpc-go/internal/resolver"
+	"github.com/xd-luqiang/grpc-go/internal/xds/env"
+	"github.com/xd-luqiang/grpc-go/internal/xds/rbac"
+	"github.com/xd-luqiang/grpc-go/xds/internal/httpfilter"
 )
 
 func init() {

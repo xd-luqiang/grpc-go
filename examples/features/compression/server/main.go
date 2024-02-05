@@ -28,9 +28,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	_ "github.com/dubbogo/grpc-go/encoding/gzip" // Install the gzip compressor
-	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
+	"github.com/xd-luqiang/grpc-go"
+	_ "github.com/xd-luqiang/grpc-go/encoding/gzip" // Install the gzip compressor
+	pb "github.com/xd-luqiang/grpc-go/examples/features/proto/echo"
 )
 
 var port = flag.Int("port", 50051, "the port to serve on")

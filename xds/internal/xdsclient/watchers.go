@@ -25,7 +25,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/pretty"
+	"github.com/xd-luqiang/grpc-go/internal/pretty"
 )
 
 type watchInfoState int

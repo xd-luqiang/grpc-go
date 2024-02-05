@@ -29,19 +29,19 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/connectivity"
-	_ "github.com/dubbogo/grpc-go/health"
-	healthgrpc "github.com/dubbogo/grpc-go/health/grpc_health_v1"
-	healthpb "github.com/dubbogo/grpc-go/health/grpc_health_v1"
-	"github.com/dubbogo/grpc-go/internal"
-	"github.com/dubbogo/grpc-go/internal/channelz"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/resolver/manual"
-	"github.com/dubbogo/grpc-go/status"
-	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	_ "github.com/xd-luqiang/grpc-go/health"
+	healthgrpc "github.com/xd-luqiang/grpc-go/health/grpc_health_v1"
+	healthpb "github.com/xd-luqiang/grpc-go/health/grpc_health_v1"
+	"github.com/xd-luqiang/grpc-go/internal"
+	"github.com/xd-luqiang/grpc-go/internal/channelz"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/resolver/manual"
+	"github.com/xd-luqiang/grpc-go/status"
+	testpb "github.com/xd-luqiang/grpc-go/test/grpc_testing"
 )
 
 var testHealthCheckFunc = internal.HealthCheckFunc

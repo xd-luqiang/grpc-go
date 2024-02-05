@@ -27,10 +27,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/channelz/service"
-	pb "github.com/dubbogo/grpc-go/examples/helloworld/helloworld"
-	"github.com/dubbogo/grpc-go/internal/grpcrand"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/channelz/service"
+	pb "github.com/xd-luqiang/grpc-go/examples/helloworld/helloworld"
+	"github.com/xd-luqiang/grpc-go/internal/grpcrand"
 )
 
 var (

@@ -32,9 +32,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/credentials/tls/certprovider"
-	credinternal "github.com/dubbogo/grpc-go/internal/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials/tls/certprovider"
+	credinternal "github.com/xd-luqiang/grpc-go/internal/credentials"
 )
 
 // VerificationFuncParams contains parameters available to users when

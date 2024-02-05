@@ -40,21 +40,21 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/balancer"
-	lbgrpc "github.com/dubbogo/grpc-go/balancer/grpclb/grpc_lb_v1"
-	lbpb "github.com/dubbogo/grpc-go/balancer/grpclb/grpc_lb_v1"
-	grpclbstate "github.com/dubbogo/grpc-go/balancer/grpclb/state"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/peer"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/resolver/manual"
-	"github.com/dubbogo/grpc-go/status"
-	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	lbgrpc "github.com/xd-luqiang/grpc-go/balancer/grpclb/grpc_lb_v1"
+	lbpb "github.com/xd-luqiang/grpc-go/balancer/grpclb/grpc_lb_v1"
+	grpclbstate "github.com/xd-luqiang/grpc-go/balancer/grpclb/state"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/peer"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/resolver/manual"
+	"github.com/xd-luqiang/grpc-go/status"
+	testpb "github.com/xd-luqiang/grpc-go/test/grpc_testing"
 )
 
 var (

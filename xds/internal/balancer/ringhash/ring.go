@@ -30,7 +30,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/resolver"
 )
 
 type ring struct {

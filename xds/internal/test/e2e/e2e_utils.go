@@ -26,7 +26,7 @@ import (
 )
 
 import (
-	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
+	channelzpb "github.com/xd-luqiang/grpc-go/channelz/grpc_channelz_v1"
 )
 
 func verifySubConnStates(t *testing.T, scs []*channelzpb.Subchannel, want map[channelzpb.ChannelConnectivityState_State]int) {

@@ -29,10 +29,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/codes"
-	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/codes"
+	pb "github.com/xd-luqiang/grpc-go/examples/features/proto/echo"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 // server is used to implement EchoServer.

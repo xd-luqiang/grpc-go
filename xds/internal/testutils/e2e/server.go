@@ -40,8 +40,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/grpclog"
 )
 
 var logger = grpclog.Component("xds-e2e")

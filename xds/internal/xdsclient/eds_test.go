@@ -38,9 +38,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/xds/internal"
-	"github.com/dubbogo/grpc-go/xds/internal/version"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/xds/internal"
+	"github.com/xd-luqiang/grpc-go/xds/internal/version"
 )
 
 func (s) TestEDSParseRespProto(t *testing.T) {

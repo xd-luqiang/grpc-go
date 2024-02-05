@@ -32,13 +32,13 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	"github.com/dubbogo/grpc-go/balancer/rls/internal/cache"
-	"github.com/dubbogo/grpc-go/balancer/rls/internal/keys"
-	rlspb "github.com/dubbogo/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
-	"github.com/dubbogo/grpc-go/internal/grpcrand"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/balancer/rls/internal/cache"
+	"github.com/xd-luqiang/grpc-go/balancer/rls/internal/keys"
+	rlspb "github.com/xd-luqiang/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
+	"github.com/xd-luqiang/grpc-go/internal/grpcrand"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/metadata"
 )
 
 const defaultTestMaxAge = 5 * time.Second

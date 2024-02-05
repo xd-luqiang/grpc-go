@@ -25,8 +25,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/grpclog"
-	ppb "github.com/dubbogo/grpc-go/profiling/proto"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	ppb "github.com/xd-luqiang/grpc-go/profiling/proto"
 )
 
 var logger = grpclog.Component("profiling")

@@ -29,11 +29,11 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/credentials/insecure"
-	xdscreds "github.com/dubbogo/grpc-go/credentials/xds"
-	pb "github.com/dubbogo/grpc-go/examples/helloworld/helloworld"
-	_ "github.com/dubbogo/grpc-go/xds" // To install the xds resolvers and balancers.
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/credentials/insecure"
+	xdscreds "github.com/xd-luqiang/grpc-go/credentials/xds"
+	pb "github.com/xd-luqiang/grpc-go/examples/helloworld/helloworld"
+	_ "github.com/xd-luqiang/grpc-go/xds" // To install the xds resolvers and balancers.
 )
 
 var (

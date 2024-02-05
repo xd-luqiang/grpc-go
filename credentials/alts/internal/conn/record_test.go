@@ -30,8 +30,8 @@ import (
 )
 
 import (
-	core "github.com/dubbogo/grpc-go/credentials/alts/internal"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
+	core "github.com/xd-luqiang/grpc-go/credentials/alts/internal"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
 )
 
 type s struct {

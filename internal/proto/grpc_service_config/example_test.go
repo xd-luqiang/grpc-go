@@ -27,8 +27,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	scpb "github.com/dubbogo/grpc-go/internal/proto/grpc_service_config"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	scpb "github.com/xd-luqiang/grpc-go/internal/proto/grpc_service_config"
 )
 
 type s struct {

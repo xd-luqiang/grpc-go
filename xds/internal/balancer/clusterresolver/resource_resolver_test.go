@@ -29,11 +29,11 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/resolver/manual"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils"
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/fakeclient"
-	xdsclient "github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/resolver/manual"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/fakeclient"
+	xdsclient "github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
 )
 
 const (

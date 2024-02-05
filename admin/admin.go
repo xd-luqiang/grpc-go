@@ -30,9 +30,9 @@
 package admin
 
 import (
-	"github.com/dubbogo/grpc-go"
-	channelzservice "github.com/dubbogo/grpc-go/channelz/service"
-	internaladmin "github.com/dubbogo/grpc-go/internal/admin"
+	"github.com/xd-luqiang/grpc-go"
+	channelzservice "github.com/xd-luqiang/grpc-go/channelz/service"
+	internaladmin "github.com/xd-luqiang/grpc-go/internal/admin"
 )
 
 func init() {

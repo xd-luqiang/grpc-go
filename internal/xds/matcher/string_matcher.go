@@ -17,7 +17,7 @@
  */
 
 // Package matcher contains types that need to be shared between code under
-// github.com/dubbogo/grpc-go/xds/... and the rest of gRPC.
+// github.com/xd-luqiang/grpc-go/xds/... and the rest of gRPC.
 package matcher
 
 import (
@@ -32,7 +32,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpcutil"
+	"github.com/xd-luqiang/grpc-go/internal/grpcutil"
 )
 
 // StringMatcher contains match criteria for matching a string, and is an

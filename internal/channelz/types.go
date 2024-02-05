@@ -26,8 +26,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/connectivity"
-	"github.com/dubbogo/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/credentials"
 )
 
 // entry represents a node in the channelz database.

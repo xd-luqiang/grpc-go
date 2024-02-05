@@ -28,7 +28,7 @@ import (
 )
 
 import (
-	ppb "github.com/dubbogo/grpc-go/profiling/proto"
+	ppb "github.com/xd-luqiang/grpc-go/profiling/proto"
 )
 
 type jsonNode struct {

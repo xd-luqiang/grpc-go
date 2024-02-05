@@ -33,11 +33,11 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/credentials/tls/certprovider"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/dubbogo/grpc-go/security/advancedtls/internal/testutils"
-	"github.com/dubbogo/grpc-go/security/advancedtls/testdata"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials/tls/certprovider"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/security/advancedtls/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/security/advancedtls/testdata"
 )
 
 type s struct {

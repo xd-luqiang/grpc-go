@@ -30,15 +30,15 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	channelzgrpc "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
-	channelzpb "github.com/dubbogo/grpc-go/channelz/grpc_channelz_v1"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/connectivity"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/internal/channelz"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go"
+	channelzgrpc "github.com/xd-luqiang/grpc-go/channelz/grpc_channelz_v1"
+	channelzpb "github.com/xd-luqiang/grpc-go/channelz/grpc_channelz_v1"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/channelz"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 func init() {
@@ -50,7 +50,7 @@ var logger = grpclog.Component("channelz")
 // RegisterChannelzServiceToServer registers the channelz service to the given server.
 //
 // Note: it is preferred to use the admin API
-// (https://pkg.go.dev/github.com/dubbogo/grpc-go/admin#Register) instead to
+// (https://pkg.go.dev/github.com/xd-luqiang/grpc-go/admin#Register) instead to
 // register Channelz and other administrative services.
 func RegisterChannelzServiceToServer(s grpc.ServiceRegistrar) {
 	channelzgrpc.RegisterChannelzServer(s, newCZServer())

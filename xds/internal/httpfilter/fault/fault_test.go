@@ -47,20 +47,20 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/credentials/insecure"
-	"github.com/dubbogo/grpc-go/internal/grpcrand"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
-	"github.com/dubbogo/grpc-go/internal/testutils"
-	"github.com/dubbogo/grpc-go/internal/xds"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/status"
-	testpb "github.com/dubbogo/grpc-go/test/grpc_testing"
-	_ "github.com/dubbogo/grpc-go/xds/internal/balancer" // Register the balancers.
-	_ "github.com/dubbogo/grpc-go/xds/internal/resolver" // Register the xds_resolver.
-	"github.com/dubbogo/grpc-go/xds/internal/testutils/e2e"
-	_ "github.com/dubbogo/grpc-go/xds/internal/xdsclient/v3" // Register the v3 xDS API client.
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/credentials/insecure"
+	"github.com/xd-luqiang/grpc-go/internal/grpcrand"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go/internal/xds"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/status"
+	testpb "github.com/xd-luqiang/grpc-go/test/grpc_testing"
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/balancer" // Register the balancers.
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/resolver" // Register the xds_resolver.
+	"github.com/xd-luqiang/grpc-go/xds/internal/testutils/e2e"
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/v3" // Register the v3 xDS API client.
 )
 
 const defaultTestTimeout = 10 * time.Second

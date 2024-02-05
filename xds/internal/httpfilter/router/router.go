@@ -33,8 +33,8 @@ import (
 )
 
 import (
-	iresolver "github.com/dubbogo/grpc-go/internal/resolver"
-	"github.com/dubbogo/grpc-go/xds/internal/httpfilter"
+	iresolver "github.com/xd-luqiang/grpc-go/internal/resolver"
+	"github.com/xd-luqiang/grpc-go/xds/internal/httpfilter"
 )
 
 // TypeURL is the message type for the Router configuration.

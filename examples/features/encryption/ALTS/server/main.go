@@ -28,9 +28,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/credentials/alts"
-	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/credentials/alts"
+	pb "github.com/xd-luqiang/grpc-go/examples/features/proto/echo"
 )
 
 var port = flag.Int("port", 50051, "the port to serve on")

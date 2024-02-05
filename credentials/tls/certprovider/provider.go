@@ -32,7 +32,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal"
+	"github.com/xd-luqiang/grpc-go/internal"
 )
 
 func init() {

@@ -23,8 +23,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/grpclog"
-	grpclogi "github.com/dubbogo/grpc-go/internal/grpclog"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	grpclogi "github.com/xd-luqiang/grpc-go/internal/grpclog"
 )
 
 type s struct {

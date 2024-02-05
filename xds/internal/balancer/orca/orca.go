@@ -24,9 +24,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/internal/balancerload"
-	"github.com/dubbogo/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/balancerload"
+	"github.com/xd-luqiang/grpc-go/metadata"
 )
 
 const mdKey = "X-Endpoint-Load-Metrics-Bin"

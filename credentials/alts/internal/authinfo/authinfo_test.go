@@ -24,8 +24,8 @@ import (
 )
 
 import (
-	altspb "github.com/dubbogo/grpc-go/credentials/alts/internal/proto/grpc_gcp"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
+	altspb "github.com/xd-luqiang/grpc-go/credentials/alts/internal/proto/grpc_gcp"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
 )
 
 type s struct {

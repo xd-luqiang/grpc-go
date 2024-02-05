@@ -30,12 +30,12 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/credentials/tls/certprovider/pemfile"
-	pb "github.com/dubbogo/grpc-go/examples/helloworld/helloworld"
-	"github.com/dubbogo/grpc-go/keepalive"
-	"github.com/dubbogo/grpc-go/security/advancedtls"
-	"github.com/dubbogo/grpc-go/security/advancedtls/testdata"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/credentials/tls/certprovider/pemfile"
+	pb "github.com/xd-luqiang/grpc-go/examples/helloworld/helloworld"
+	"github.com/xd-luqiang/grpc-go/keepalive"
+	"github.com/xd-luqiang/grpc-go/security/advancedtls"
+	"github.com/xd-luqiang/grpc-go/security/advancedtls/testdata"
 )
 
 var port = ":50051"

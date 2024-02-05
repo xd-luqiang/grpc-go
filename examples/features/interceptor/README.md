@@ -30,7 +30,7 @@ types of interceptors in gRPC.
 
 #### Unary Interceptor
 
-[`UnaryClientInterceptor`](https://godoc.org/github.com/dubbogo/grpc-go#UnaryClientInterceptor)
+[`UnaryClientInterceptor`](https://godoc.org/github.com/xd-luqiang/grpc-go#UnaryClientInterceptor)
 is the type for client-side unary interceptor. It is essentially a function type
 with signature: `func(ctx context.Context, method string, req, reply
 interface{}, cc *ClientConn, invoker UnaryInvoker, opts ...CallOption) error`.
@@ -54,11 +54,11 @@ example, we log the RPC timing and error info.
 
 To install a unary interceptor on a ClientConn, configure `Dial` with
 `DialOption`
-[`WithUnaryInterceptor`](https://godoc.org/github.com/dubbogo/grpc-go#WithUnaryInterceptor).
+[`WithUnaryInterceptor`](https://godoc.org/github.com/xd-luqiang/grpc-go#WithUnaryInterceptor).
 
 #### Stream Interceptor
 
-[`StreamClientInterceptor`](https://godoc.org/github.com/dubbogo/grpc-go#StreamClientInterceptor)
+[`StreamClientInterceptor`](https://godoc.org/github.com/xd-luqiang/grpc-go#StreamClientInterceptor)
 is the type for client-side stream interceptor. It is a function type with
 signature: `func(ctx context.Context, desc *StreamDesc, cc *ClientConn, method
 string, streamer Streamer, opts ...CallOption) (ClientStream, error)`. An
@@ -82,7 +82,7 @@ interception purpose.
 
 To install the stream interceptor for a ClientConn, configure `Dial` with
 `DialOption`
-[`WithStreamInterceptor`](https://godoc.org/github.com/dubbogo/grpc-go#WithStreamInterceptor).
+[`WithStreamInterceptor`](https://godoc.org/github.com/xd-luqiang/grpc-go#WithStreamInterceptor).
 
 ### Server-side
 
@@ -91,7 +91,7 @@ different provided info.
 
 #### Unary Interceptor
 
-[`UnaryServerInterceptor`](https://godoc.org/github.com/dubbogo/grpc-go#UnaryServerInterceptor)
+[`UnaryServerInterceptor`](https://godoc.org/github.com/xd-luqiang/grpc-go#UnaryServerInterceptor)
 is the type for server-side unary interceptor. It is a function type with
 signature: `func(ctx context.Context, req interface{}, info *UnaryServerInfo,
 handler UnaryHandler) (resp interface{}, err error)`.
@@ -101,11 +101,11 @@ explanation.
 
 To install the unary interceptor for a Server, configure `NewServer` with
 `ServerOption`
-[`UnaryInterceptor`](https://godoc.org/github.com/dubbogo/grpc-go#UnaryInterceptor).
+[`UnaryInterceptor`](https://godoc.org/github.com/xd-luqiang/grpc-go#UnaryInterceptor).
 
 #### Stream Interceptor
 
-[`StreamServerInterceptor`](https://godoc.org/github.com/dubbogo/grpc-go#StreamServerInterceptor)
+[`StreamServerInterceptor`](https://godoc.org/github.com/xd-luqiang/grpc-go#StreamServerInterceptor)
 is the type for server-side stream interceptor. It is a function type with
 signature: `func(srv interface{}, ss ServerStream, info *StreamServerInfo,
 handler StreamHandler) error`.
@@ -115,4 +115,4 @@ explanation.
 
 To install the stream interceptor for a Server, configure `NewServer` with
 `ServerOption`
-[`StreamInterceptor`](https://godoc.org/github.com/dubbogo/grpc-go#StreamInterceptor).
+[`StreamInterceptor`](https://godoc.org/github.com/xd-luqiang/grpc-go#StreamInterceptor).

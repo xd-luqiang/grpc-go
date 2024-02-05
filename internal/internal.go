@@ -26,8 +26,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/connectivity"
-	"github.com/dubbogo/grpc-go/serviceconfig"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/serviceconfig"
 )
 
 var (

@@ -35,7 +35,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/encoding"
+	"github.com/xd-luqiang/grpc-go/encoding"
 )
 
 // Name is the name registered for the gzip compressor.

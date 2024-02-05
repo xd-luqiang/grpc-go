@@ -35,16 +35,16 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/balancer"
-	lbpb "github.com/dubbogo/grpc-go/balancer/grpclb/grpc_lb_v1"
-	"github.com/dubbogo/grpc-go/connectivity"
-	"github.com/dubbogo/grpc-go/internal/backoff"
-	"github.com/dubbogo/grpc-go/internal/channelz"
-	imetadata "github.com/dubbogo/grpc-go/internal/metadata"
-	"github.com/dubbogo/grpc-go/keepalive"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/balancer"
+	lbpb "github.com/xd-luqiang/grpc-go/balancer/grpclb/grpc_lb_v1"
+	"github.com/xd-luqiang/grpc-go/connectivity"
+	"github.com/xd-luqiang/grpc-go/internal/backoff"
+	"github.com/xd-luqiang/grpc-go/internal/channelz"
+	imetadata "github.com/xd-luqiang/grpc-go/internal/metadata"
+	"github.com/xd-luqiang/grpc-go/keepalive"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/resolver"
 )
 
 // processServerList updates balancer's internal state, create/remove SubConns

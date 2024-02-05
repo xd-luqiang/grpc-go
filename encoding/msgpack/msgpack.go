@@ -5,8 +5,8 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/encoding"
-	"github.com/dubbogo/grpc-go/encoding/raw_proto"
+	"github.com/xd-luqiang/grpc-go/encoding"
+	"github.com/xd-luqiang/grpc-go/encoding/raw_proto"
 )
 
 func init() {

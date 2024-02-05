@@ -27,9 +27,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials/tls/certprovider"
-	xdsinternal "github.com/dubbogo/grpc-go/internal/credentials/xds"
-	"github.com/dubbogo/grpc-go/xds/internal/xdsclient"
+	"github.com/xd-luqiang/grpc-go/credentials/tls/certprovider"
+	xdsinternal "github.com/xd-luqiang/grpc-go/internal/credentials/xds"
+	"github.com/xd-luqiang/grpc-go/xds/internal/xdsclient"
 )
 
 // connWrapper is a thin wrapper around a net.Conn returned by Accept(). It

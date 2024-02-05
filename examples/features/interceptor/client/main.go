@@ -33,11 +33,11 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/credentials/oauth"
-	"github.com/dubbogo/grpc-go/examples/data"
-	ecpb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials/oauth"
+	"github.com/xd-luqiang/grpc-go/examples/data"
+	ecpb "github.com/xd-luqiang/grpc-go/examples/features/proto/echo"
 )
 
 var addr = flag.String("addr", "localhost:50051", "the address to connect to")

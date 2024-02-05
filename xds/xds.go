@@ -36,18 +36,18 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	_ "github.com/dubbogo/grpc-go/credentials/tls/certprovider/pemfile" // Register the file watcher certificate provider plugin.
-	internaladmin "github.com/dubbogo/grpc-go/internal/admin"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/xds/csds"
-	_ "github.com/dubbogo/grpc-go/xds/internal/balancer"           // Register the balancers.
-	_ "github.com/dubbogo/grpc-go/xds/internal/httpfilter/fault"   // Register the fault injection filter.
-	_ "github.com/dubbogo/grpc-go/xds/internal/httpfilter/rbac"    // Register the RBAC filter.
-	_ "github.com/dubbogo/grpc-go/xds/internal/httpfilter/router"  // Register the router filter.
-	xdsresolver "github.com/dubbogo/grpc-go/xds/internal/resolver" // Register the xds_resolver.
-	_ "github.com/dubbogo/grpc-go/xds/internal/xdsclient/v2"       // Register the v2 xDS API client.
-	_ "github.com/dubbogo/grpc-go/xds/internal/xdsclient/v3"       // Register the v3 xDS API client.
+	"github.com/xd-luqiang/grpc-go"
+	_ "github.com/xd-luqiang/grpc-go/credentials/tls/certprovider/pemfile" // Register the file watcher certificate provider plugin.
+	internaladmin "github.com/xd-luqiang/grpc-go/internal/admin"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/xds/csds"
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/balancer"           // Register the balancers.
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/httpfilter/fault"   // Register the fault injection filter.
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/httpfilter/rbac"    // Register the RBAC filter.
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/httpfilter/router"  // Register the router filter.
+	xdsresolver "github.com/xd-luqiang/grpc-go/xds/internal/resolver" // Register the xds_resolver.
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/v2"       // Register the v2 xDS API client.
+	_ "github.com/xd-luqiang/grpc-go/xds/internal/xdsclient/v3"       // Register the v3 xDS API client.
 )
 
 func init() {

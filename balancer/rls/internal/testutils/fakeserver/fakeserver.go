@@ -29,10 +29,10 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	rlsgrpc "github.com/dubbogo/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
-	rlspb "github.com/dubbogo/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
-	"github.com/dubbogo/grpc-go/internal/testutils"
+	"github.com/xd-luqiang/grpc-go"
+	rlsgrpc "github.com/xd-luqiang/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
+	rlspb "github.com/xd-luqiang/grpc-go/balancer/rls/internal/proto/grpc_lookup_v1"
+	"github.com/xd-luqiang/grpc-go/internal/testutils"
 )
 
 const (

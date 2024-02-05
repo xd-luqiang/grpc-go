@@ -31,13 +31,13 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	"github.com/dubbogo/grpc-go/codes"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/examples/data"
-	pb "github.com/dubbogo/grpc-go/examples/features/proto/echo"
-	"github.com/dubbogo/grpc-go/metadata"
-	"github.com/dubbogo/grpc-go/status"
+	"github.com/xd-luqiang/grpc-go"
+	"github.com/xd-luqiang/grpc-go/codes"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/examples/data"
+	pb "github.com/xd-luqiang/grpc-go/examples/features/proto/echo"
+	"github.com/xd-luqiang/grpc-go/metadata"
+	"github.com/xd-luqiang/grpc-go/status"
 )
 
 var (
@@ -58,7 +58,7 @@ func main() {
 	opts := []grpc.ServerOption{
 		// The following grpc.ServerOption adds an interceptor for all unary
 		// RPCs. To configure an interceptor for streaming RPCs, see:
-		// https://godoc.org/github.com/dubbogo/grpc-go#StreamInterceptor
+		// https://godoc.org/github.com/xd-luqiang/grpc-go#StreamInterceptor
 		grpc.UnaryInterceptor(ensureValidToken),
 		// Enable TLS for all incoming connections.
 		grpc.Creds(credentials.NewServerTLSFromCert(&cert)),
@@ -104,7 +104,7 @@ func ensureValidToken(ctx context.Context, req interface{}, info *grpc.UnaryServ
 		return nil, errMissingMetadata
 	}
 	// The keys within metadata.MD are normalized to lowercase.
-	// See: https://godoc.org/github.com/dubbogo/grpc-go/metadata#New
+	// See: https://godoc.org/github.com/xd-luqiang/grpc-go/metadata#New
 	if !valid(md["authorization"]) {
 		return nil, errInvalidToken
 	}

@@ -19,7 +19,7 @@
 package conn
 
 import (
-	core "github.com/dubbogo/grpc-go/credentials/alts/internal"
+	core "github.com/xd-luqiang/grpc-go/credentials/alts/internal"
 )
 
 // NewOutCounter returns an outgoing counter initialized to the starting sequence

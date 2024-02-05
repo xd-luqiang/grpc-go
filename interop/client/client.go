@@ -30,17 +30,17 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go"
-	_ "github.com/dubbogo/grpc-go/balancer/grpclb"
-	"github.com/dubbogo/grpc-go/credentials"
-	"github.com/dubbogo/grpc-go/credentials/alts"
-	"github.com/dubbogo/grpc-go/credentials/google"
-	"github.com/dubbogo/grpc-go/credentials/oauth"
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/interop"
-	testgrpc "github.com/dubbogo/grpc-go/interop/grpc_testing"
-	"github.com/dubbogo/grpc-go/resolver"
-	"github.com/dubbogo/grpc-go/testdata"
+	"github.com/xd-luqiang/grpc-go"
+	_ "github.com/xd-luqiang/grpc-go/balancer/grpclb"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	"github.com/xd-luqiang/grpc-go/credentials/alts"
+	"github.com/xd-luqiang/grpc-go/credentials/google"
+	"github.com/xd-luqiang/grpc-go/credentials/oauth"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/interop"
+	testgrpc "github.com/xd-luqiang/grpc-go/interop/grpc_testing"
+	"github.com/xd-luqiang/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/testdata"
 )
 
 const (

@@ -33,13 +33,13 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/credentials"
-	core "github.com/dubbogo/grpc-go/credentials/alts/internal"
-	"github.com/dubbogo/grpc-go/credentials/alts/internal/handshaker"
-	"github.com/dubbogo/grpc-go/credentials/alts/internal/handshaker/service"
-	altspb "github.com/dubbogo/grpc-go/credentials/alts/internal/proto/grpc_gcp"
-	"github.com/dubbogo/grpc-go/grpclog"
-	"github.com/dubbogo/grpc-go/internal/googlecloud"
+	"github.com/xd-luqiang/grpc-go/credentials"
+	core "github.com/xd-luqiang/grpc-go/credentials/alts/internal"
+	"github.com/xd-luqiang/grpc-go/credentials/alts/internal/handshaker"
+	"github.com/xd-luqiang/grpc-go/credentials/alts/internal/handshaker/service"
+	altspb "github.com/xd-luqiang/grpc-go/credentials/alts/internal/proto/grpc_gcp"
+	"github.com/xd-luqiang/grpc-go/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/googlecloud"
 )
 
 const (

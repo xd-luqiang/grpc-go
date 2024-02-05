@@ -30,7 +30,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/grpclog"
+	"github.com/xd-luqiang/grpc-go/internal/grpclog"
 )
 
 // LoggerV2 does underlying logging work for grpclog.

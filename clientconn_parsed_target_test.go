@@ -32,7 +32,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/resolver"
+	"github.com/xd-luqiang/grpc-go/resolver"
 )
 
 func (s) TestParsedTarget_Success_WithoutCustomDialer(t *testing.T) {

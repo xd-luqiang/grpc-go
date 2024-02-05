@@ -23,7 +23,7 @@ import (
 )
 
 import (
-	grpc "github.com/dubbogo/grpc-go"
+	grpc "github.com/xd-luqiang/grpc-go"
 )
 
 const (

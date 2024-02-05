@@ -27,11 +27,11 @@ import (
 )
 
 import (
-	grpc "github.com/dubbogo/grpc-go"
-	core "github.com/dubbogo/grpc-go/credentials/alts/internal"
-	altspb "github.com/dubbogo/grpc-go/credentials/alts/internal/proto/grpc_gcp"
-	"github.com/dubbogo/grpc-go/credentials/alts/internal/testutil"
-	"github.com/dubbogo/grpc-go/internal/grpctest"
+	grpc "github.com/xd-luqiang/grpc-go"
+	core "github.com/xd-luqiang/grpc-go/credentials/alts/internal"
+	altspb "github.com/xd-luqiang/grpc-go/credentials/alts/internal/proto/grpc_gcp"
+	"github.com/xd-luqiang/grpc-go/credentials/alts/internal/testutil"
+	"github.com/xd-luqiang/grpc-go/internal/grpctest"
 )
 
 type s struct {

@@ -27,9 +27,9 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
-	_ "github.com/dubbogo/grpc-go/balancer/grpclb"               // grpclb for config parsing.
-	_ "github.com/dubbogo/grpc-go/internal/resolver/passthrough" // passthrough resolver.
+	"github.com/xd-luqiang/grpc-go/balancer"
+	_ "github.com/xd-luqiang/grpc-go/balancer/grpclb"               // grpclb for config parsing.
+	_ "github.com/xd-luqiang/grpc-go/internal/resolver/passthrough" // passthrough resolver.
 )
 
 const balancerWithoutConfigParserName = "dummy_balancer"

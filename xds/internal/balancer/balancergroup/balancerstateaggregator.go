@@ -19,7 +19,7 @@
 package balancergroup
 
 import (
-	"github.com/dubbogo/grpc-go/balancer"
+	"github.com/xd-luqiang/grpc-go/balancer"
 )
 
 // BalancerStateAggregator aggregates sub-picker and connectivity states into a

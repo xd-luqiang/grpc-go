@@ -27,7 +27,7 @@ import (
 )
 
 import (
-	"github.com/dubbogo/grpc-go/internal/leakcheck"
+	"github.com/xd-luqiang/grpc-go/internal/leakcheck"
 )
 
 var lcFailed uint32
